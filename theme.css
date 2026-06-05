@@ -5310,7 +5310,7 @@ body.praxis-properties-spacious {
   font-size: var(--h3-size, 1em);
   font-weight: 500;
   letter-spacing: 0;
-  margin-bottom: var(--size-4-1);
+  margin-bottom: var(--praxis-space-4);
 }
 
 .metadata-property-value :is(.metadata-input-date, .metadata-input-datetime) {
