@@ -5285,12 +5285,6 @@ body {
   padding-inline: var(--praxis-space-5);
 }
 
-/* Search fields — ensure icon doesn't overlap text */
-.search-input-container input[type="search"],
-.search-input-container input:not([type]) {
-  padding-inline-start: calc(var(--search-icon-size, 16px) + var(--size-2-3) + 4px);
-}
-
 /* Spacious properties toggle */
 body.praxis-properties-spacious {
   --metadata-padding: var(--praxis-space-4) 0 var(--praxis-space-5) 0;
