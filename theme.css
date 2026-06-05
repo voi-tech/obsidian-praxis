@@ -314,21 +314,21 @@ body {
 
   --metadata-background: transparent;
   --metadata-max-width: var(--file-line-width);
-  --metadata-padding: 0 0 var(--size-4-2) 0;
+  --metadata-padding: 0 0 var(--size-4-1) 0;
   --metadata-border-color: transparent;
   --metadata-border-radius: var(--radius-s);
   --metadata-border-width: 0;
-  --metadata-gap: max(4px, var(--praxis-properties-gap));
+  --metadata-gap: var(--praxis-properties-gap);
   --metadata-divider-color: var(--background-modifier-border);
   --metadata-divider-color-hover: var(--background-modifier-border-hover);
   --metadata-divider-color-focus: var(--background-modifier-border-focus);
   --metadata-divider-width: var(--border-width);
-  --metadata-property-padding: var(--size-2-2) var(--size-2-3);
+  --metadata-property-padding: var(--size-2-1) var(--size-2-2);
   --metadata-property-radius: var(--radius-s);
   --metadata-property-radius-hover: var(--radius-s);
   --metadata-property-radius-focus: var(--radius-s);
   --metadata-property-background: transparent;
-  --metadata-property-background-hover: color-mix(in srgb, var(--background-modifier-hover) 68%, transparent);
+  --metadata-property-background-hover: transparent;
   --metadata-property-background-active: transparent;
   --metadata-label-background-hover: transparent;
   --metadata-label-background-active: transparent;
@@ -343,8 +343,8 @@ body {
   --metadata-input-font-size: var(--font-ui-small);
   --metadata-sidebar-input-font-size: var(--font-ui-smaller);
   --metadata-input-background: transparent;
-  --metadata-input-background-hover: color-mix(in srgb, var(--background-modifier-hover) 56%, transparent);
-  --metadata-input-background-active: color-mix(in srgb, var(--background-primary) 74%, var(--background-secondary));
+  --metadata-input-background-hover: transparent;
+  --metadata-input-background-active: transparent;
 
   --inline-title-size: var(--praxis-inline-title-size);
   --inline-title-line-height: 1.15;
@@ -962,31 +962,12 @@ body.praxis-properties-spacious {
   --metadata-input-height: 34px;
 }
 
-.metadata-container {
-  color: var(--text-muted);
-}
-
 .metadata-properties-title {
   color: var(--text-normal);
-  font-size: var(--h2);
-  font-weight: 550;
+  font-size: var(--h3);
+  font-weight: 500;
   letter-spacing: 0;
-  margin-bottom: var(--size-4-2);
-}
-
-.metadata-container .metadata-property:where(:not(.is-disabled)) {
-  border: var(--border-width) solid transparent;
-  box-shadow: inset 0 -1px 0 var(--metadata-divider-color);
-}
-
-.metadata-property:hover {
-  border-color: color-mix(in srgb, var(--metadata-divider-color-hover) 48%, transparent);
-  box-shadow: none;
-}
-
-.metadata-property:focus-within {
-  border-color: color-mix(in srgb, var(--metadata-divider-color-focus) 62%, transparent);
-  box-shadow: 0 0 0 2px color-mix(in srgb, var(--metadata-divider-color-focus) 18%, transparent);
+  margin-bottom: var(--size-4-1);
 }
 
 .metadata-property-key {
@@ -1006,11 +987,14 @@ body.praxis-properties-spacious {
 }
 
 .metadata-property-value {
+  background: transparent !important;
   color: var(--metadata-input-text-color);
 }
 
 .metadata-property-value :is(input, textarea, select, .multi-select-container, .metadata-input-text, .metadata-input-longtext, .metadata-input-number, .metadata-input-date, .metadata-input-datetime) {
+  background: transparent !important;
   border-radius: calc(var(--metadata-property-radius) - 4px);
+  box-shadow: none;
 }
 
 .metadata-property-value :is(.metadata-input-date, .metadata-input-datetime) {
