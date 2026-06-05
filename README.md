@@ -28,7 +28,7 @@ Praxis is a warm, focused Obsidian theme built from Minimal's proven foundation 
 BRAT can install Praxis directly from GitHub while the theme is in beta or before it is listed in the community theme catalog.
 
 1. Install and enable the `BRAT` community plugin.
-2. Open BRAT settings and add this repository as a beta theme: `https://github.com/voitech/obsidian-praxis`.
+2. Open BRAT settings and add this repository as a beta theme: `https://github.com/voi-tech/obsidian-praxis`.
 3. Open Obsidian Settings -> Appearance -> Themes and select `Praxis`.
 
 Praxis targets Obsidian 1.13.0 or newer and works on desktop and mobile.
