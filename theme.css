@@ -5473,36 +5473,36 @@ body {
   --praxis-icon-wallet: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M17 14h.01'/%3E%3Cpath d='M7 7h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14'/%3E%3C/svg%3E");
 }
 
-body
+body:is(.theme-dark, .theme-light)
   :is(input[data-task="/"], input[data-task="-"], input[data-task=">"], input[data-task="<"], input[data-task="?"], input[data-task="!"], input[data-task="*"], input[data-task="\""], input[data-task="\u201c"], input[data-task="l"], input[data-task="b"], input[data-task="i"], input[data-task="S"], input[data-task="I"], input[data-task="p"], input[data-task="c"], input[data-task="f"], input[data-task="k"], input[data-task="w"], input[data-task="u"], input[data-task="d"], input[data-task="+"], input[data-task="B"], input[data-task="a"], input[data-task="n"], input[data-task="R"], input[data-task="t"], input[data-task="P"], input[data-task="L"]):checked,
-body
+body:is(.theme-dark, .theme-light)
   li:is([data-task="/"], [data-task="-"], [data-task=">"], [data-task="<"], [data-task="?"], [data-task="!"], [data-task="*"], [data-task="\""], [data-task="\u201c"], [data-task="l"], [data-task="b"], [data-task="i"], [data-task="S"], [data-task="I"], [data-task="p"], [data-task="c"], [data-task="f"], [data-task="k"], [data-task="w"], [data-task="u"], [data-task="d"], [data-task="+"], [data-task="B"], [data-task="a"], [data-task="n"], [data-task="R"], [data-task="t"], [data-task="P"], [data-task="L"]) > input:checked,
-body
+body:is(.theme-dark, .theme-light)
   li:is([data-task="/"], [data-task="-"], [data-task=">"], [data-task="<"], [data-task="?"], [data-task="!"], [data-task="*"], [data-task="\""], [data-task="\u201c"], [data-task="l"], [data-task="b"], [data-task="i"], [data-task="S"], [data-task="I"], [data-task="p"], [data-task="c"], [data-task="f"], [data-task="k"], [data-task="w"], [data-task="u"], [data-task="d"], [data-task="+"], [data-task="B"], [data-task="a"], [data-task="n"], [data-task="R"], [data-task="t"], [data-task="P"], [data-task="L"]) > p > input:checked {
-  --checkbox-marker-color: transparent !important;
-  appearance: none !important;
-  -webkit-appearance: none !important;
-  background-color: currentColor !important;
-  background-image: none !important;
-  background-position: 50% 50% !important;
-  background-repeat: no-repeat !important;
-  background-size: 0 0 !important;
-  border: none !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-  color: var(--praxis-task-color, var(--praxis-task-violet)) !important;
-  filter: none !important;
-  mask-image: var(--praxis-task-icon, var(--praxis-icon-check)) !important;
-  mask-mode: alpha !important;
-  mask-position: 50% 50% !important;
-  mask-repeat: no-repeat !important;
-  mask-size: var(--checkbox-icon, 1em) !important;
-  overflow: visible !important;
-  transform: none !important;
-  -webkit-mask-image: var(--praxis-task-icon, var(--praxis-icon-check)) !important;
-  -webkit-mask-position: 50% 50% !important;
-  -webkit-mask-repeat: no-repeat !important;
-  -webkit-mask-size: var(--checkbox-icon, 1em) !important;
+  --checkbox-marker-color: transparent;
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: currentColor;
+  background-image: none;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 0 0;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  color: var(--praxis-task-color, var(--praxis-task-violet));
+  filter: none;
+  mask-image: var(--praxis-task-icon, var(--praxis-icon-check));
+  mask-mode: alpha;
+  mask-position: 50% 50%;
+  mask-repeat: no-repeat;
+  mask-size: var(--checkbox-icon, 1em);
+  overflow: visible;
+  transform: none;
+  -webkit-mask-image: var(--praxis-task-icon, var(--praxis-icon-check));
+  -webkit-mask-position: 50% 50%;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: var(--checkbox-icon, 1em);
 }
 
 body
