@@ -46,8 +46,8 @@ body {
 
   --radius-xs: 5px;
   --radius-s: var(--praxis-radius);
-  --radius-m: calc(var(--praxis-radius) + 4px);
-  --radius-l: calc(var(--praxis-radius) + 8px);
+  --radius-m: 21px;
+  --radius-l: 21px;
   --border-width: 1px;
 
   --page-title-weight: 450;
@@ -412,7 +412,7 @@ span[src$="#interface"] img {
 img[src$="#circle"],
 span[src$="#circle"] img {
   aspect-ratio: 1 / 1;
-  border-radius: 50%;
+  border-radius: 55%;
 }
 
 .img-grid-ratio {

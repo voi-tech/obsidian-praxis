@@ -194,7 +194,7 @@ body {
   --top-left-padding-y:0px;
   /* Image opacity in dark mode */
   --image-muted:0.7;
-  --image-radius: 4px;
+  --image-radius: 5px;
   /* Spacing */
   --heading-spacing: 2em;
   --p-spacing: 1.75rem;
@@ -1078,7 +1078,7 @@ body:not(.is-mobile).labeled-nav.vault-profile-top .workspace-split.mod-left-spl
 
 /* Modals */
 .modal-button-container .mod-checkbox {
-  --checkbox-radius: 4px;
+  --checkbox-radius: 5px;
 }
 
 /* Confirm delete */
@@ -1261,7 +1261,7 @@ body.praxis-callouts-outlined .callout-content .callout {
 
 /* Checklists, task lists, checkboxes */
 body {
-  --checkbox-radius: 50%;
+  --checkbox-radius: 55%;
   --checkbox-top: 2px;
   --checkbox-left: 0px;
   --checkbox-margin: 0px 6px 0px -2em;
@@ -1269,7 +1269,7 @@ body {
 
 .checkbox-square {
   --checkbox-size: calc(var(--font-text-size) * 0.85);
-  --checkbox-radius: 4px;
+  --checkbox-radius: 5px;
   --checkbox-top: 1px;
   --checkbox-left: 0px;
   --checkbox-margin: 0px 8px 0px -2em;
@@ -2235,7 +2235,7 @@ body {
   flex-direction: column;
   margin: 0;
   padding: 0 0 calc(var(--cards-padding) / 3);
-  border-radius: 6px;
+  border-radius: 5px;
   overflow: hidden;
   transition: box-shadow 0.15s linear;
   max-width: var(--cards-max-width);
@@ -3407,7 +3407,7 @@ div[src$="#invert"] {
 img[src$="#circle"]:not(.emoji),
 span[src$="#circle"] img:not(.emoji),
 span[src$="#round"] img:not(.emoji) {
-  border-radius: 50%;
+  border-radius: 55%;
   aspect-ratio: 1/1;
 }
 
@@ -3928,7 +3928,7 @@ body:not(.sidebar-tabs-underline):not(.sidebar-tabs-index):not(.sidebar-tabs-squ
   border: 1px solid var(--tab-outline-color);
   padding: 3px;
   margin: 6px 8px;
-  border-radius: 4px;
+  border-radius: 5px;
 }
 .sidebar-tabs-wide:not(.labeled-nav) .mod-left-split .workspace-tab-header, .sidebar-tabs-wide.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header,
 .sidebar-tabs-wide .mod-right-split .workspace-tab-header {
@@ -4023,7 +4023,7 @@ body:not(.full-file-names) .tree-item-inner {
 .is-tablet .workspace-drawer:not(.is-pinned) {
   margin: 30px 16px 0;
   height: calc(100vh - 48px);
-  border-radius: 15px;
+  border-radius: 13px;
   border: none;
 }
 .is-tablet .workspace-drawer-ribbon {
@@ -4198,7 +4198,7 @@ input.prompt-input:focus-visible {
   }
   .is-mobile .publish-section {
     background: var(--background-secondary);
-    border-radius: 10px;
+    border-radius: 8px;
     padding: 12px 12px 1px;
   }
   .is-mobile .publish-changes-switch-site {
@@ -4278,7 +4278,7 @@ body {
 #calendar-container .arrow {
   cursor: var(--cursor);
   width: 22px;
-  border-radius: 4px;
+  border-radius: 5px;
   padding: 3px 7px;
 }
 #calendar-container .arrow svg {
@@ -4350,7 +4350,7 @@ body {
   font-size: var(--font-adaptive-smaller);
   font-weight: 500;
   color: var(--text-muted);
-  border-radius: 4px;
+  border-radius: 5px;
   margin: 0;
   padding: 2px 8px;
 }
@@ -4995,7 +4995,7 @@ body .markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-t
 
 .modal.mod-settings .setting-item .pickr button.pcr-button {
   box-shadow: none;
-  border-radius: 40px;
+  border-radius: 34px;
   height: 24px;
   width: 24px;
 }
@@ -5006,7 +5006,7 @@ body .markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-t
 
 .setting-item .pickr .pcr-button:after,
 .setting-item .pickr .pcr-button:before {
-  border-radius: 40px;
+  border-radius: 34px;
   box-shadow: none;
   border: none;
 }
@@ -5187,8 +5187,8 @@ body {
 
   /* Style Settings driven values */
   --radius-s: var(--praxis-radius);
-  --radius-m: calc(var(--praxis-radius) + 4px);
-  --radius-l: calc(var(--praxis-radius) + 8px);
+  --radius-m: var(--praxis-radius-lg);
+  --radius-l: var(--praxis-radius-lg);
   --file-line-width: var(--praxis-line-width);
   --inline-title-size: var(--praxis-inline-title-size);
   --h1-weight: var(--praxis-heading-weight);
@@ -5366,7 +5366,7 @@ body.praxis-properties-spacious {
 
 .metadata-property-value :is(input[type="checkbox"], .metadata-input-checkbox)::before,
 .metadata-property-value :is(input[type="checkbox"], .metadata-input-checkbox)::after {
-  border-radius: calc(var(--checkbox-radius) - 1px) !important;
+  border-radius: var(--checkbox-radius) !important;
 }
 
 /* H1 underline */
