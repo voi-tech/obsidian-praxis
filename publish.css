@@ -530,28 +530,36 @@ body {
   --praxis-icon-heart: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.8 0-3.3.8-4.5 2.1A6 6 0 0 0 7.5 3 5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4 3 5.5l7 7 7-7z'/%3E%3C/svg%3E");
 }
 
-body :is(input[data-task="/"], input[data-task="-"], input[data-task=">"], input[data-task="<"], input[data-task="?"], input[data-task="!"], input[data-task="*"], input[data-task="\""], input[data-task="“"], input[data-task="l"], input[data-task="b"], input[data-task="i"], input[data-task="S"], input[data-task="I"], input[data-task="p"], input[data-task="c"], input[data-task="f"], input[data-task="k"], input[data-task="w"], input[data-task="u"], input[data-task="d"], input[data-task="+"], input[data-task="B"], input[data-task="a"], input[data-task="n"], input[data-task="R"], input[data-task="t"], input[data-task="P"], input[data-task="L"]):checked {
+.published-container input[data-task]:not([data-task=""], [data-task=" "], [data-task="x"]),
+body :is(input[data-task="/"], input[data-task="-"], input[data-task=">"], input[data-task="<"], input[data-task="?"], input[data-task="!"], input[data-task="*"], input[data-task="\""], input[data-task="“"], input[data-task="l"], input[data-task="b"], input[data-task="i"], input[data-task="S"], input[data-task="I"], input[data-task="p"], input[data-task="c"], input[data-task="f"], input[data-task="k"], input[data-task="w"], input[data-task="u"], input[data-task="d"], input[data-task="+"], input[data-task="B"], input[data-task="a"], input[data-task="n"], input[data-task="R"], input[data-task="t"], input[data-task="P"], input[data-task="L"]) {
   --checkbox-marker-color: transparent !important;
   appearance: none !important;
   -webkit-appearance: none !important;
-  background-color: currentColor !important;
+  background-color: var(--praxis-task-color, var(--praxis-task-violet)) !important;
   background-image: none !important;
   border: 0 !important;
   border-radius: 0 !important;
   box-shadow: none !important;
   color: var(--praxis-task-color, var(--praxis-task-violet)) !important;
+  display: inline-block !important;
+  height: var(--checkbox-size, 1em) !important;
   mask-image: var(--praxis-task-icon, var(--praxis-icon-check)) !important;
   mask-position: 50% 50% !important;
   mask-repeat: no-repeat !important;
-  mask-size: var(--checkbox-icon, 1em) !important;
+  mask-size: 86% 86% !important;
+  opacity: 1 !important;
+  vertical-align: -0.15em !important;
+  width: var(--checkbox-size, 1em) !important;
   -webkit-mask-image: var(--praxis-task-icon, var(--praxis-icon-check)) !important;
   -webkit-mask-position: 50% 50% !important;
   -webkit-mask-repeat: no-repeat !important;
-  -webkit-mask-size: var(--checkbox-icon, 1em) !important;
+  -webkit-mask-size: 86% 86% !important;
 }
 
-body :is(input[data-task="/"], input[data-task="-"], input[data-task=">"], input[data-task="<"], input[data-task="?"], input[data-task="!"], input[data-task="*"], input[data-task="\""], input[data-task="“"], input[data-task="l"], input[data-task="b"], input[data-task="i"], input[data-task="S"], input[data-task="I"], input[data-task="p"], input[data-task="c"], input[data-task="f"], input[data-task="k"], input[data-task="w"], input[data-task="u"], input[data-task="d"], input[data-task="+"], input[data-task="B"], input[data-task="a"], input[data-task="n"], input[data-task="R"], input[data-task="t"], input[data-task="P"], input[data-task="L"]):checked::before,
-body :is(input[data-task="/"], input[data-task="-"], input[data-task=">"], input[data-task="<"], input[data-task="?"], input[data-task="!"], input[data-task="*"], input[data-task="\""], input[data-task="“"], input[data-task="l"], input[data-task="b"], input[data-task="i"], input[data-task="S"], input[data-task="I"], input[data-task="p"], input[data-task="c"], input[data-task="f"], input[data-task="k"], input[data-task="w"], input[data-task="u"], input[data-task="d"], input[data-task="+"], input[data-task="B"], input[data-task="a"], input[data-task="n"], input[data-task="R"], input[data-task="t"], input[data-task="P"], input[data-task="L"]):checked::after {
+.published-container input[data-task]:not([data-task=""], [data-task=" "], [data-task="x"])::before,
+.published-container input[data-task]:not([data-task=""], [data-task=" "], [data-task="x"])::after,
+body :is(input[data-task="/"], input[data-task="-"], input[data-task=">"], input[data-task="<"], input[data-task="?"], input[data-task="!"], input[data-task="*"], input[data-task="\""], input[data-task="“"], input[data-task="l"], input[data-task="b"], input[data-task="i"], input[data-task="S"], input[data-task="I"], input[data-task="p"], input[data-task="c"], input[data-task="f"], input[data-task="k"], input[data-task="w"], input[data-task="u"], input[data-task="d"], input[data-task="+"], input[data-task="B"], input[data-task="a"], input[data-task="n"], input[data-task="R"], input[data-task="t"], input[data-task="P"], input[data-task="L"])::before,
+body :is(input[data-task="/"], input[data-task="-"], input[data-task=">"], input[data-task="<"], input[data-task="?"], input[data-task="!"], input[data-task="*"], input[data-task="\""], input[data-task="“"], input[data-task="l"], input[data-task="b"], input[data-task="i"], input[data-task="S"], input[data-task="I"], input[data-task="p"], input[data-task="c"], input[data-task="f"], input[data-task="k"], input[data-task="w"], input[data-task="u"], input[data-task="d"], input[data-task="+"], input[data-task="B"], input[data-task="a"], input[data-task="n"], input[data-task="R"], input[data-task="t"], input[data-task="P"], input[data-task="L"])::after {
   content: none !important;
   display: none !important;
 }

@@ -162,12 +162,13 @@ requireMarkers("theme.css", themeCss, [
   "--metadata-padding",
   "--metadata-input-height",
   "--metadata-label-width",
-  ".metadata-property",
-  ".metadata-property-icon",
+  ".metadata-property-value :is(.metadata-input-date, .metadata-input-datetime)",
+  ".workspace-ribbon .clickable-icon",
+  ".sidebar-toggle-button",
   "--callout-icon: lucide-",
   'data-callout="author"',
   'data-callout-metadata="noicon"',
-  "input[data-task",
+  ".markdown-rendered input[data-task]:not",
   ".HyperMD-task-line[data-task",
   ".cm-task-list-item-checkbox",
   ".cards table",
@@ -186,7 +187,7 @@ requireMarkers("publish.css", publishCss, [
   "--callout-icon: lucide-",
   'data-callout="author"',
   'data-callout-metadata="noicon"',
-  "input[data-task",
+  ".published-container input[data-task]:not",
   ".cards table",
   ".list-cards",
   ".img-grid",
@@ -207,6 +208,10 @@ for (const forbiddenPublishSelector of [".HyperMD-task-line", ".cm-task-list-ite
 
 if (publishCss.includes(".metadata-") || publishCss.includes("--metadata-")) {
   fail("publish.css must not contain app-only Properties selectors or metadata variables.");
+}
+
+if (/\.metadata-property\s*\{[\s\S]*?(?:display|flex|min-height)/.test(themeCss)) {
+  fail("theme.css must not reimplement the Properties row layout with broad .metadata-property overrides.");
 }
 
 requireMarkers("README.md", readme, [
