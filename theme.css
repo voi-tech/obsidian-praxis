@@ -35,17 +35,11 @@ name: Praxis
 id: praxis
 settings:
   -
-    id: praxis-colors
-    title: Colors
+    id: praxis-appearance
+    title: Appearance
     type: heading
     level: 1
     collapsed: false
-  -
-    id: praxis-accent
-    title: Accent color
-    type: variable-color
-    format: hex
-    default: '#7a60c8'
   -
     id: praxis-background-style
     title: Background contrast
@@ -66,93 +60,6 @@ settings:
         label: True black
         value: praxis-contrast-black
   -
-    id: praxis-interface
-    title: Interface
-    type: heading
-    level: 1
-    collapsed: false
-  -
-    id: praxis-font-text-size
-    title: Text size
-    type: variable-number-slider
-    default: 16
-    min: 13
-    max: 22
-    step: 1
-    format: px
-  -
-    id: praxis-radius
-    title: Corner radius
-    type: variable-number-slider
-    default: 13
-    min: 0
-    max: 21
-    step: 1
-    format: px
-  -
-    id: praxis-line-width
-    title: Readable line width
-    type: variable-number-slider
-    default: 860
-    min: 560
-    max: 1280
-    step: 20
-    format: px
-  -
-    id: praxis-links-underlined
-    title: Underline links
-    type: class-toggle
-    default: false
-  -
-    id: praxis-status-off
-    title: Hide status bar
-    type: class-toggle
-    default: false
-  -
-    id: praxis-headings
-    title: Headings
-    type: heading
-    level: 1
-    collapsed: true
-  -
-    id: praxis-inline-title-size
-    title: Note title size
-    type: variable-number-slider
-    default: 42
-    min: 26
-    max: 64
-    step: 1
-    format: px
-  -
-    id: praxis-heading-weight
-    title: Heading weight
-    type: variable-number-slider
-    default: 500
-    min: 300
-    max: 800
-    step: 100
-  -
-    id: praxis-h1-borders
-    title: H1 borders
-    type: class-toggle
-    default: false
-  -
-    id: praxis-content
-    title: Content
-    type: heading
-    level: 1
-    collapsed: true
-  -
-    id: praxis-table-lines
-    title: Table grid lines
-    type: class-toggle
-    default: false
-  -
-    id: praxis-disable-custom-task-click
-    title: Disable custom task clicks
-    type: class-toggle
-    default: false
-  -
     id: praxis-callout-style
     title: Callout style
     type: class-select
@@ -169,19 +76,19 @@ settings:
         label: Minimal
         value: praxis-callouts-minimal
   -
-    id: praxis-features
-    title: Features
-    type: heading
-    level: 1
-    collapsed: true
-  -
-    id: praxis-code-scroll
-    title: Horizontal scroll for code blocks
+    id: praxis-links-underlined
+    title: Underline links
     type: class-toggle
     default: false
   -
-    id: praxis-line-nums
-    title: Line numbers in editor
+    id: praxis-content
+    title: Content
+    type: heading
+    level: 1
+    collapsed: false
+  -
+    id: praxis-disable-custom-task-click
+    title: Custom task checkboxes
     type: class-toggle
     default: false
   -
@@ -190,110 +97,26 @@ settings:
     type: class-toggle
     default: false
   -
-    id: praxis-focus-mode
-    title: Focus mode (hide UI chrome)
+    id: active-line-on
+    title: Highlight active line
     type: class-toggle
     default: false
   -
-    id: praxis-tab-title
-    title: Tab title behavior
-    type: class-select
-    allowEmpty: true
-    options:
-      -
-        label: Always visible
-        value: praxis-tab-title-visible
-      -
-        label: Always hidden
-        value: praxis-tab-title-hidden
-  -
-    id: praxis-unstyled-tags
-    title: Unstyled tags (plain text)
-    type: class-toggle
-    default: false
-  -
-    id: praxis-properties
+    id: praxis-properties-heading
     title: Properties
     type: heading
     level: 1
-    collapsed: true
+    collapsed: false
   -
-    id: praxis-properties-label-width
-    title: Label width
-    type: variable-number-slider
-    default: 128
-    min: 96
-    max: 240
-    step: 4
-    format: px
-  -
-    id: praxis-properties-input-height
-    title: Input height
-    type: variable-number-slider
-    default: 26
-    min: 24
-    max: 40
-    step: 1
-    format: px
-  -
-    id: praxis-properties-gap
-    title: Row gap
-    type: variable-number-slider
-    default: 0
-    min: 0
-    max: 10
-    step: 1
-    format: px
-  -
-    id: praxis-properties-spacious
-    title: Spacious properties
+    id: metadata-heading-off
+    title: Hide properties heading
     type: class-toggle
     default: false
   -
-    id: praxis-helpers
-    title: Helper classes
-    type: heading
-    level: 1
-    collapsed: true
-  -
-    id: praxis-cards-min-width
-    title: Card minimum width
-    type: variable-number-slider
-    default: 180
-    min: 120
-    max: 360
-    step: 10
-    format: px
-  -
-    id: praxis-cards-image-height
-    title: Card image max height
-    type: variable-number-slider
-    default: 400
-    min: 120
-    max: 720
-    step: 20
-    format: px
-  -
-    id: praxis-cards-image-fit
-    title: Card image fit
-    type: variable-select
-    default: contain
-    options:
-      -
-        label: Contain
-        value: contain
-      -
-        label: Cover
-        value: cover
-  -
-    id: praxis-img-grid-gap
-    title: Image grid gap
-    type: variable-number-slider
-    default: 8
-    min: 0
-    max: 24
-    step: 1
-    format: px
+    id: metadata-add-property-off
+    title: Hide "Add property" button
+    type: class-toggle
+    default: false
 */
 
 
@@ -5443,6 +5266,45 @@ body {
   border-radius: var(--radius-s);
 }
 
+/* Ribbon icons — center within the ribbon column */
+.workspace-ribbon.mod-left {
+  align-items: center;
+}
+.workspace-ribbon.mod-left .side-dock-actions,
+.workspace-ribbon.mod-left .side-dock-settings {
+  align-items: center;
+  width: 100%;
+}
+
+/* Sidebar toggle button — alignment and full-icon highlight */
+.sidebar-toggle-button {
+  display: flex;
+  align-items: center;
+}
+.sidebar-toggle-button .clickable-icon {
+  padding: var(--size-2-2);
+}
+
+/* Vault profile area — reduce excess padding */
+.workspace-sidedock-vault-profile {
+  padding-block: var(--size-2-2);
+}
+.workspace-drawer-vault-switcher {
+  padding-block: var(--size-2-1);
+}
+
+/* Settings sidebar nav items — reduce spacing */
+.vertical-tab-nav-item {
+  padding-top: var(--size-2-2);
+  padding-bottom: var(--size-2-2);
+}
+
+/* Search fields — ensure icon doesn't overlap text */
+.search-input-container input[type="search"],
+.search-input-container input:not([type]) {
+  padding-inline-start: calc(var(--search-icon-size, 16px) + var(--size-2-3) + 4px);
+}
+
 /* Spacious properties toggle */
 body.praxis-properties-spacious {
   --metadata-padding: var(--size-4-1) 0 var(--size-4-2) 0;
@@ -5466,19 +5328,56 @@ body.praxis-properties-spacious {
 }
 
 .metadata-property-value :is(.metadata-input-date, .metadata-input-datetime) {
-  gap: var(--size-2-3);
+  gap: 0;
 }
 
 .metadata-property-value :is(.metadata-input-date, .metadata-input-datetime) > .clickable-icon {
-  margin-inline-end: var(--size-2-3) !important;
+  margin-inline-start: var(--size-2-2) !important;
+  margin-inline-end: 0 !important;
 }
 
 .metadata-property-value :is(.metadata-input-date, .metadata-input-datetime) > :is(input, span, div):not(.clickable-icon) {
-  margin-inline-start: var(--size-2-3);
+  margin-inline-start: 0;
 }
 
 .metadata-property-value :is(.metadata-input-date, .metadata-input-datetime) input {
-  padding-inline-start: var(--size-2-3);
+  padding-inline-start: 0;
+}
+
+/* Native date input — inherit theme colors */
+.metadata-input-date input[type="date"],
+.metadata-input-datetime input[type="datetime-local"] {
+  color: var(--text-normal);
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: var(--metadata-input-font-size, var(--font-ui-small));
+  font-family: inherit;
+}
+.theme-light .metadata-input-date input[type="date"],
+.theme-light .metadata-input-datetime input[type="datetime-local"] {
+  color-scheme: light;
+}
+.theme-dark .metadata-input-date input[type="date"],
+.theme-dark .metadata-input-datetime input[type="datetime-local"] {
+  color-scheme: dark;
+}
+.metadata-input-date input[type="date"]::-webkit-datetime-edit,
+.metadata-input-datetime input[type="datetime-local"]::-webkit-datetime-edit {
+  color: var(--text-normal);
+  padding: 0;
+}
+.metadata-input-date input[type="date"]::-webkit-datetime-edit-fields-wrapper,
+.metadata-input-datetime input[type="datetime-local"]::-webkit-datetime-edit-fields-wrapper {
+  padding: 0;
+}
+.metadata-input-date input[type="date"]::-webkit-calendar-picker-indicator,
+.metadata-input-datetime input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+.metadata-input-date input[type="date"]::-webkit-inner-spin-button,
+.metadata-input-datetime input[type="datetime-local"]::-webkit-inner-spin-button {
+  display: none;
 }
 
 .metadata-property-value :is(input[type="checkbox"], .metadata-input-checkbox) {
