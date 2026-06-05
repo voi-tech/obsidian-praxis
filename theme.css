@@ -5708,7 +5708,6 @@ body.praxis-disable-checkbox-click label.task-list-label:has(> input[data-task]:
   width: 0;
 }
 
-body.praxis-callouts-outlined .callout { background: transparent; }
 body.praxis-callouts-minimal .callout {
   background: transparent;
   border-color: transparent;
