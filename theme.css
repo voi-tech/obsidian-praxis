@@ -1239,7 +1239,7 @@ body {
   margin: 0 auto;
 }
 
-.callouts-outlined .callout .callout-title {
+body.praxis-callouts-outlined .callout .callout-title {
   background-color: var(--background-primary);
   margin-top: -24px;
   z-index: 200;
@@ -1249,7 +1249,7 @@ body {
   letter-spacing: 0.05em;
   font-variant-caps: all-small-caps;
 }
-.callouts-outlined .callout {
+body.praxis-callouts-outlined .callout {
   overflow: visible;
   --callout-border-width: 1px;
   --callout-border-opacity: 0.5;
@@ -1257,10 +1257,10 @@ body {
   --callout-blend-mode: normal;
   background-color: transparent;
 }
-.callouts-outlined .cm-embed-block.cm-callout {
+body.praxis-callouts-outlined .cm-embed-block.cm-callout {
   padding-top: 12px;
 }
-.callouts-outlined .callout-content .callout {
+body.praxis-callouts-outlined .callout-content .callout {
   margin-top: 18px;
 }
 
