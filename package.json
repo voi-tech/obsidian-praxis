@@ -1,6 +1,6 @@
 {
   "name": "@voitech/obsidian-praxis",
-  "version": "26.06.5",
+  "version": "26.06.5.1",
   "private": true,
   "description": "Praxis theme for Obsidian, with a lightweight Obsidian Publish companion stylesheet.",
   "license": "MIT",
