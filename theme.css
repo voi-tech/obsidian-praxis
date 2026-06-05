@@ -5293,7 +5293,7 @@ body {
 
 /* Spacious properties toggle */
 body.praxis-properties-spacious {
-  --metadata-padding: var(--size-4-1) 0 var(--size-4-2) 0;
+  --metadata-padding: var(--praxis-space-4) 0 var(--praxis-space-5) 0;
   --metadata-gap: var(--size-2-2);
   --metadata-property-padding: var(--size-2-2) var(--size-2-3);
   --metadata-input-height: 34px;
