@@ -5282,7 +5282,7 @@ body {
 .vertical-tab-nav-item {
   padding-top: var(--size-2-2);
   padding-bottom: var(--size-2-2);
-  padding-inline: var(--size-4-2);
+  padding-inline: var(--praxis-space-5);
 }
 
 /* Search fields — ensure icon doesn't overlap text */
