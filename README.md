@@ -4,6 +4,18 @@ Praxis is a warm, focused Obsidian theme built from Minimal's proven foundation 
 
 ![Praxis screenshot](screenshot.png)
 
+## About Praxis
+
+- [Features](#features)
+- [Install](#install)
+- [Companion plugins](#companion-plugins)
+- [Style Settings](#style-settings)
+- [Helper classes](#helper-classes)
+- [Obsidian Publish](#obsidian-publish)
+- [Development](#development)
+- [Community theme submission](#community-theme-submission)
+- [Credits and license](#credits-and-license)
+
 ## Features
 
 - Warm light and dark palettes with a true black dark variant
@@ -33,9 +45,17 @@ BRAT can install Praxis directly from GitHub while the theme is in beta or befor
 
 Praxis targets Obsidian 1.13.0 or newer and works on desktop and mobile.
 
+## Companion Plugins
+
+Praxis does not require companion plugins, but it is designed to work well with:
+
+- [Style Settings](https://github.com/mgmeyers/obsidian-style-settings), which exposes Praxis' small set of theme toggles
+- [Hider](https://github.com/kepano/obsidian-hider), which pairs well with the compact interface and hidden chrome patterns inherited from Minimal
+- [BRAT](https://github.com/TfTHacker/obsidian42-brat), which can install Praxis before it is listed in the community theme catalog
+
 ## Style Settings
 
-Praxis works without plugins. If you install the optional Style Settings community plugin, Praxis exposes a small set of theme controls:
+Praxis works without plugins, and its Style Settings-backed features are enabled by default in the base theme. If you install the optional Style Settings community plugin, Praxis exposes a small set of controls for the same defaults:
 
 - background contrast
 - callout style
@@ -143,7 +163,7 @@ The community theme entry should use:
 {
   "name": "Praxis",
   "author": "voitech",
-  "repo": "voitech/obsidian-praxis",
+  "repo": "voi-tech/obsidian-praxis",
   "screenshot": "screenshot.png",
   "modes": ["dark", "light"]
 }
@@ -151,10 +171,10 @@ The community theme entry should use:
 
 Update `repo` if the GitHub owner or repository name differs.
 
-## Credits
+## Credits And License
 
-Praxis is a fork of [Minimal](https://github.com/kepano/obsidian-minimal) by Steph Ango. Minimal is released under the MIT License. Praxis preserves the license notice and adds its own design layer, Publish companion, task treatments, callout styling, and Properties refinements.
+Praxis is a fork and substantial adaptation of [Minimal](https://github.com/kepano/obsidian-minimal) by Steph Ango. It uses Minimal as its foundation for Obsidian app structure, helper classes, compatibility patterns, and Publish-oriented thinking, then adds the Praxis design layer: warm palettes, compact spacing, task treatments, callout styling, Properties refinements, and a companion `publish.css`.
 
-## License
+Minimal is released under the MIT License. Praxis preserves the copyright and license notice in `theme.css` and is also released under the MIT License.
 
-MIT
+If Praxis is useful to you, please also support the original Minimal project: [Buy me a coffee for kepano](https://www.buymeacoffee.com/kepano).

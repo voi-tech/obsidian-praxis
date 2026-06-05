@@ -266,7 +266,7 @@ if (/\.metadata-property\s*\{[\s\S]*?(?:display|flex|min-height)/.test(themeCss)
 
 requireMarkers("README.md", readme, [
   "Install with BRAT",
-  "https://github.com/voitech/obsidian-praxis",
+  "https://github.com/voi-tech/obsidian-praxis",
   "Appearance -> Themes"
 ]);
 

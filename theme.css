@@ -79,7 +79,7 @@ settings:
     id: praxis-links-underlined
     title: Underline links
     type: class-toggle
-    default: false
+    default: true
   -
     id: praxis-content
     title: Content
@@ -91,18 +91,18 @@ settings:
     title: Checkbox icons
     description: Show custom icons for special task types
     type: class-toggle
-    default: false
+    default: true
   -
     id: praxis-disable-checkbox-click
     title: Disable checkbox click
     description: Prevent clicking on custom task icons to toggle their state
     type: class-toggle
-    default: false
+    default: true
   -
     id: active-line-on
     title: Highlight active line
     type: class-toggle
-    default: false
+    default: true
   -
     id: praxis-properties-heading
     title: Properties
@@ -113,12 +113,12 @@ settings:
     id: metadata-heading-off
     title: Hide properties heading
     type: class-toggle
-    default: false
+    default: true
   -
     id: metadata-add-property-off
     title: Hide "Add property" button
     type: class-toggle
-    default: false
+    default: true
 */
 
 
@@ -620,11 +620,11 @@ body {
   --input-height: calc(var(--font-adaptive-small) * 2.2);
 }
 
-body.metadata-heading-off .metadata-properties-heading {
+.metadata-properties-heading {
   display: none;
 }
 
-.metadata-add-property-off .mod-root .metadata-add-button {
+.mod-root .metadata-add-button {
   display: none;
 }
 
@@ -1706,8 +1706,8 @@ body,
 
 /* Minimal features */
 /* Active line highlight */
-.active-line-on .workspace-leaf-content[data-type=markdown] .cm-line.cm-active,
-.active-line-on .workspace-leaf-content[data-type=markdown] .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote.cm-active {
+.workspace-leaf-content[data-type=markdown] .cm-line.cm-active,
+.workspace-leaf-content[data-type=markdown] .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote.cm-active {
   background-color: var(--active-line-bg);
   box-shadow: -25vw 0px var(--active-line-bg), 25vw 0 var(--active-line-bg);
 }
@@ -2312,7 +2312,7 @@ body {
 }
 
 .links-int-on .cards table {
-  --link-decoration: none;
+  --link-decoration: underline;
 }
 
 /* Block button */
@@ -2453,7 +2453,7 @@ body {
 }
 .list-cards.markdown-preview-view div > ul > li > a {
   --link-decoration: none;
-  --link-external-decoration: none;
+  --link-external-decoration: underline;
   font-weight: var(--bold-weight);
 }
 .list-cards.markdown-preview-view div ul > li:hover {
@@ -5461,11 +5461,11 @@ body {
   --praxis-icon-wallet: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M17 14h.01'/%3E%3Cpath d='M7 7h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14'/%3E%3C/svg%3E");
 }
 
-body.praxis-checkbox-icons
+body
   :is(input[data-task="/"], input[data-task="-"], input[data-task=">"], input[data-task="<"], input[data-task="?"], input[data-task="!"], input[data-task="*"], input[data-task="\""], input[data-task="\u201c"], input[data-task="l"], input[data-task="b"], input[data-task="i"], input[data-task="S"], input[data-task="I"], input[data-task="p"], input[data-task="c"], input[data-task="f"], input[data-task="k"], input[data-task="w"], input[data-task="u"], input[data-task="d"], input[data-task="+"], input[data-task="B"], input[data-task="a"], input[data-task="n"], input[data-task="R"], input[data-task="t"], input[data-task="P"], input[data-task="L"]):checked,
-body.praxis-checkbox-icons
+body
   li:is([data-task="/"], [data-task="-"], [data-task=">"], [data-task="<"], [data-task="?"], [data-task="!"], [data-task="*"], [data-task="\""], [data-task="\u201c"], [data-task="l"], [data-task="b"], [data-task="i"], [data-task="S"], [data-task="I"], [data-task="p"], [data-task="c"], [data-task="f"], [data-task="k"], [data-task="w"], [data-task="u"], [data-task="d"], [data-task="+"], [data-task="B"], [data-task="a"], [data-task="n"], [data-task="R"], [data-task="t"], [data-task="P"], [data-task="L"]) > input:checked,
-body.praxis-checkbox-icons
+body
   li:is([data-task="/"], [data-task="-"], [data-task=">"], [data-task="<"], [data-task="?"], [data-task="!"], [data-task="*"], [data-task="\""], [data-task="\u201c"], [data-task="l"], [data-task="b"], [data-task="i"], [data-task="S"], [data-task="I"], [data-task="p"], [data-task="c"], [data-task="f"], [data-task="k"], [data-task="w"], [data-task="u"], [data-task="d"], [data-task="+"], [data-task="B"], [data-task="a"], [data-task="n"], [data-task="R"], [data-task="t"], [data-task="P"], [data-task="L"]) > p > input:checked {
   --checkbox-marker-color: transparent !important;
   appearance: none !important;
@@ -5493,17 +5493,17 @@ body.praxis-checkbox-icons
   -webkit-mask-size: var(--checkbox-icon, 1em) !important;
 }
 
-body.praxis-checkbox-icons
+body
   :is(input[data-task="/"], input[data-task="-"], input[data-task=">"], input[data-task="<"], input[data-task="?"], input[data-task="!"], input[data-task="*"], input[data-task="\""], input[data-task="\u201c"], input[data-task="l"], input[data-task="b"], input[data-task="i"], input[data-task="S"], input[data-task="I"], input[data-task="p"], input[data-task="c"], input[data-task="f"], input[data-task="k"], input[data-task="w"], input[data-task="u"], input[data-task="d"], input[data-task="+"], input[data-task="B"], input[data-task="a"], input[data-task="n"], input[data-task="R"], input[data-task="t"], input[data-task="P"], input[data-task="L"]):checked::after,
-body.praxis-checkbox-icons
+body
   li:is([data-task="/"], [data-task="-"], [data-task=">"], [data-task="<"], [data-task="?"], [data-task="!"], [data-task="*"], [data-task="\""], [data-task="\u201c"], [data-task="l"], [data-task="b"], [data-task="i"], [data-task="S"], [data-task="I"], [data-task="p"], [data-task="c"], [data-task="f"], [data-task="k"], [data-task="w"], [data-task="u"], [data-task="d"], [data-task="+"], [data-task="B"], [data-task="a"], [data-task="n"], [data-task="R"], [data-task="t"], [data-task="P"], [data-task="L"]) > input:checked::after,
-body.praxis-checkbox-icons
+body
   li:is([data-task="/"], [data-task="-"], [data-task=">"], [data-task="<"], [data-task="?"], [data-task="!"], [data-task="*"], [data-task="\""], [data-task="\u201c"], [data-task="l"], [data-task="b"], [data-task="i"], [data-task="S"], [data-task="I"], [data-task="p"], [data-task="c"], [data-task="f"], [data-task="k"], [data-task="w"], [data-task="u"], [data-task="d"], [data-task="+"], [data-task="B"], [data-task="a"], [data-task="n"], [data-task="R"], [data-task="t"], [data-task="P"], [data-task="L"]) > p > input:checked::after,
-body.praxis-checkbox-icons
+body
   :is(input[data-task="/"], input[data-task="-"], input[data-task=">"], input[data-task="<"], input[data-task="?"], input[data-task="!"], input[data-task="*"], input[data-task="\""], input[data-task="\u201c"], input[data-task="l"], input[data-task="b"], input[data-task="i"], input[data-task="S"], input[data-task="I"], input[data-task="p"], input[data-task="c"], input[data-task="f"], input[data-task="k"], input[data-task="w"], input[data-task="u"], input[data-task="d"], input[data-task="+"], input[data-task="B"], input[data-task="a"], input[data-task="n"], input[data-task="R"], input[data-task="t"], input[data-task="P"], input[data-task="L"]):checked::before,
-body.praxis-checkbox-icons
+body
   li:is([data-task="/"], [data-task="-"], [data-task=">"], [data-task="<"], [data-task="?"], [data-task="!"], [data-task="*"], [data-task="\""], [data-task="\u201c"], [data-task="l"], [data-task="b"], [data-task="i"], [data-task="S"], [data-task="I"], [data-task="p"], [data-task="c"], [data-task="f"], [data-task="k"], [data-task="w"], [data-task="u"], [data-task="d"], [data-task="+"], [data-task="B"], [data-task="a"], [data-task="n"], [data-task="R"], [data-task="t"], [data-task="P"], [data-task="L"]) > input:checked::before,
-body.praxis-checkbox-icons
+body
   li:is([data-task="/"], [data-task="-"], [data-task=">"], [data-task="<"], [data-task="?"], [data-task="!"], [data-task="*"], [data-task="\""], [data-task="\u201c"], [data-task="l"], [data-task="b"], [data-task="i"], [data-task="S"], [data-task="I"], [data-task="p"], [data-task="c"], [data-task="f"], [data-task="k"], [data-task="w"], [data-task="u"], [data-task="d"], [data-task="+"], [data-task="B"], [data-task="a"], [data-task="n"], [data-task="R"], [data-task="t"], [data-task="P"], [data-task="L"]) > p > input:checked::before {
   background: none !important;
   border: 0 !important;
@@ -5515,34 +5515,34 @@ body.praxis-checkbox-icons
   -webkit-mask: none !important;
 }
 
-body.praxis-checkbox-icons :is(input[data-task="/"], li[data-task="/"]) { --praxis-task-icon: var(--praxis-icon-minus); --praxis-task-color: var(--praxis-task-muted); }
-body.praxis-checkbox-icons :is(input[data-task="-"], li[data-task="-"]) { --praxis-task-icon: var(--praxis-icon-minus); --praxis-task-color: var(--praxis-task-muted); }
-body.praxis-checkbox-icons :is(input[data-task=">"], li[data-task=">"]) { --praxis-task-icon: var(--praxis-icon-paper-plane); --praxis-task-color: var(--praxis-task-muted); }
-body.praxis-checkbox-icons :is(input[data-task="<"], li[data-task="<"]) { --praxis-task-icon: var(--praxis-icon-calendar); --praxis-task-color: var(--praxis-task-muted); }
-body.praxis-checkbox-icons :is(input[data-task="?"], li[data-task="?"]) { --praxis-task-icon: var(--praxis-icon-question); --praxis-task-color: var(--praxis-task-violet); }
-body.praxis-checkbox-icons :is(input[data-task="!"], li[data-task="!"]) { --praxis-task-icon: var(--praxis-icon-alert); --praxis-task-color: var(--praxis-task-orange); }
-body.praxis-checkbox-icons :is(input[data-task="*"], li[data-task="*"]) { --praxis-task-icon: var(--praxis-icon-star); --praxis-task-color: var(--praxis-task-violet); }
-body.praxis-checkbox-icons :is(input[data-task='"'], input[data-task="\201c"], li[data-task='"'], li[data-task="\201c"]) { --praxis-task-icon: var(--praxis-icon-quote); --praxis-task-color: var(--praxis-task-brown); }
-body.praxis-checkbox-icons :is(input[data-task="l"], li[data-task="l"]) { --praxis-task-icon: var(--praxis-icon-map-pin); --praxis-task-color: var(--praxis-task-orange); }
-body.praxis-checkbox-icons :is(input[data-task="b"], li[data-task="b"]) { --praxis-task-icon: var(--praxis-icon-bookmark); --praxis-task-color: var(--praxis-task-violet); }
-body.praxis-checkbox-icons :is(input[data-task="i"], li[data-task="i"]) { --praxis-task-icon: var(--praxis-icon-info); --praxis-task-color: var(--praxis-task-mint); }
-body.praxis-checkbox-icons :is(input[data-task="S"], li[data-task="S"]) { --praxis-task-icon: var(--praxis-icon-wallet); --praxis-task-color: var(--praxis-task-mint); }
-body.praxis-checkbox-icons :is(input[data-task="I"], li[data-task="I"]) { --praxis-task-icon: var(--praxis-icon-lightbulb); --praxis-task-color: var(--praxis-task-violet); }
-body.praxis-checkbox-icons :is(input[data-task="p"], li[data-task="p"]) { --praxis-task-icon: var(--praxis-icon-thumbs-up); --praxis-task-color: var(--praxis-task-mint); }
-body.praxis-checkbox-icons :is(input[data-task="c"], li[data-task="c"]) { --praxis-task-icon: var(--praxis-icon-thumbs-down); --praxis-task-color: var(--praxis-task-orange); }
-body.praxis-checkbox-icons :is(input[data-task="f"], li[data-task="f"]) { --praxis-task-icon: var(--praxis-icon-flame); --praxis-task-color: var(--praxis-task-orange); }
-body.praxis-checkbox-icons :is(input[data-task="k"], li[data-task="k"]) { --praxis-task-icon: var(--praxis-icon-key); --praxis-task-color: var(--praxis-task-violet); }
-body.praxis-checkbox-icons :is(input[data-task="w"], li[data-task="w"]) { --praxis-task-icon: var(--praxis-icon-trophy); --praxis-task-color: var(--praxis-task-violet); }
-body.praxis-checkbox-icons :is(input[data-task="u"], li[data-task="u"]) { --praxis-task-icon: var(--praxis-icon-trend-up); --praxis-task-color: var(--praxis-task-mint); }
-body.praxis-checkbox-icons :is(input[data-task="d"], li[data-task="d"]) { --praxis-task-icon: var(--praxis-icon-trend-down); --praxis-task-color: var(--praxis-task-orange); }
-body.praxis-checkbox-icons :is(input[data-task="+"], li[data-task="+"]) { --praxis-task-icon: var(--praxis-icon-plus); --praxis-task-color: var(--praxis-task-mint); }
-body.praxis-checkbox-icons :is(input[data-task="B"], li[data-task="B"]) { --praxis-task-icon: var(--praxis-icon-brain); --praxis-task-color: var(--praxis-task-violet); }
-body.praxis-checkbox-icons :is(input[data-task="a"], li[data-task="a"]) { --praxis-task-icon: var(--praxis-icon-alarm); --praxis-task-color: var(--praxis-task-orange); }
-body.praxis-checkbox-icons :is(input[data-task="n"], li[data-task="n"]) { --praxis-task-icon: var(--praxis-icon-note); --praxis-task-color: var(--praxis-task-violet); }
-body.praxis-checkbox-icons :is(input[data-task="R"], li[data-task="R"]) { --praxis-task-icon: var(--praxis-icon-review); --praxis-task-color: var(--praxis-task-mint); }
-body.praxis-checkbox-icons :is(input[data-task="t"], li[data-task="t"]) { --praxis-task-icon: var(--praxis-icon-clock); --praxis-task-color: var(--praxis-task-muted); }
-body.praxis-checkbox-icons :is(input[data-task="P"], li[data-task="P"]) { --praxis-task-icon: var(--praxis-icon-phone); --praxis-task-color: var(--praxis-task-mint); }
-body.praxis-checkbox-icons :is(input[data-task="L"], li[data-task="L"]) { --praxis-task-icon: var(--praxis-icon-heart); --praxis-task-color: var(--praxis-task-violet); }
+body :is(input[data-task="/"], li[data-task="/"]) { --praxis-task-icon: var(--praxis-icon-minus); --praxis-task-color: var(--praxis-task-muted); }
+body :is(input[data-task="-"], li[data-task="-"]) { --praxis-task-icon: var(--praxis-icon-minus); --praxis-task-color: var(--praxis-task-muted); }
+body :is(input[data-task=">"], li[data-task=">"]) { --praxis-task-icon: var(--praxis-icon-paper-plane); --praxis-task-color: var(--praxis-task-muted); }
+body :is(input[data-task="<"], li[data-task="<"]) { --praxis-task-icon: var(--praxis-icon-calendar); --praxis-task-color: var(--praxis-task-muted); }
+body :is(input[data-task="?"], li[data-task="?"]) { --praxis-task-icon: var(--praxis-icon-question); --praxis-task-color: var(--praxis-task-violet); }
+body :is(input[data-task="!"], li[data-task="!"]) { --praxis-task-icon: var(--praxis-icon-alert); --praxis-task-color: var(--praxis-task-orange); }
+body :is(input[data-task="*"], li[data-task="*"]) { --praxis-task-icon: var(--praxis-icon-star); --praxis-task-color: var(--praxis-task-violet); }
+body :is(input[data-task='"'], input[data-task="\201c"], li[data-task='"'], li[data-task="\201c"]) { --praxis-task-icon: var(--praxis-icon-quote); --praxis-task-color: var(--praxis-task-brown); }
+body :is(input[data-task="l"], li[data-task="l"]) { --praxis-task-icon: var(--praxis-icon-map-pin); --praxis-task-color: var(--praxis-task-orange); }
+body :is(input[data-task="b"], li[data-task="b"]) { --praxis-task-icon: var(--praxis-icon-bookmark); --praxis-task-color: var(--praxis-task-violet); }
+body :is(input[data-task="i"], li[data-task="i"]) { --praxis-task-icon: var(--praxis-icon-info); --praxis-task-color: var(--praxis-task-mint); }
+body :is(input[data-task="S"], li[data-task="S"]) { --praxis-task-icon: var(--praxis-icon-wallet); --praxis-task-color: var(--praxis-task-mint); }
+body :is(input[data-task="I"], li[data-task="I"]) { --praxis-task-icon: var(--praxis-icon-lightbulb); --praxis-task-color: var(--praxis-task-violet); }
+body :is(input[data-task="p"], li[data-task="p"]) { --praxis-task-icon: var(--praxis-icon-thumbs-up); --praxis-task-color: var(--praxis-task-mint); }
+body :is(input[data-task="c"], li[data-task="c"]) { --praxis-task-icon: var(--praxis-icon-thumbs-down); --praxis-task-color: var(--praxis-task-orange); }
+body :is(input[data-task="f"], li[data-task="f"]) { --praxis-task-icon: var(--praxis-icon-flame); --praxis-task-color: var(--praxis-task-orange); }
+body :is(input[data-task="k"], li[data-task="k"]) { --praxis-task-icon: var(--praxis-icon-key); --praxis-task-color: var(--praxis-task-violet); }
+body :is(input[data-task="w"], li[data-task="w"]) { --praxis-task-icon: var(--praxis-icon-trophy); --praxis-task-color: var(--praxis-task-violet); }
+body :is(input[data-task="u"], li[data-task="u"]) { --praxis-task-icon: var(--praxis-icon-trend-up); --praxis-task-color: var(--praxis-task-mint); }
+body :is(input[data-task="d"], li[data-task="d"]) { --praxis-task-icon: var(--praxis-icon-trend-down); --praxis-task-color: var(--praxis-task-orange); }
+body :is(input[data-task="+"], li[data-task="+"]) { --praxis-task-icon: var(--praxis-icon-plus); --praxis-task-color: var(--praxis-task-mint); }
+body :is(input[data-task="B"], li[data-task="B"]) { --praxis-task-icon: var(--praxis-icon-brain); --praxis-task-color: var(--praxis-task-violet); }
+body :is(input[data-task="a"], li[data-task="a"]) { --praxis-task-icon: var(--praxis-icon-alarm); --praxis-task-color: var(--praxis-task-orange); }
+body :is(input[data-task="n"], li[data-task="n"]) { --praxis-task-icon: var(--praxis-icon-note); --praxis-task-color: var(--praxis-task-violet); }
+body :is(input[data-task="R"], li[data-task="R"]) { --praxis-task-icon: var(--praxis-icon-review); --praxis-task-color: var(--praxis-task-mint); }
+body :is(input[data-task="t"], li[data-task="t"]) { --praxis-task-icon: var(--praxis-icon-clock); --praxis-task-color: var(--praxis-task-muted); }
+body :is(input[data-task="P"], li[data-task="P"]) { --praxis-task-icon: var(--praxis-icon-phone); --praxis-task-color: var(--praxis-task-mint); }
+body :is(input[data-task="L"], li[data-task="L"]) { --praxis-task-icon: var(--praxis-icon-heart); --praxis-task-color: var(--praxis-task-violet); }
 
 .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="x"],
 .markdown-rendered li[data-task="x"] {
@@ -5555,10 +5555,10 @@ body.praxis-checkbox-icons :is(input[data-task="L"], li[data-task="L"]) { --prax
   transition: opacity ease-in-out 0.5s !important;
 }
 
-body.praxis-disable-checkbox-click input[data-task]:not(input[data-task=""], input[data-task=" "], input[data-task="x"]):checked,
-body.praxis-disable-checkbox-click li[data-task]:not(li[data-task=""], li[data-task=" "], li[data-task="x"]) > input:checked,
-body.praxis-disable-checkbox-click li[data-task]:not(li[data-task=""], li[data-task=" "], li[data-task="x"]) > p > input:checked,
-body.praxis-disable-checkbox-click label.task-list-label:has(> input[data-task]:not(input[data-task=""], input[data-task=" "], input[data-task="x"]):checked) {
+input[data-task]:not(input[data-task=""], input[data-task=" "], input[data-task="x"]):checked,
+li[data-task]:not(li[data-task=""], li[data-task=" "], li[data-task="x"]) > input:checked,
+li[data-task]:not(li[data-task=""], li[data-task=" "], li[data-task="x"]) > p > input:checked,
+label.task-list-label:has(> input[data-task]:not(input[data-task=""], input[data-task=" "], input[data-task="x"]):checked) {
   pointer-events: none;
 }
 
