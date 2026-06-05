@@ -8,12 +8,9 @@ Praxis is a warm, focused Obsidian theme built from Minimal's proven foundation 
 
 - [Features](#features)
 - [Install](#install)
-- [Companion plugins](#companion-plugins)
 - [Style Settings](#style-settings)
 - [Helper classes](#helper-classes)
 - [Obsidian Publish](#obsidian-publish)
-- [Development](#development)
-- [Community theme submission](#community-theme-submission)
 - [Credits and license](#credits-and-license)
 
 ## Features
@@ -45,17 +42,9 @@ BRAT can install Praxis directly from GitHub while the theme is in beta or befor
 
 Praxis targets Obsidian 1.13.0 or newer and works on desktop and mobile.
 
-## Companion Plugins
-
-Praxis does not require companion plugins, but it is designed to work well with:
-
-- [Style Settings](https://github.com/mgmeyers/obsidian-style-settings), which exposes Praxis' small set of theme toggles
-- [Hider](https://github.com/kepano/obsidian-hider), which pairs well with the compact interface and hidden chrome patterns inherited from Minimal
-- [BRAT](https://github.com/TfTHacker/obsidian42-brat), which can install Praxis before it is listed in the community theme catalog
-
 ## Style Settings
 
-Praxis works without plugins, and its Style Settings-backed features are enabled by default in the base theme. If you install the optional Style Settings community plugin, Praxis exposes a small set of controls for the same defaults:
+Praxis works without plugins, and its Style Settings-backed features are enabled by default in the base theme. If you install the optional [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) community plugin, Praxis exposes a small set of controls for the same defaults:
 
 - background contrast
 - callout style
@@ -137,44 +126,10 @@ Callouts use Lucide-based icons. The custom `[!author]` callout is styled for qu
 
 To use it, publish `publish.css` at the root of your Publish vault. Style Settings does not run on Obsidian Publish, so Publish customization should be done directly through CSS variables in `publish.css`.
 
-## Development
-
-Praxis has no runtime or development dependencies. The package scripts validate the distributable files:
-
-```sh
-npm run validate
-```
-
-The validator checks required files, manifest fields, the lightweight Style Settings block, CSS balance, Minimal-compatible helper classes, Publish boundaries, and absence of private local paths.
-
-## Community Theme Submission
-
-The repository is prepared for Obsidian community theme submission with:
-
-- `theme.css`
-- `manifest.json`
-- `README.md`
-- `LICENSE`
-- `screenshot.png`
-
-The community theme entry should use:
-
-```json
-{
-  "name": "Praxis",
-  "author": "voitech",
-  "repo": "voi-tech/obsidian-praxis",
-  "screenshot": "screenshot.png",
-  "modes": ["dark", "light"]
-}
-```
-
-Update `repo` if the GitHub owner or repository name differs.
-
 ## Credits And License
 
 Praxis is a fork and substantial adaptation of [Minimal](https://github.com/kepano/obsidian-minimal) by Steph Ango. It uses Minimal as its foundation for Obsidian app structure, helper classes, compatibility patterns, and Publish-oriented thinking, then adds the Praxis design layer: warm palettes, compact spacing, task treatments, callout styling, Properties refinements, and a companion `publish.css`.
 
 Minimal is released under the MIT License. Praxis preserves the copyright and license notice in `theme.css` and is also released under the MIT License.
 
-If Praxis is useful to you, please also support the original Minimal project: [Buy me a coffee for kepano](https://www.buymeacoffee.com/kepano).
+If Praxis is useful to you, please also [support the original Minimal project](https://www.buymeacoffee.com/kepano).
