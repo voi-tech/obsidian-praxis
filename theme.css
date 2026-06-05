@@ -1759,12 +1759,12 @@ body {
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer > .metadata-container {
   max-width: var(--max-width);
   width: var(--line-width);
-  margin-inline: var(--content-margin);
+  margin-inline: var(--content-margin) !important;
 }
 
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > *:not(div) {
   max-width: var(--content-line-width);
-  margin-inline-start: var(--content-margin-start);
+  margin-inline-start: var(--content-margin-start) !important;
 }
 
 /* File margins ------------------------------------ */
