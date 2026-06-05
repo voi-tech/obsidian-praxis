@@ -11,7 +11,7 @@ body {
   --praxis-font-monospace-theme: "Geist Mono", "SFMono-Regular", Consolas, monospace;
   --praxis-font-text-size: 16px;
   --praxis-line-width: 860px;
-  --praxis-radius: 8px;
+  --praxis-radius: 13px;
   --praxis-accent: #7a60c8;
 
   --font-interface-theme: var(--praxis-font-interface-theme);
@@ -494,17 +494,146 @@ span[src$="#circle"] img {
   --cards-image-fit: cover;
 }
 
+body {
+  --praxis-task-violet: var(--praxis-text-accent);
+  --praxis-task-mint: var(--green);
+  --praxis-task-orange: var(--orange);
+  --praxis-task-brown: var(--text-muted);
+  --praxis-task-muted: var(--text-faint);
+  --praxis-icon-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E");
+  --praxis-icon-minus: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round'%3E%3Cpath d='M5 12h14'/%3E%3C/svg%3E");
+  --praxis-icon-send: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m22 2-7 20-4-9-9-4Z'/%3E%3Cpath d='M22 2 11 13'/%3E%3C/svg%3E");
+  --praxis-icon-calendar: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M8 2v4M16 2v4'/%3E%3Crect x='3' y='4' width='18' height='18' rx='2'/%3E%3Cpath d='M3 10h18'/%3E%3C/svg%3E");
+  --praxis-icon-circle-help: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='M9.1 9a3 3 0 1 1 5.8 1c-.7 1.2-2.9 1.6-2.9 3M12 17h.01'/%3E%3C/svg%3E");
+  --praxis-icon-triangle-alert: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m21.7 18-8-14a2 2 0 0 0-3.4 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.7-3Z'/%3E%3Cpath d='M12 9v4M12 17h.01'/%3E%3C/svg%3E");
+  --praxis-icon-star: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M11.5 2.3a.6.6 0 0 1 1 0l3 6.1 6.7 1a.6.6 0 0 1 .3 1l-4.9 4.8 1.2 6.7a.6.6 0 0 1-.9.6L12 19.3l-6 3.2a.6.6 0 0 1-.9-.6l1.2-6.7-4.9-4.8a.6.6 0 0 1 .3-1l6.7-1 3-6.1z'/%3E%3C/svg%3E");
+  --praxis-icon-quote: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 21c3 0 7-1 7-8V5c0-1.3-.7-2-2-2H4c-1.3 0-2 .7-2 2v4c0 1.3.7 2 2 2h3c0 4-2 6-4 6v4Z'/%3E%3Cpath d='M15 21c3 0 7-1 7-8V5c0-1.3-.7-2-2-2h-4c-1.3 0-2 .7-2 2v4c0 1.3.7 2 2 2h3c0 4-2 6-4 6v4Z'/%3E%3C/svg%3E");
+  --praxis-icon-map-pin: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 10c0 4.9-8 12-8 12S4 14.9 4 10a8 8 0 0 1 16 0Z'/%3E%3Ccircle cx='12' cy='10' r='3'/%3E%3C/svg%3E");
+  --praxis-icon-bookmark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z'/%3E%3C/svg%3E");
+  --praxis-icon-info: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='M12 16v-4M12 8h.01'/%3E%3C/svg%3E");
+  --praxis-icon-wallet: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M17 14h.01'/%3E%3Cpath d='M7 7h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14'/%3E%3C/svg%3E");
+  --praxis-icon-lightbulb: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 18h6M10 22h4M12 2v2M4.9 4.9l1.4 1.4M19.1 4.9l-1.4 1.4M2 12h2M20 12h2'/%3E%3Cpath d='M8 14a6 6 0 1 1 8 0c-.7.7-1 1.4-1 2H9c0-.6-.3-1.3-1-2Z'/%3E%3C/svg%3E");
+  --praxis-icon-thumbs-up: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M7 10v12'/%3E%3Cpath d='M15 5.9 14 10h5.8a2 2 0 0 1 1.9 2.6l-1.4 7a2 2 0 0 1-1.9 1.4H7a2 2 0 0 1-2-2v-8.4a4 4 0 0 1 .8-2.4L10 3a2 2 0 0 1 3 2.6Z'/%3E%3C/svg%3E");
+  --praxis-icon-thumbs-down: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M17 14V2'/%3E%3Cpath d='M9 18.1 10 14H4.2a2 2 0 0 1-1.9-2.6l1.4-7A2 2 0 0 1 5.6 3H17a2 2 0 0 1 2 2v8.4a4 4 0 0 1-.8 2.4L14 21a2 2 0 0 1-3-2.6Z'/%3E%3C/svg%3E");
+  --praxis-icon-flame: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.4-.5-2-1-3-1.1 1.1-2 2.3-2 4a4 4 0 0 0 8 0c0-2.3-1.1-4.4-3-6 .2 1.6-.3 3-1.5 4.5'/%3E%3Cpath d='M12 22a8 8 0 0 0 8-8c0-4.8-3.4-7.7-6.2-10.6-.8 2.8-2.5 4.4-4.6 6.2C7.5 11.1 6 12.7 6 15a6 6 0 0 0 12 0'/%3E%3C/svg%3E");
+  --praxis-icon-key: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M2 18v3c0 .6.4 1 1 1h4v-3h3v-3h2l1.4-1.4a6.5 6.5 0 1 0-4-4Z'/%3E%3Ccircle cx='16.5' cy='7.5' r='.5' fill='black'/%3E%3C/svg%3E");
+  --praxis-icon-trophy: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0Z'/%3E%3Cpath d='M5 4H3v3a4 4 0 0 0 4 4M19 4h2v3a4 4 0 0 1-4 4'/%3E%3C/svg%3E");
+  --praxis-icon-trending-up: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m22 7-8.5 8.5-5-5L2 17'/%3E%3Cpath d='M16 7h6v6'/%3E%3C/svg%3E");
+  --praxis-icon-trending-down: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m22 17-8.5-8.5-5 5L2 7'/%3E%3Cpath d='M16 17h6v-6'/%3E%3C/svg%3E");
+  --praxis-icon-plus: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round'%3E%3Cpath d='M12 5v14M5 12h14'/%3E%3C/svg%3E");
+  --praxis-icon-brain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 5a3 3 0 1 0-6 .1 4 4 0 0 0-2.5 5.8 4 4 0 0 0 .5 6.6A4 4 0 1 0 12 18Z'/%3E%3Cpath d='M12 5a3 3 0 1 1 6 .1 4 4 0 0 1 2.5 5.8 4 4 0 0 1-.5 6.6A4 4 0 1 1 12 18Z'/%3E%3Cpath d='M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4'/%3E%3C/svg%3E");
+  --praxis-icon-alarm-clock: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='13' r='8'/%3E%3Cpath d='M12 9v4l2 2M5 3 2 6M22 6l-3-3M6.4 19.6 4 22M17.6 19.6 20 22'/%3E%3C/svg%3E");
+  --praxis-icon-notebook-pen: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7'/%3E%3Cpath d='M18.4 2.6a1 1 0 0 1 3 3l-9 9a2 2 0 0 1-.9.5l-2.9.8.8-2.9a2 2 0 0 1 .5-.9Z'/%3E%3C/svg%3E");
+  --praxis-icon-clipboard-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2'/%3E%3Crect x='9' y='3' width='6' height='4' rx='1'/%3E%3Cpath d='m9 14 2 2 4-5'/%3E%3C/svg%3E");
+  --praxis-icon-clock: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='M12 6v6l4 2'/%3E%3C/svg%3E");
+  --praxis-icon-phone: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.6a2 2 0 0 1-.5 2.1L8 9.7a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.8.3 1.7.6 2.6.7a2 2 0 0 1 2 2.3Z'/%3E%3C/svg%3E");
+  --praxis-icon-heart: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.8 0-3.3.8-4.5 2.1A6 6 0 0 0 7.5 3 5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4 3 5.5l7 7 7-7z'/%3E%3C/svg%3E");
+}
+
+body :is(input[data-task="/"], input[data-task="-"], input[data-task=">"], input[data-task="<"], input[data-task="?"], input[data-task="!"], input[data-task="*"], input[data-task="\""], input[data-task="“"], input[data-task="l"], input[data-task="b"], input[data-task="i"], input[data-task="S"], input[data-task="I"], input[data-task="p"], input[data-task="c"], input[data-task="f"], input[data-task="k"], input[data-task="w"], input[data-task="u"], input[data-task="d"], input[data-task="+"], input[data-task="B"], input[data-task="a"], input[data-task="n"], input[data-task="R"], input[data-task="t"], input[data-task="P"], input[data-task="L"]):checked {
+  --checkbox-marker-color: transparent !important;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  background-color: currentColor !important;
+  background-image: none !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  color: var(--praxis-task-color, var(--praxis-task-violet)) !important;
+  mask-image: var(--praxis-task-icon, var(--praxis-icon-check)) !important;
+  mask-position: 50% 50% !important;
+  mask-repeat: no-repeat !important;
+  mask-size: var(--checkbox-icon, 1em) !important;
+  -webkit-mask-image: var(--praxis-task-icon, var(--praxis-icon-check)) !important;
+  -webkit-mask-position: 50% 50% !important;
+  -webkit-mask-repeat: no-repeat !important;
+  -webkit-mask-size: var(--checkbox-icon, 1em) !important;
+}
+
+body :is(input[data-task="/"], input[data-task="-"], input[data-task=">"], input[data-task="<"], input[data-task="?"], input[data-task="!"], input[data-task="*"], input[data-task="\""], input[data-task="“"], input[data-task="l"], input[data-task="b"], input[data-task="i"], input[data-task="S"], input[data-task="I"], input[data-task="p"], input[data-task="c"], input[data-task="f"], input[data-task="k"], input[data-task="w"], input[data-task="u"], input[data-task="d"], input[data-task="+"], input[data-task="B"], input[data-task="a"], input[data-task="n"], input[data-task="R"], input[data-task="t"], input[data-task="P"], input[data-task="L"]):checked::before,
+body :is(input[data-task="/"], input[data-task="-"], input[data-task=">"], input[data-task="<"], input[data-task="?"], input[data-task="!"], input[data-task="*"], input[data-task="\""], input[data-task="“"], input[data-task="l"], input[data-task="b"], input[data-task="i"], input[data-task="S"], input[data-task="I"], input[data-task="p"], input[data-task="c"], input[data-task="f"], input[data-task="k"], input[data-task="w"], input[data-task="u"], input[data-task="d"], input[data-task="+"], input[data-task="B"], input[data-task="a"], input[data-task="n"], input[data-task="R"], input[data-task="t"], input[data-task="P"], input[data-task="L"]):checked::after {
+  content: none !important;
+  display: none !important;
+}
+
+body :is(input[data-task="/"], li[data-task="/"]) { --praxis-task-icon: var(--praxis-icon-minus); --praxis-task-color: var(--praxis-task-muted); }
+body :is(input[data-task="-"], li[data-task="-"]) { --praxis-task-icon: var(--praxis-icon-minus); --praxis-task-color: var(--praxis-task-muted); }
+body :is(input[data-task=">"], li[data-task=">"]) { --praxis-task-icon: var(--praxis-icon-send); --praxis-task-color: var(--praxis-task-muted); }
+body :is(input[data-task="<"], li[data-task="<"]) { --praxis-task-icon: var(--praxis-icon-calendar); --praxis-task-color: var(--praxis-task-muted); }
+body :is(input[data-task="?"], li[data-task="?"]) { --praxis-task-icon: var(--praxis-icon-circle-help); --praxis-task-color: var(--praxis-task-violet); }
+body :is(input[data-task="!"], li[data-task="!"]) { --praxis-task-icon: var(--praxis-icon-triangle-alert); --praxis-task-color: var(--praxis-task-orange); }
+body :is(input[data-task="*"], li[data-task="*"]) { --praxis-task-icon: var(--praxis-icon-star); --praxis-task-color: var(--praxis-task-violet); }
+body :is(input[data-task="\""], input[data-task="“"], li[data-task="\""], li[data-task="“"]) { --praxis-task-icon: var(--praxis-icon-quote); --praxis-task-color: var(--praxis-task-brown); }
+body :is(input[data-task="l"], li[data-task="l"]) { --praxis-task-icon: var(--praxis-icon-map-pin); --praxis-task-color: var(--praxis-task-orange); }
+body :is(input[data-task="b"], li[data-task="b"]) { --praxis-task-icon: var(--praxis-icon-bookmark); --praxis-task-color: var(--praxis-task-violet); }
+body :is(input[data-task="i"], li[data-task="i"]) { --praxis-task-icon: var(--praxis-icon-info); --praxis-task-color: var(--praxis-task-mint); }
+body :is(input[data-task="S"], li[data-task="S"]) { --praxis-task-icon: var(--praxis-icon-wallet); --praxis-task-color: var(--praxis-task-mint); }
+body :is(input[data-task="I"], li[data-task="I"]) { --praxis-task-icon: var(--praxis-icon-lightbulb); --praxis-task-color: var(--praxis-task-violet); }
+body :is(input[data-task="p"], li[data-task="p"]) { --praxis-task-icon: var(--praxis-icon-thumbs-up); --praxis-task-color: var(--praxis-task-mint); }
+body :is(input[data-task="c"], li[data-task="c"]) { --praxis-task-icon: var(--praxis-icon-thumbs-down); --praxis-task-color: var(--praxis-task-orange); }
+body :is(input[data-task="f"], li[data-task="f"]) { --praxis-task-icon: var(--praxis-icon-flame); --praxis-task-color: var(--praxis-task-orange); }
+body :is(input[data-task="k"], li[data-task="k"]) { --praxis-task-icon: var(--praxis-icon-key); --praxis-task-color: var(--praxis-task-violet); }
+body :is(input[data-task="w"], li[data-task="w"]) { --praxis-task-icon: var(--praxis-icon-trophy); --praxis-task-color: var(--praxis-task-violet); }
+body :is(input[data-task="u"], li[data-task="u"]) { --praxis-task-icon: var(--praxis-icon-trending-up); --praxis-task-color: var(--praxis-task-mint); }
+body :is(input[data-task="d"], li[data-task="d"]) { --praxis-task-icon: var(--praxis-icon-trending-down); --praxis-task-color: var(--praxis-task-orange); }
+body :is(input[data-task="+"], li[data-task="+"]) { --praxis-task-icon: var(--praxis-icon-plus); --praxis-task-color: var(--praxis-task-mint); }
+body :is(input[data-task="B"], li[data-task="B"]) { --praxis-task-icon: var(--praxis-icon-brain); --praxis-task-color: var(--praxis-task-violet); }
+body :is(input[data-task="a"], li[data-task="a"]) { --praxis-task-icon: var(--praxis-icon-alarm-clock); --praxis-task-color: var(--praxis-task-orange); }
+body :is(input[data-task="n"], li[data-task="n"]) { --praxis-task-icon: var(--praxis-icon-notebook-pen); --praxis-task-color: var(--praxis-task-violet); }
+body :is(input[data-task="R"], li[data-task="R"]) { --praxis-task-icon: var(--praxis-icon-clipboard-check); --praxis-task-color: var(--praxis-task-mint); }
+body :is(input[data-task="t"], li[data-task="t"]) { --praxis-task-icon: var(--praxis-icon-clock); --praxis-task-color: var(--praxis-task-muted); }
+body :is(input[data-task="P"], li[data-task="P"]) { --praxis-task-icon: var(--praxis-icon-phone); --praxis-task-color: var(--praxis-task-mint); }
+body :is(input[data-task="L"], li[data-task="L"]) { --praxis-task-icon: var(--praxis-icon-heart); --praxis-task-color: var(--praxis-task-violet); }
+
+.published-container li[data-task="x"] {
+  color: var(--text-muted);
+  opacity: 0.7;
+  text-decoration: none;
+}
+
 .callout {
-  --callout-color: 152, 120, 224;
-  --callout-title-color: #b09ae8;
-  background: rgba(var(--callout-color), 0.12);
-  border: var(--border-width) solid rgba(var(--callout-color), 0.28);
-  border-radius: var(--radius-s);
+  --callout-color: rgb(152 120 224);
+  --callout-icon: lucide-pencil;
+  --callout-title-color: var(--callout-color);
+  --callout-border-width: var(--border-width);
+  --callout-radius: var(--radius-s);
+  --callout-padding: var(--space-4);
+  --callout-title-padding: 0 0 var(--space-2) 0;
+  --callout-content-padding: var(--space-2) 0 0 0;
+  background: color-mix(in srgb, var(--callout-color) 12%, transparent);
+  border: var(--callout-border-width) solid color-mix(in srgb, var(--callout-color) 28%, transparent);
+  border-radius: var(--callout-radius);
+  padding: var(--callout-padding);
 }
 
 .callout-title,
-.callout-icon {
+.callout-icon,
+.callout-title-icon {
   color: var(--callout-title-color);
+}
+
+.callout-content {
+  padding: var(--callout-content-padding);
+}
+
+.callout[data-callout="note"] {
+  --callout-icon: lucide-pencil;
+}
+
+.callout[data-callout="abstract"],
+.callout[data-callout="summary"],
+.callout[data-callout="tldr"] {
+  --callout-icon: lucide-clipboard-list;
+}
+
+.callout[data-callout="question"],
+.callout[data-callout="help"],
+.callout[data-callout="faq"] {
+  --callout-icon: lucide-circle-help;
+}
+
+.callout[data-callout="example"] {
+  --callout-icon: lucide-list;
 }
 
 .callout[data-callout="note"],
@@ -515,8 +644,27 @@ span[src$="#circle"] img {
 .callout[data-callout="help"],
 .callout[data-callout="faq"],
 .callout[data-callout="example"] {
-  --callout-color: 152, 120, 224;
-  --callout-title-color: #b09ae8;
+  --callout-color: rgb(152 120 224);
+}
+
+.callout[data-callout="info"] {
+  --callout-icon: lucide-info;
+}
+
+.callout[data-callout="todo"] {
+  --callout-icon: lucide-check;
+}
+
+.callout[data-callout="tip"],
+.callout[data-callout="hint"],
+.callout[data-callout="important"] {
+  --callout-icon: lucide-flame;
+}
+
+.callout[data-callout="success"],
+.callout[data-callout="check"],
+.callout[data-callout="done"] {
+  --callout-icon: lucide-check;
 }
 
 .callout[data-callout="info"],
@@ -527,8 +675,28 @@ span[src$="#circle"] img {
 .callout[data-callout="success"],
 .callout[data-callout="check"],
 .callout[data-callout="done"] {
-  --callout-color: 91, 191, 178;
-  --callout-title-color: #7dcfc5;
+  --callout-color: rgb(91 191 178);
+}
+
+.callout[data-callout="warning"],
+.callout[data-callout="caution"],
+.callout[data-callout="attention"] {
+  --callout-icon: lucide-triangle-alert;
+}
+
+.callout[data-callout="failure"],
+.callout[data-callout="fail"],
+.callout[data-callout="missing"] {
+  --callout-icon: lucide-x;
+}
+
+.callout[data-callout="danger"],
+.callout[data-callout="error"] {
+  --callout-icon: lucide-zap;
+}
+
+.callout[data-callout="bug"] {
+  --callout-icon: lucide-bug;
 }
 
 .callout[data-callout="warning"],
@@ -540,14 +708,35 @@ span[src$="#circle"] img {
 .callout[data-callout="danger"],
 .callout[data-callout="error"],
 .callout[data-callout="bug"] {
-  --callout-color: 217, 122, 64;
-  --callout-title-color: #e8975c;
+  --callout-color: rgb(217 122 64);
 }
 
 .callout[data-callout="quote"],
 .callout[data-callout="cite"] {
-  --callout-color: 139, 114, 85;
-  --callout-title-color: #b8a88a;
+  --callout-color: rgb(139 114 85);
+  --callout-icon: lucide-quote;
+}
+
+.callout[data-callout="author"] {
+  --callout-color: rgb(139 114 85);
+  --callout-icon: lucide-user;
+  box-shadow: 0 var(--space-3) var(--space-6) var(--praxis-shadow);
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.callout[data-callout="author"] > .callout-title {
+  font-style: italic;
+  justify-content: flex-end;
+  padding-right: var(--space-3);
+}
+
+.callout:is([data-callout-metadata~="noicon"], [data-callout-metadata="noicon"]) .callout-icon,
+.callout:is([data-callout-metadata~="noicon"], [data-callout-metadata="noicon"]) .callout-title-icon {
+  display: none;
+  margin: 0;
+  min-width: 0;
+  width: 0;
 }
 
 @media (max-width: 750px) {

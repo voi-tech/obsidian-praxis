@@ -1,8 +1,7 @@
 {
   "name": "Praxis",
   "version": "0.1.0",
-  "minAppVersion": "1.5.0",
+  "minAppVersion": "1.13.0",
   "author": "voitech",
   "authorUrl": "https://voitech.lol"
 }
-

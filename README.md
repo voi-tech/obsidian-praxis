@@ -12,7 +12,7 @@ The theme follows Obsidian's CSS variable system and keeps a Minimal-inspired he
 2. Add `theme.css` and `manifest.json` to that folder.
 3. Open Obsidian Settings -> Appearance -> Themes and select `Praxis`.
 
-Praxis supports light and dark modes. It uses Geist and Geist Mono when available, then falls back to Inter and system fonts.
+Praxis supports light and dark modes and targets Obsidian 1.13.0 or newer. It uses Geist and Geist Mono when available, then falls back to Inter and system fonts.
 
 ## Style Settings
 
@@ -26,6 +26,7 @@ Praxis works without plugins. If you install the optional Style Settings communi
 - link underlines and H1 borders
 - table grid lines
 - callout style
+- optional click locking for custom checkbox statuses
 - card width, card image height, card image fit, and image grid gap
 
 Style Settings custom properties use stable `--praxis-*` variables where possible, so user settings can survive theme updates.
@@ -39,6 +40,8 @@ Praxis keeps the helper classes commonly used with Minimal-style workflows:
 - Cards: `cards`, `list-cards`, `cards-16-9`, `cards-1-1`, `cards-2-1`, `cards-2-3`, `cards-cols-1` through `cards-cols-8`, `cards-cover`, `cards-align-bottom`
 - Images: `img-grid`, `img-grid-ratio`, `img-zoom`
 - Image suffixes: `#outline`, `#interface`, `#invert`, `#invertW`, `#circle`
+- Checkbox icons: custom task statuses use Lucide-based icons for `/`, `-`, `>`, `<`, `?`, `!`, `*`, quote, `l`, `b`, `i`, `S`, `I`, `p`, `c`, `f`, `k`, `w`, `u`, `d`, `+`, `B`, `a`, `n`, `R`, `t`, `P`, `L`
+- Callouts: standard callouts and `[!author]` use Lucide icons; `|noicon` metadata hides callout icons
 
 Some app helpers rely on Obsidian's rendered Markdown structure and modern Chromium CSS support.
 

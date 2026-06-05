@@ -133,6 +133,10 @@ if (manifest?.name !== "Praxis") {
   fail('manifest.json "name" must be "Praxis".');
 }
 
+if (manifest?.minAppVersion !== "1.13.0") {
+  fail('manifest.json "minAppVersion" must be "1.13.0".');
+}
+
 await validatePackage();
 
 const themeCss = await readText("theme.css");
@@ -148,8 +152,15 @@ requireMarkers("theme.css", themeCss, [
   ".theme-light",
   ".theme-dark",
   "--praxis-",
+  "--praxis-radius: 13px",
   "--background-primary",
   "--font-text-theme",
+  "--callout-icon: lucide-",
+  'data-callout="author"',
+  'data-callout-metadata="noicon"',
+  "input[data-task",
+  ".HyperMD-task-line[data-task",
+  ".cm-task-list-item-checkbox",
   ".cards table",
   ".list-cards",
   ".img-grid",
@@ -161,17 +172,32 @@ requireMarkers("publish.css", publishCss, [
   ".published-container",
   ".theme-light",
   ".theme-dark",
+  "--praxis-radius: 13px",
   "--page-width",
+  "--callout-icon: lucide-",
+  'data-callout="author"',
+  'data-callout-metadata="noicon"',
+  "input[data-task",
   ".cards table",
   ".list-cards",
   ".img-grid",
   ".callout"
 ]);
 
-for (const forbidden of ["@import", "base64,", "Mobile Documents", "iCloud~md~obsidian", "/Users/"]) {
+for (const forbidden of ["@import", "base64,", "Mobile Documents", "iCloud~md~obsidian", "/Users/", "--callout-color: 152, 120, 224", "rgba(var(--callout-color)"]) {
   if (themeCss.includes(forbidden) || publishCss.includes(forbidden) || readme.includes(forbidden)) {
     fail(`Repository contains forbidden private or heavy asset marker "${forbidden}".`);
   }
+}
+
+for (const forbiddenPublishSelector of [".HyperMD-task-line", ".cm-task-list-item-checkbox", ".markdown-source-view"]) {
+  if (publishCss.includes(forbiddenPublishSelector)) {
+    fail(`publish.css contains app-only checkbox selector "${forbiddenPublishSelector}".`);
+  }
+}
+
+if (!themeCss.includes("data:image/svg+xml") || !publishCss.includes("data:image/svg+xml")) {
+  fail("Checkbox icon masks must be present as Lucide-based inline SVG data URIs.");
 }
 
 if (publishCss.length > 100_000) {
