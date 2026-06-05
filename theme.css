@@ -5401,7 +5401,7 @@ body.praxis-table-lines,
   --table-column-first-border-width: 1px;
   --table-column-last-border-width: 1px;
   --table-row-last-border-width: 1px;
-  --table-edge-cell-padding: var(--size-4-1);
+  --table-edge-cell-padding: var(--praxis-space-4);
 }
 
 /* Link underline toggle */
