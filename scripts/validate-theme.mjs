@@ -76,15 +76,15 @@ const validateStyleSettings = (themeCss) => {
     "name: Praxis",
     "id: praxis",
     "settings:",
-    "praxis-font-text-size",
-    "praxis-line-width",
-    "praxis-accent",
-    "praxis-properties-label-width",
-    "praxis-properties-input-height",
-    "praxis-properties-gap",
-    "praxis-properties-spacious",
-    "praxis-cards-min-width",
-    "type: variable-color",
+    "praxis-background-style",
+    "praxis-callout-style",
+    "praxis-links-underlined",
+    "praxis-checkbox-icons",
+    "praxis-disable-checkbox-click",
+    "active-line-on",
+    "metadata-heading-off",
+    "metadata-add-property-off",
+    "type: class-select",
     "type: class-toggle"
   ]);
 
@@ -146,10 +146,61 @@ await validatePackage();
 const themeCss = await readText("theme.css");
 const publishCss = await readText("publish.css");
 const readme = await readText("README.md");
+const minimalHelperMarkers = [
+  ".wide",
+  ".max",
+  ".table-100",
+  ".table-wide",
+  ".table-max",
+  ".table-full",
+  ".table-small",
+  ".table-tiny",
+  ".table-nowrap",
+  ".table-wrap",
+  ".table-center",
+  ".table-lines",
+  ".table-numbers",
+  ".table-tabular",
+  ".row-hover",
+  ".row-alt",
+  ".row-lines",
+  ".row-lines-off",
+  ".col-alt",
+  ".col-lines",
+  ".img-100",
+  ".img-wide",
+  ".img-max",
+  ".img-grid",
+  ".img-grid-ratio",
+  ".iframe-100",
+  ".iframe-wide",
+  ".iframe-max",
+  ".map-100",
+  ".map-wide",
+  ".map-max",
+  ".chart-100",
+  ".chart-wide",
+  ".chart-max",
+  ".cards table",
+  ".list-cards",
+  ".cards-16-9",
+  ".cards-1-1",
+  ".cards-2-1",
+  ".cards-2-3",
+  ".cards-cols-1",
+  ".cards-cols-8",
+  ".cards-cover",
+  ".cards-align-bottom",
+  ".hide-title",
+  ".alt-title",
+  ".h1-borders"
+];
 
 checkBalancedCss("theme.css", themeCss);
 checkBalancedCss("publish.css", publishCss);
 validateStyleSettings(themeCss);
+requireMarkers("theme.css Minimal helpers", themeCss, minimalHelperMarkers);
+requireMarkers("publish.css Minimal helpers", publishCss, minimalHelperMarkers);
 
 requireMarkers("theme.css", themeCss, [
   "body",
@@ -168,9 +219,8 @@ requireMarkers("theme.css", themeCss, [
   "--callout-icon: lucide-",
   'data-callout="author"',
   'data-callout-metadata="noicon"',
-  ".markdown-rendered input[data-task]:not",
+  "input[data-task",
   ".HyperMD-task-line[data-task",
-  ".cm-task-list-item-checkbox",
   ".cards table",
   ".list-cards",
   ".img-grid",

@@ -1921,7 +1921,9 @@ body {
 
 .table-wide,
 .table-max,
-.table-100 {
+.table-100,
+.table-full,
+.table-cards {
   --table-max-width: 100%;
   --table-width: 100%;
 }
@@ -1942,7 +1944,9 @@ body {
   --table-margin: 0;
 }
 
-.table-100 {
+.table-100,
+.table-full,
+.table-cards {
   --container-table-width: 100%;
   --container-dataview-table-width: 100%;
   --container-table-max-width: 100%;
@@ -1956,20 +1960,28 @@ body {
   --bases-header-padding-end: var(--size-4-2);
   --bases-header-padding-start: var(--size-4-2);
 }
-.table-100 .bases-view[data-view-type=table] {
+.table-100 .bases-view[data-view-type=table],
+.table-full .bases-view[data-view-type=table],
+.table-cards .bases-view[data-view-type=table] {
   --bases-embed-border-width: 0;
   --bases-embed-border-radius: 0;
 }
-.table-100 .table-col-btn {
+.table-100 .table-col-btn,
+.table-full .table-col-btn,
+.table-cards .table-col-btn {
   cursor: default !important;
   margin-top: 8px;
   height: var(--table-header-size);
   inset-inline-start: calc(100% - var(--table-drag-handle-size) - 4px) !important;
 }
-.table-100 .markdown-source-view.mod-cm6, .table-100.markdown-source-view.mod-cm6 {
+.table-100 .markdown-source-view.mod-cm6, .table-100.markdown-source-view.mod-cm6,
+.table-full .markdown-source-view.mod-cm6, .table-full.markdown-source-view.mod-cm6,
+.table-cards .markdown-source-view.mod-cm6, .table-cards.markdown-source-view.mod-cm6 {
   --table-drag-handle-background-active: transparent;
 }
-.table-100 .markdown-source-view.mod-cm6 .cm-table-widget .table-row-drag-handle, .table-100.markdown-source-view.mod-cm6 .cm-table-widget .table-row-drag-handle {
+.table-100 .markdown-source-view.mod-cm6 .cm-table-widget .table-row-drag-handle, .table-100.markdown-source-view.mod-cm6 .cm-table-widget .table-row-drag-handle,
+.table-full .markdown-source-view.mod-cm6 .cm-table-widget .table-row-drag-handle, .table-full.markdown-source-view.mod-cm6 .cm-table-widget .table-row-drag-handle,
+.table-cards .markdown-source-view.mod-cm6 .cm-table-widget .table-row-drag-handle, .table-cards.markdown-source-view.mod-cm6 .cm-table-widget .table-row-drag-handle {
   inset-inline-end: calc(100% - var(--table-drag-handle-size)) !important;
 }
 
@@ -5370,7 +5382,11 @@ body.praxis-properties-spacious {
 }
 
 /* H1 underline */
-.markdown-rendered h1::after,
+.hide-title .inline-title,
+.alt-title .inline-title {
+  display: none;
+}
+
 .h1-borders .markdown-rendered h1::after {
   border-bottom: 1px solid var(--background-modifier-border);
   content: "";
@@ -5506,7 +5522,7 @@ body.praxis-checkbox-icons :is(input[data-task="<"], li[data-task="<"]) { --prax
 body.praxis-checkbox-icons :is(input[data-task="?"], li[data-task="?"]) { --praxis-task-icon: var(--praxis-icon-question); --praxis-task-color: var(--praxis-task-violet); }
 body.praxis-checkbox-icons :is(input[data-task="!"], li[data-task="!"]) { --praxis-task-icon: var(--praxis-icon-alert); --praxis-task-color: var(--praxis-task-orange); }
 body.praxis-checkbox-icons :is(input[data-task="*"], li[data-task="*"]) { --praxis-task-icon: var(--praxis-icon-star); --praxis-task-color: var(--praxis-task-violet); }
-body.praxis-checkbox-icons :is(input[data-task="\""], input[data-task="""], li[data-task="\""], li[data-task="""]) { --praxis-task-icon: var(--praxis-icon-quote); --praxis-task-color: var(--praxis-task-brown); }
+body.praxis-checkbox-icons :is(input[data-task='"'], input[data-task="\201c"], li[data-task='"'], li[data-task="\201c"]) { --praxis-task-icon: var(--praxis-icon-quote); --praxis-task-color: var(--praxis-task-brown); }
 body.praxis-checkbox-icons :is(input[data-task="l"], li[data-task="l"]) { --praxis-task-icon: var(--praxis-icon-map-pin); --praxis-task-color: var(--praxis-task-orange); }
 body.praxis-checkbox-icons :is(input[data-task="b"], li[data-task="b"]) { --praxis-task-icon: var(--praxis-icon-bookmark); --praxis-task-color: var(--praxis-task-violet); }
 body.praxis-checkbox-icons :is(input[data-task="i"], li[data-task="i"]) { --praxis-task-icon: var(--praxis-icon-info); --praxis-task-color: var(--praxis-task-mint); }

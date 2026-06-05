@@ -14,6 +14,13 @@ body {
   --praxis-cards-image-height: 400px;
   --praxis-cards-image-fit: contain;
   --praxis-img-grid-gap: 8px;
+  --line-width-wide: calc(var(--praxis-line-width) + 12.5%);
+  --max-width: 100%;
+  --container-table-width: var(--praxis-line-width);
+  --container-img-width: var(--praxis-line-width);
+  --container-iframe-width: var(--praxis-line-width);
+  --container-map-width: var(--praxis-line-width);
+  --container-chart-width: var(--praxis-line-width);
 
   --font-text-theme: ui-sans-serif, system-ui, sans-serif;
   --font-monospace-theme: ui-monospace, "SFMono-Regular", Consolas, monospace;
@@ -290,6 +297,24 @@ body {
   font-size: var(--font-small);
 }
 
+.wide {
+  --praxis-line-width: var(--line-width-wide);
+  --container-table-width: var(--line-width-wide);
+  --container-img-width: var(--line-width-wide);
+  --container-iframe-width: var(--line-width-wide);
+  --container-map-width: var(--line-width-wide);
+  --container-chart-width: var(--line-width-wide);
+}
+
+.max {
+  --praxis-line-width: var(--max-width);
+  --container-table-width: var(--max-width);
+  --container-img-width: var(--max-width);
+  --container-iframe-width: var(--max-width);
+  --container-map-width: var(--max-width);
+  --container-chart-width: var(--max-width);
+}
+
 .hide-title .page-header,
 .alt-title .page-header {
   display: none;
@@ -302,8 +327,22 @@ body {
 
 .table-100 table,
 .table-full table,
-.table-cards table {
+.table-cards table,
+.table-wide table,
+.table-max table {
   width: 100%;
+}
+
+.table-wide table {
+  max-width: var(--line-width-wide);
+}
+
+.table-max table {
+  max-width: var(--max-width);
+}
+
+.table-100 table {
+  max-width: 100%;
 }
 
 .table-small table {
@@ -316,6 +355,15 @@ body {
 
 .table-nowrap {
   --table-white-space: nowrap;
+}
+
+.table-wrap,
+.table-nowrap .table-wrap {
+  --table-white-space: normal;
+}
+
+.table-center table {
+  margin-inline: auto;
 }
 
 .row-alt {
@@ -382,6 +430,42 @@ body {
 
 .row-hover table tbody > tr:hover {
   background-color: var(--table-row-background-hover);
+}
+
+.img-wide img,
+.img-max img,
+.img-100 img,
+.iframe-wide iframe,
+.iframe-max iframe,
+.iframe-100 iframe,
+.map-wide :is(.block-language-map, .leaflet-container, iframe),
+.map-max :is(.block-language-map, .leaflet-container, iframe),
+.map-100 :is(.block-language-map, .leaflet-container, iframe),
+.chart-wide :is(.block-language-chart, canvas, svg),
+.chart-max :is(.block-language-chart, canvas, svg),
+.chart-100 :is(.block-language-chart, canvas, svg) {
+  width: 100%;
+}
+
+.img-wide img,
+.iframe-wide iframe,
+.map-wide :is(.block-language-map, .leaflet-container, iframe),
+.chart-wide :is(.block-language-chart, canvas, svg) {
+  max-width: var(--line-width-wide);
+}
+
+.img-max img,
+.iframe-max iframe,
+.map-max :is(.block-language-map, .leaflet-container, iframe),
+.chart-max :is(.block-language-chart, canvas, svg) {
+  max-width: var(--max-width);
+}
+
+.img-100 img,
+.iframe-100 iframe,
+.map-100 :is(.block-language-map, .leaflet-container, iframe),
+.chart-100 :is(.block-language-chart, canvas, svg) {
+  max-width: 100%;
 }
 
 img[src$="#outline"],
@@ -717,7 +801,7 @@ body :is(input[data-task="<"], li[data-task="<"]) { --praxis-task-icon: var(--pr
 body :is(input[data-task="?"], li[data-task="?"]) { --praxis-task-icon: var(--praxis-icon-circle-help); --praxis-task-color: var(--praxis-task-violet); }
 body :is(input[data-task="!"], li[data-task="!"]) { --praxis-task-icon: var(--praxis-icon-triangle-alert); --praxis-task-color: var(--praxis-task-orange); }
 body :is(input[data-task="*"], li[data-task="*"]) { --praxis-task-icon: var(--praxis-icon-star); --praxis-task-color: var(--praxis-task-violet); }
-body :is(input[data-task="\""], input[data-task="“"], li[data-task="\""], li[data-task="“"]) { --praxis-task-icon: var(--praxis-icon-quote); --praxis-task-color: var(--praxis-task-brown); }
+body :is(input[data-task='"'], input[data-task="\201c"], li[data-task='"'], li[data-task="\201c"]) { --praxis-task-icon: var(--praxis-icon-quote); --praxis-task-color: var(--praxis-task-brown); }
 body :is(input[data-task="l"], li[data-task="l"]) { --praxis-task-icon: var(--praxis-icon-map-pin); --praxis-task-color: var(--praxis-task-orange); }
 body :is(input[data-task="b"], li[data-task="b"]) { --praxis-task-icon: var(--praxis-icon-bookmark); --praxis-task-color: var(--praxis-task-violet); }
 body :is(input[data-task="i"], li[data-task="i"]) { --praxis-task-icon: var(--praxis-icon-info); --praxis-task-color: var(--praxis-task-mint); }
