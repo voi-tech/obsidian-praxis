@@ -99,11 +99,6 @@ settings:
     type: class-toggle
     default: false
   -
-    id: praxis-strike-lists
-    title: Strikethrough completed tasks
-    type: class-toggle
-    default: false
-  -
     id: active-line-on
     title: Highlight active line
     type: class-toggle
@@ -1280,11 +1275,7 @@ body {
   --checkbox-margin: 0px 8px 0px -2em;
 }
 
-body.praxis-strike-lists {
-  --checklist-done-decoration: line-through;
-}
-
-body:not(.praxis-strike-lists) {
+body {
   --checklist-done-decoration: none;
   --checklist-done-color: var(--text-normal);
 }
@@ -5378,8 +5369,8 @@ body.praxis-properties-spacious {
   border-radius: calc(var(--checkbox-radius) - 1px) !important;
 }
 
-/* H1 border toggle */
-body.praxis-h1-borders .markdown-rendered h1::after,
+/* H1 underline */
+.markdown-rendered h1::after,
 .h1-borders .markdown-rendered h1::after {
   border-bottom: 1px solid var(--background-modifier-border);
   content: "";
