@@ -1422,6 +1422,8 @@ body {
 }
 
 .markdown-rendered input[data-task]:not([data-task=""], [data-task=" "], [data-task="x"]),
+.markdown-rendered li[data-task]:not([data-task=""], [data-task=" "], [data-task="x"]) > input,
+.markdown-rendered li[data-task]:not([data-task=""], [data-task=" "], [data-task="x"]) > p > input,
 .markdown-source-view.mod-cm6 input[data-task]:not([data-task=""], [data-task=" "], [data-task="x"]),
 body :is(input[data-task="/"], input[data-task="-"], input[data-task=">"], input[data-task="<"], input[data-task="?"], input[data-task="!"], input[data-task="*"], input[data-task="\""], input[data-task="“"], input[data-task="l"], input[data-task="b"], input[data-task="i"], input[data-task="S"], input[data-task="I"], input[data-task="p"], input[data-task="c"], input[data-task="f"], input[data-task="k"], input[data-task="w"], input[data-task="u"], input[data-task="d"], input[data-task="+"], input[data-task="B"], input[data-task="a"], input[data-task="n"], input[data-task="R"], input[data-task="t"], input[data-task="P"], input[data-task="L"]) {
   --checkbox-marker-color: transparent !important;
@@ -1450,6 +1452,10 @@ body :is(input[data-task="/"], input[data-task="-"], input[data-task=">"], input
 
 .markdown-rendered input[data-task]:not([data-task=""], [data-task=" "], [data-task="x"])::before,
 .markdown-rendered input[data-task]:not([data-task=""], [data-task=" "], [data-task="x"])::after,
+.markdown-rendered li[data-task]:not([data-task=""], [data-task=" "], [data-task="x"]) > input::before,
+.markdown-rendered li[data-task]:not([data-task=""], [data-task=" "], [data-task="x"]) > input::after,
+.markdown-rendered li[data-task]:not([data-task=""], [data-task=" "], [data-task="x"]) > p > input::before,
+.markdown-rendered li[data-task]:not([data-task=""], [data-task=" "], [data-task="x"]) > p > input::after,
 .markdown-source-view.mod-cm6 input[data-task]:not([data-task=""], [data-task=" "], [data-task="x"])::before,
 .markdown-source-view.mod-cm6 input[data-task]:not([data-task=""], [data-task=" "], [data-task="x"])::after,
 body :is(input[data-task="/"], input[data-task="-"], input[data-task=">"], input[data-task="<"], input[data-task="?"], input[data-task="!"], input[data-task="*"], input[data-task="\""], input[data-task="“"], input[data-task="l"], input[data-task="b"], input[data-task="i"], input[data-task="S"], input[data-task="I"], input[data-task="p"], input[data-task="c"], input[data-task="f"], input[data-task="k"], input[data-task="w"], input[data-task="u"], input[data-task="d"], input[data-task="+"], input[data-task="B"], input[data-task="a"], input[data-task="n"], input[data-task="R"], input[data-task="t"], input[data-task="P"], input[data-task="L"])::before,
