@@ -12,6 +12,16 @@ The theme follows Obsidian's CSS variable system and keeps a Minimal-inspired he
 2. Add `theme.css` and `manifest.json` to that folder.
 3. Open Obsidian Settings -> Appearance -> Themes and select `Praxis`.
 
+### Install with BRAT
+
+BRAT can install Praxis directly from GitHub while the theme is in beta or before it is listed in the community theme catalog.
+
+1. Install and enable the `BRAT` community plugin.
+2. Open BRAT settings and add this repository as a beta theme: `https://github.com/voitech/obsidian-praxis`.
+3. Open Obsidian Settings -> Appearance -> Themes and select `Praxis`.
+
+Update the repository URL if you are using a fork or a different GitHub owner.
+
 Praxis supports light and dark modes and targets Obsidian 1.13.0 or newer. It uses Geist and Geist Mono when available, then falls back to Inter and system fonts.
 
 ## Style Settings
@@ -26,6 +36,7 @@ Praxis works without plugins. If you install the optional Style Settings communi
 - link underlines and H1 borders
 - table grid lines
 - callout style
+- compact Properties layout, label width, row gap, and input height
 - optional click locking for custom checkbox statuses
 - card width, card image height, card image fit, and image grid gap
 

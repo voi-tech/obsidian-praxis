@@ -79,6 +79,10 @@ const validateStyleSettings = (themeCss) => {
     "praxis-font-text-size",
     "praxis-line-width",
     "praxis-accent",
+    "praxis-properties-label-width",
+    "praxis-properties-input-height",
+    "praxis-properties-gap",
+    "praxis-properties-spacious",
     "praxis-cards-min-width",
     "type: variable-color",
     "type: class-toggle"
@@ -155,6 +159,11 @@ requireMarkers("theme.css", themeCss, [
   "--praxis-radius: 13px",
   "--background-primary",
   "--font-text-theme",
+  "--metadata-padding",
+  "--metadata-input-height",
+  "--metadata-label-width",
+  ".metadata-property",
+  ".metadata-property-icon",
   "--callout-icon: lucide-",
   'data-callout="author"',
   'data-callout-metadata="noicon"',
@@ -195,6 +204,16 @@ for (const forbiddenPublishSelector of [".HyperMD-task-line", ".cm-task-list-ite
     fail(`publish.css contains app-only checkbox selector "${forbiddenPublishSelector}".`);
   }
 }
+
+if (publishCss.includes(".metadata-") || publishCss.includes("--metadata-")) {
+  fail("publish.css must not contain app-only Properties selectors or metadata variables.");
+}
+
+requireMarkers("README.md", readme, [
+  "Install with BRAT",
+  "https://github.com/voitech/obsidian-praxis",
+  "Appearance -> Themes"
+]);
 
 if (!themeCss.includes("data:image/svg+xml") || !publishCss.includes("data:image/svg+xml")) {
   fail("Checkbox icon masks must be present as Lucide-based inline SVG data URIs.");
