@@ -5229,7 +5229,7 @@ body {
   /* Properties / metadata */
   --metadata-background: transparent;
   --metadata-max-width: var(--file-line-width);
-  --metadata-padding: 0 0 var(--size-4-1) 0;
+  --metadata-padding: 0 0 var(--praxis-space-4) 0;
   --metadata-border-color: transparent;
   --metadata-border-radius: var(--radius-s);
   --metadata-border-width: 0;
