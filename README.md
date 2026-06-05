@@ -1,6 +1,6 @@
 # Praxis
 
-Praxis is a warm, focused Obsidian theme built from Minimal's proven foundation and shaped around a compact Praxis design system. It supports light and dark mode, includes an Obsidian Publish companion stylesheet, and keeps the Minimal-style helper classes that make notes, tables, image galleries, dashboards, and Dataview views easier to compose.
+Praxis is a warm, focused Obsidian theme built from Minimal's proven foundation and shaped around a compact Praxis design system. It supports light and dark mode, but it is intentionally designed as a dark-first theme. It includes an Obsidian Publish companion stylesheet and keeps the Minimal-style helper classes that make notes, tables, image galleries, dashboards, and Dataview views easier to compose.
 
 ![Praxis screenshot](screenshot.png)
 
@@ -15,7 +15,7 @@ Praxis is a warm, focused Obsidian theme built from Minimal's proven foundation 
 
 ## Features
 
-- Warm light and dark palettes with a true black dark variant
+- Dark-first warm palette with a light mode fallback and a true black dark variant
 - Compact interface spacing based on a Fibonacci scale
 - Minimal-compatible helper classes for tables, images, iframes, maps, charts, cards, and page width
 - Card layouts for tables, Dataview-style tables, and list-based galleries
