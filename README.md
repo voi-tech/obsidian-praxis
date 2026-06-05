@@ -1,57 +1,87 @@
-# @voitech/obsidian-praxis
+# Praxis
 
-Praxis theme for Obsidian and Obsidian Publish.
+Praxis is a quiet, configurable theme for Obsidian. It is built as a standalone theme, with a lightweight companion stylesheet for Obsidian Publish.
 
-The app theme lives in `theme.css`. The Publish theme lives in `publish.css` and is based on `obsidian-minimal-publish` by Steph Ango, released under the MIT license.
+The theme follows Obsidian's CSS variable system and keeps a Minimal-inspired helper-class surface for cards, image grids, table layouts, title helpers, callouts, and image filters.
 
-## Install in Obsidian
+![Praxis screenshot](screenshot.png)
+
+## Install
 
 1. Create a folder named `Praxis` in your vault at `.obsidian/themes/Praxis`.
-2. Copy `theme.css` and `manifest.json` into that folder.
+2. Add `theme.css` and `manifest.json` to that folder.
 3. Open Obsidian Settings -> Appearance -> Themes and select `Praxis`.
 
-The theme supports light and dark modes. It prefers Geist and Geist Mono when available, then falls back to Inter, system sans fonts, and system monospace fonts.
+Praxis supports light and dark modes. It uses Geist and Geist Mono when available, then falls back to Inter and system fonts.
 
-## Publish
+## Style Settings
 
-`publish.css` is the package-owned copy for Obsidian Publish. It preserves the current Minimal Publish behavior used by the vault: compact typography, warm paper colors, purple accents, table helpers, cards, list cards, image grids, image zoom hooks, and callout colors.
+Praxis works without plugins. If you install the optional Style Settings community plugin, the theme exposes settings for:
 
-To sync the package copy to the default vault path:
+- interface, text, and monospace fonts
+- text size and readable line width
+- accent colors
+- background contrast
+- note title and heading weight
+- link underlines and H1 borders
+- table grid lines
+- callout style
+- card width, card image height, card image fit, and image grid gap
 
-```sh
-node scripts/sync-publish.mjs
-```
-
-To sync somewhere else:
-
-```sh
-OBSIDIAN_PUBLISH_CSS="/path/to/vault/publish.css" node scripts/sync-publish.mjs
-```
+Style Settings custom properties use stable `--praxis-*` variables where possible, so user settings can survive theme updates.
 
 ## Helper Classes
 
-The app theme carries over the Publish helper classes that are useful inside Obsidian:
+Praxis keeps the helper classes commonly used with Minimal-style workflows:
 
-- `hide-title`, `alt-title`, `h1-borders`
-- `table-100`, `table-full`, `table-small`, `table-tiny`, `table-nowrap`, `table-lines`, `table-numbers`, `row-hover`, `row-alt`, `col-alt`, `col-lines`
-- `cards`, `list-cards`, `cards-16-9`, `cards-1-1`, `cards-2-1`, `cards-2-3`, `cards-cols-1` through `cards-cols-8`, `cards-cover`, `cards-align-bottom`
-- `img-grid`, `img-grid-ratio`, `img-zoom`
-- image suffixes `#outline`, `#interface`, `#invert`, `#invertW`, and `#circle`
+- Title helpers: `hide-title`, `alt-title`, `h1-borders`
+- Tables: `table-100`, `table-full`, `table-small`, `table-tiny`, `table-nowrap`, `table-lines`, `table-numbers`, `table-tabular`, `row-hover`, `row-alt`, `row-lines`, `row-lines-off`, `col-alt`, `col-lines`, `table-col-1-150`, `table-col-1-200`
+- Cards: `cards`, `list-cards`, `cards-16-9`, `cards-1-1`, `cards-2-1`, `cards-2-3`, `cards-cols-1` through `cards-cols-8`, `cards-cover`, `cards-align-bottom`
+- Images: `img-grid`, `img-grid-ratio`, `img-zoom`
+- Image suffixes: `#outline`, `#interface`, `#invert`, `#invertW`, `#circle`
 
-Some helpers depend on Obsidian's rendered Markdown structure and modern CSS selector support such as `:has()`.
+Some app helpers rely on Obsidian's rendered Markdown structure and modern Chromium CSS support.
 
-## Validate
+## Obsidian Publish
 
-Run the package validation directly with Node:
+`publish.css` is a public companion stylesheet for Obsidian Publish. It shares Praxis colors, typography, callouts, cards, table helpers, and image helpers while staying separate from the app theme.
+
+To use it, publish `publish.css` at the root of your Publish vault. Style Settings does not run on Obsidian Publish, so Publish customization should be done directly through CSS variables in `publish.css`.
+
+## Development
+
+Praxis intentionally has no runtime or development dependencies. The package scripts only validate the distributable files:
 
 ```sh
-node scripts/validate-theme.mjs
+npm run validate
 ```
 
-If the workspace package manager is available:
+The validator checks required files, manifest fields, Style Settings markers, CSS balance, Publish file size, and absence of private local paths.
 
-```sh
-pnpm build
+## Community Theme Submission
+
+The repository is prepared for Obsidian community theme submission with:
+
+- `theme.css`
+- `manifest.json`
+- `README.md`
+- `LICENSE`
+- `screenshot.png`
+
+The community theme entry should use:
+
+```json
+{
+  "name": "Praxis",
+  "author": "voitech",
+  "repo": "voitech/obsidian-praxis",
+  "screenshot": "screenshot.png",
+  "modes": ["dark", "light"]
+}
 ```
 
-The validator checks required files, manifest fields, app theme markers, and the presence of the Publish CSS surface.
+Update `repo` if the GitHub owner or repository name differs.
+
+## Credits
+
+Praxis is not a fork of Minimal. It is inspired by the architecture, helper-class conventions, and Publish separation used by [Minimal](https://github.com/kepano/obsidian-minimal) and [Minimal Publish](https://github.com/kepano/obsidian-minimal-publish) by Steph Ango. Those projects are released under the MIT License.

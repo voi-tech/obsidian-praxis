@@ -2,15 +2,18 @@
   "name": "@voitech/obsidian-praxis",
   "version": "0.1.0",
   "private": true,
-  "description": "Praxis theme for Obsidian and Obsidian Publish.",
+  "description": "Praxis theme for Obsidian, with a lightweight Obsidian Publish companion stylesheet.",
   "license": "MIT",
   "files": [
     "theme.css",
     "publish.css",
-    "manifest.json"
+    "manifest.json",
+    "README.md",
+    "LICENSE",
+    "screenshot.png"
   ],
   "scripts": {
     "build": "node scripts/validate-theme.mjs",
-    "sync:publish": "node scripts/sync-publish.mjs"
+    "validate": "node scripts/validate-theme.mjs"
   }
 }
