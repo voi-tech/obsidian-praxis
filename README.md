@@ -1,8 +1,8 @@
 # Praxis
 
-Praxis is a quiet, configurable theme for Obsidian. It is built as a standalone theme, with a lightweight companion stylesheet for Obsidian Publish.
+Praxis is a quiet, configurable Obsidian theme built as a fork of [Minimal](https://github.com/kepano/obsidian-minimal) by Steph Ango. It replaces Minimal's color schemes with a single warm-toned Praxis palette based on a Fibonacci spacing scale and golden-ratio border radii, and ships a lightweight companion stylesheet for Obsidian Publish.
 
-The theme follows Obsidian's CSS variable system and keeps a Minimal-inspired helper-class surface for cards, image grids, table layouts, title helpers, callouts, and image filters.
+The theme follows Obsidian's CSS variable system and preserves Minimal's full helper-class surface for cards, image grids, table layouts, title helpers, callouts, and image filters.
 
 ![Praxis screenshot](screenshot.png)
 
@@ -22,7 +22,7 @@ BRAT can install Praxis directly from GitHub while the theme is in beta or befor
 
 Update the repository URL if you are using a fork or a different GitHub owner.
 
-Praxis supports light and dark modes and targets Obsidian 1.13.0 or newer. It uses Geist and Geist Mono when available, then falls back to Inter and system fonts.
+Praxis supports light and dark modes and targets Obsidian 1.13.0 or newer. It does not set a default font family — use your own choice in Obsidian Settings.
 
 ## Style Settings
 
@@ -98,4 +98,4 @@ Update `repo` if the GitHub owner or repository name differs.
 
 ## Credits
 
-Praxis is not a fork of Minimal. It is inspired by the architecture, helper-class conventions, and Publish separation used by [Minimal](https://github.com/kepano/obsidian-minimal) and [Minimal Publish](https://github.com/kepano/obsidian-minimal-publish) by Steph Ango. Those projects are released under the MIT License.
+Praxis is a fork of [Minimal](https://github.com/kepano/obsidian-minimal) by Steph Ango. Minimal is released under the MIT License. The Praxis design layer — color palette, spacing scale, border radii, and Properties panel styling — is added on top of Minimal's base.

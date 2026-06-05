@@ -6,17 +6,13 @@
  */
 
 body {
-  --praxis-font-interface-theme: "Geist", "Inter", ui-sans-serif, system-ui, sans-serif;
-  --praxis-font-text-theme: "Geist", "Inter", ui-sans-serif, system-ui, sans-serif;
-  --praxis-font-monospace-theme: "Geist Mono", "SFMono-Regular", Consolas, monospace;
   --praxis-font-text-size: 16px;
   --praxis-line-width: 860px;
   --praxis-radius: 13px;
   --praxis-accent: #7a60c8;
 
-  --font-interface-theme: var(--praxis-font-interface-theme);
-  --font-text-theme: var(--praxis-font-text-theme);
-  --font-monospace-theme: var(--praxis-font-monospace-theme);
+  --font-text-theme: ui-sans-serif, system-ui, sans-serif;
+  --font-monospace-theme: ui-monospace, "SFMono-Regular", Consolas, monospace;
   --font-text-size: var(--praxis-font-text-size);
   --font-small: 13px;
   --font-smaller: 11px;
@@ -71,24 +67,30 @@ body {
   --img-grid-gap: var(--space-3);
 }
 
+.theme-dark {
+  --color-red: #d97a40;
+  --color-orange: #e8975c;
+  --color-yellow: #c9a84c;
+  --color-green: #5bbfb2;
+  --color-cyan: #7dcfc5;
+  --color-blue: #6b9fd4;
+  --color-purple: #9878e0;
+  --color-pink: #c87ab0;
+}
+
+.theme-light {
+  --color-red: #b96830;
+  --color-orange: #c47a40;
+  --color-yellow: #a08030;
+  --color-green: #3a8f84;
+  --color-cyan: #5bbfb2;
+  --color-blue: #4a7fb0;
+  --color-purple: #7a60c8;
+  --color-pink: #a05a90;
+}
+
 .theme-light,
 .theme-dark {
-  --red: #d97a40;
-  --orange: #d97a40;
-  --yellow: #e8975c;
-  --green: #5bbfb2;
-  --cyan: #5bbfb2;
-  --blue: var(--praxis-accent);
-  --purple: var(--praxis-accent);
-  --pink: #b09ae8;
-  --color-red: var(--red);
-  --color-orange: var(--orange);
-  --color-yellow: var(--yellow);
-  --color-green: var(--green);
-  --color-cyan: var(--cyan);
-  --color-blue: var(--blue);
-  --color-purple: var(--purple);
-  --color-pink: var(--pink);
 
   --background-primary: var(--praxis-bg-primary);
   --background-primary-alt: var(--praxis-bg-secondary);
