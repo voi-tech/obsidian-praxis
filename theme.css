@@ -5189,13 +5189,10 @@ body {
   --radius-l: 21px;
   --radius-xl: 34px;
 
-  /* Size overrides (Fibonacci) */
+  /* Size overrides (Fibonacci) — only size-2-* to avoid breaking Obsidian UI */
   --size-2-1: 3px;
   --size-2-2: 5px;
   --size-2-3: 8px;
-  --size-4-1: 13px;
-  --size-4-2: 21px;
-  --size-4-3: 34px;
 
   /* Style Settings driven values */
   --radius-s: var(--praxis-radius);
