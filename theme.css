@@ -5210,7 +5210,7 @@ body {
   --cards-mobile-width: min(100%, 180px);
   --cards-image-height: var(--praxis-cards-image-height);
   --cards-image-fit: var(--praxis-cards-image-fit);
-  --cards-padding: var(--size-4-1);
+  --cards-padding: var(--praxis-space-4);
   --cards-background: transparent;
   --cards-border-width: 1px;
   --cards-aspect-ratio: auto;
