@@ -319,16 +319,16 @@ body {
   --metadata-border-radius: var(--radius-s);
   --metadata-border-width: 0;
   --metadata-gap: var(--praxis-properties-gap);
-  --metadata-divider-color: var(--background-modifier-border);
-  --metadata-divider-color-hover: var(--background-modifier-border-hover);
-  --metadata-divider-color-focus: var(--background-modifier-border-focus);
-  --metadata-divider-width: var(--border-width);
+  --metadata-divider-color: transparent;
+  --metadata-divider-color-hover: transparent;
+  --metadata-divider-color-focus: transparent;
+  --metadata-divider-width: 0;
   --metadata-property-padding: var(--size-2-1) 0;
   --metadata-property-radius: var(--radius-s);
   --metadata-property-radius-hover: var(--radius-s);
   --metadata-property-radius-focus: var(--radius-s);
   --metadata-property-background: transparent;
-  --metadata-property-background-hover: color-mix(in srgb, var(--background-modifier-hover) 42%, transparent);
+  --metadata-property-background-hover: color-mix(in srgb, var(--background-modifier-hover) 34%, transparent);
   --metadata-property-background-active: transparent;
   --metadata-label-background-hover: transparent;
   --metadata-label-background-active: transparent;
@@ -974,9 +974,16 @@ body.praxis-properties-spacious {
   gap: var(--size-2-3);
 }
 
-.metadata-property-value :is(.metadata-input-date, .metadata-input-datetime) .clickable-icon,
-.metadata-property-value :is(.metadata-input-date, .metadata-input-datetime) svg {
-  margin-inline-end: var(--size-2-3);
+.metadata-property-value :is(.metadata-input-date, .metadata-input-datetime) > .clickable-icon {
+  margin-inline-end: var(--size-2-3) !important;
+}
+
+.metadata-property-value :is(.metadata-input-date, .metadata-input-datetime) > :is(input, span, div):not(.clickable-icon) {
+  margin-inline-start: var(--size-2-3);
+}
+
+.metadata-property-value :is(.metadata-input-date, .metadata-input-datetime) input {
+  padding-inline-start: var(--size-2-3);
 }
 
 .metadata-property-value :is(input[type="checkbox"], .metadata-input-checkbox) {
@@ -987,7 +994,14 @@ body.praxis-properties-spacious {
   --checkbox-marker-color: var(--text-on-accent);
   --checkbox-radius: var(--radius-xs);
   --checkbox-size: 16px;
-  border-radius: var(--checkbox-radius);
+  border-radius: var(--checkbox-radius) !important;
+  height: var(--checkbox-size);
+  width: var(--checkbox-size);
+}
+
+.metadata-property-value :is(input[type="checkbox"], .metadata-input-checkbox)::before,
+.metadata-property-value :is(input[type="checkbox"], .metadata-input-checkbox)::after {
+  border-radius: calc(var(--checkbox-radius) - 1px) !important;
 }
 
 @media (max-width: 600px) {
