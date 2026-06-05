@@ -5201,6 +5201,7 @@ body {
   --radius-s: var(--praxis-radius);
   --radius-m: var(--praxis-radius-lg);
   --radius-l: var(--praxis-radius-lg);
+  --image-radius: var(--radius-s);
   --file-line-width: var(--praxis-line-width);
   --inline-title-size: var(--praxis-inline-title-size);
   --h1-weight: var(--praxis-heading-weight);
@@ -5271,6 +5272,18 @@ body {
 .workspace-sidedock-vault-profile .clickable-icon,
 .nav-buttons-container .clickable-icon {
   border-radius: var(--radius-s);
+}
+
+.markdown-source-view .image-embed,
+.markdown-source-view .image-wrapper,
+.markdown-rendered .image-embed,
+.markdown-rendered .image-wrapper {
+  border-radius: var(--image-radius);
+}
+
+.markdown-source-view .image-wrapper,
+.markdown-rendered .image-wrapper {
+  overflow: hidden;
 }
 
 /* Vault profile area — reduce excess padding */
