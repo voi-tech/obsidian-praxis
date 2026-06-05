@@ -5569,9 +5569,9 @@ body.praxis-disable-checkbox-click label.task-list-label:has(> input[data-task]:
   --callout-border-width: 1px;
   --callout-border-opacity: 1;
   --callout-radius: var(--radius-s);
-  --callout-padding: var(--size-4-1);
-  --callout-title-padding: 0 0 var(--size-2-2) 0;
-  --callout-content-padding: var(--size-2-2) 0 0 0;
+  --callout-padding: var(--praxis-space-4);
+  --callout-title-padding: 0 0 var(--praxis-space-2) 0;
+  --callout-content-padding: var(--praxis-space-2) 0 0 0;
   background: color-mix(in srgb, var(--callout-color) 12%, transparent);
   border: var(--callout-border-width) solid color-mix(in srgb, var(--callout-color) 28%, transparent);
   border-radius: var(--callout-radius);
