@@ -510,7 +510,7 @@ body {
 
 /* Gutters */
 body :not(.canvas-node) .markdown-source-view.mod-cm6 .cm-gutters {
-  position: absolute !important;
+  position: absolute;
   z-index: 0;
   margin-inline-end: 0;
 }
@@ -538,8 +538,8 @@ body {
   display: none;
 }
 
-.markdown-source-view.mod-cm6 .cm-gutters {
-  color: var(--line-number-color) !important;
+.markdown-source-view.mod-cm6 .cm-editor .cm-gutters {
+  color: var(--line-number-color);
 }
 
 .markdown-source-view.mod-cm6 .cm-editor .cm-gutterElement.cm-active .cm-heading-marker,
@@ -582,13 +582,13 @@ body {
 }
 
 .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block > .edit-block-button {
-  width: 30px !important;
-  padding-inline-start: 7px !important;
+  width: 30px;
+  padding-inline-start: 7px;
 }
 
 .is-live-preview:not(.is-readable-line-width) .cm-embed-block > .edit-block-button {
-  padding-inline-start: 0px !important;
-  margin-inline-start: 0 !important;
+  padding-inline-start: 0px;
+  margin-inline-start: 0;
   padding: 4px;
 }
 
@@ -598,7 +598,7 @@ body {
 }
 
 .markdown-source-view.mod-cm6 .edit-block-button svg {
-  margin: 0 !important;
+  margin: 0;
   opacity: 1;
 }
 
@@ -758,8 +758,8 @@ body.ribbon-vertical-expand:not(.is-mobile) .workspace-ribbon.mod-left:hover ~ .
 .ribbon-bottom-left-hover-vertical .workspace-ribbon.mod-left,
 .ribbon-bottom-left-hover .workspace-ribbon.mod-left {
   overflow: visible;
-  border-top: var(--border-width) solid var(--background-modifier-border) !important;
-  border-right: var(--border-width) solid var(--background-modifier-border) !important;
+  border-top: var(--border-width) solid var(--background-modifier-border);
+  border-right: var(--border-width) solid var(--background-modifier-border);
   border-top-right-radius: var(--radius-m);
   padding: 0;
   position: absolute;
@@ -770,7 +770,7 @@ body.ribbon-vertical-expand:not(.is-mobile) .workspace-ribbon.mod-left:hover ~ .
   bottom: 0;
   top: auto;
   background: var(--background-secondary);
-  display: var(--hider-ribbon-display) !important;
+  display: var(--hider-ribbon-display);
   flex-direction: row;
   z-index: 17;
   opacity: 0;
@@ -868,11 +868,11 @@ body:not(.praxis-status-off) .status-bar {
   color: var(--text-normal);
 }
 .status-bar .status-bar-item {
-  cursor: var(--cursor) !important;
+  cursor: var(--cursor);
 }
 .status-bar .status-bar-item.plugin-editor-status:hover, .status-bar .status-bar-item.plugin-sync:hover, .status-bar .status-bar-item.cMenu-statusbar-button:hover, .status-bar .status-bar-item.mod-clickable:hover {
   text-align: center;
-  background-color: var(--background-modifier-hover) !important;
+  background-color: var(--background-modifier-hover);
 }
 
 .tab-stack-top-flipped {
@@ -964,7 +964,7 @@ body.window-title-off .titlebar-text {
 }
 
 .titlebar-button-container.mod-right {
-  background-color: transparent !important;
+  background-color: transparent;
 }
 
 .is-hidden-frameless.theme-dark:not(.praxis-contrast-black):not(.colorful-frame),
@@ -1014,8 +1014,8 @@ body:not(.is-mobile).hide-settings .workspace-drawer-vault-actions .clickable-ic
   display: none;
 }
 
-body:not(.is-mobile).hide-help.hide-settings .workspace-drawer-vault-actions {
-  display: none !important;
+body:not(.is-mobile).hide-help.hide-settings .workspace-drawer-vault-actions.workspace-drawer-vault-actions {
+  display: none;
 }
 
 body:not(.is-grabbing):not(.is-fullscreen).labeled-nav.is-hidden-frameless.vault-profile-top .mod-left-split .mod-top .workspace-tab-header-container {
@@ -1294,10 +1294,6 @@ body {
   left: var(--checkbox-left);
 }
 
-.markdown-preview-view ul > li.task-list-item {
-  text-indent: 0;
-}
-
 .praxis-code-scroll {
   --code-white-space: pre;
 }
@@ -1306,12 +1302,12 @@ body {
   white-space: pre;
 }
 .praxis-code-scroll .cm-hmd-codeblock {
-  white-space: pre !important;
+  white-space: pre;
 }
 
 @media print {
   .print {
-    --code-background: #eeeeee !important;
+    --code-background: #eeeeee;
   }
 }
 /* Transcluded notes and embeds */
@@ -1361,15 +1357,15 @@ body {
 }
 
 .markdown-embed .markdown-preview-view .markdown-preview-sizer {
-  padding-bottom: 0 !important;
+  padding-bottom: 0;
 }
 
 .markdown-preview-view.markdown-embed .markdown-preview-sizer,
 .markdown-preview-view.is-readable-line-width .markdown-embed .markdown-preview-sizer {
   max-width: 100%;
   width: 100%;
-  min-height: 0 !important;
-  padding-bottom: 0 !important;
+  min-height: 0;
+  padding-bottom: 0;
 }
 
 .markdown-embed .markdown-preview-section div:last-child p,
@@ -1717,7 +1713,7 @@ body,
   --focus-animation-duration: 0ms;
 }
 .disable-animations .mod-sidedock {
-  transition-duration: 0ms !important;
+  transition-duration: 0ms;
 }
 
 .fast-animations {
@@ -1725,7 +1721,7 @@ body,
   --focus-animation-duration: 0.05s;
 }
 .fast-animations .mod-sidedock {
-  transition-duration: 70ms !important;
+  transition-duration: 70ms;
 }
 
 body {
@@ -1763,12 +1759,12 @@ body {
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer > .metadata-container {
   max-width: var(--max-width);
   width: var(--line-width);
-  margin-inline: var(--content-margin) !important;
+  margin-inline: var(--content-margin);
 }
 
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > *:not(div) {
   max-width: var(--content-line-width);
-  margin-inline-start: var(--content-margin-start) !important;
+  margin-inline-start: var(--content-margin-start);
 }
 
 /* File margins ------------------------------------ */
@@ -1969,10 +1965,10 @@ body {
 .table-100 .table-col-btn,
 .table-full .table-col-btn,
 .table-cards .table-col-btn {
-  cursor: default !important;
+  cursor: default;
   margin-top: 8px;
   height: var(--table-header-size);
-  inset-inline-start: calc(100% - var(--table-drag-handle-size) - 4px) !important;
+  inset-inline-start: calc(100% - var(--table-drag-handle-size) - 4px);
 }
 .table-100 .markdown-source-view.mod-cm6, .table-100.markdown-source-view.mod-cm6,
 .table-full .markdown-source-view.mod-cm6, .table-full.markdown-source-view.mod-cm6,
@@ -1982,7 +1978,7 @@ body {
 .table-100 .markdown-source-view.mod-cm6 .cm-table-widget .table-row-drag-handle, .table-100.markdown-source-view.mod-cm6 .cm-table-widget .table-row-drag-handle,
 .table-full .markdown-source-view.mod-cm6 .cm-table-widget .table-row-drag-handle, .table-full.markdown-source-view.mod-cm6 .cm-table-widget .table-row-drag-handle,
 .table-cards .markdown-source-view.mod-cm6 .cm-table-widget .table-row-drag-handle, .table-cards.markdown-source-view.mod-cm6 .cm-table-widget .table-row-drag-handle {
-  inset-inline-end: calc(100% - var(--table-drag-handle-size)) !important;
+  inset-inline-end: calc(100% - var(--table-drag-handle-size));
 }
 
 .img-wide,
@@ -2081,17 +2077,17 @@ body {
    Obsidian installer 1.1.9 or above.
 */
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content .cm-table-widget,
-.markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > div:has(table),
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > .el-table,
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer .cm-table-widget,
-.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div:has(table) {
+.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-table {
   width: var(--container-table-width);
   max-width: var(--container-table-max-width);
-  margin-inline: var(--container-table-margin) !important;
+  margin-inline: var(--container-table-margin);
   padding-inline-start: var(--table-drag-padding);
 }
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content .el-table,
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer .el-table {
-  margin-inline: var(--container-table-margin) !important;
+  margin-inline: var(--container-table-margin);
   padding-inline-start: var(--table-drag-padding);
 }
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content .table-wrapper,
@@ -2134,22 +2130,22 @@ body {
   padding-bottom: 0.25rem;
 }
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > .image-embed,
-.markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > div:has(.image-embed),
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > .el-embed-image,
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .image-embed,
-.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div:has(.image-embed) {
+.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-embed-image {
   width: var(--container-img-width);
   max-width: var(--container-img-max-width);
 }
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > .image-embed img,
-.markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > div:has(.image-embed) img,
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > .el-embed-image img,
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .image-embed img,
-.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div:has(.image-embed) img {
+.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-embed-image img {
   max-width: var(--img-max-width);
 }
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > img,
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > img {
   max-width: var(--img-line-width);
-  margin-inline-start: var(--img-margin-start) !important;
+  margin-inline-start: var(--img-margin-start);
 }
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content div:has(> .block-language-dataviewjs canvas, > .block-language-chart),
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer div:has(> .block-language-dataviewjs canvas, > .block-language-chart) {
@@ -2254,7 +2250,7 @@ body {
   height: auto;
 }
 .cards table.dataview > tbody > tr:hover {
-  background-color: var(--cards-background-hover) !important;
+  background-color: var(--cards-background-hover);
   border: var(--cards-border-width) solid var(--background-modifier-border-hover);
   box-shadow: 0 4px 6px 0px rgba(0, 0, 0, 0.05), 0 1px 3px 1px rgba(0, 0, 0, 0.025);
   transition: box-shadow 0.15s linear;
@@ -2283,7 +2279,7 @@ body {
   margin: 0 calc(var(--cards-padding) / 2);
 }
 .cards table.dataview tbody > tr > td a {
-  text-decoration: none;
+  text-decoration-line: none;
 }
 .cards table.dataview tbody > tr > td > button {
   width: 100%;
@@ -2294,8 +2290,8 @@ body {
 }
 .cards table.dataview tbody > tr > td > ul {
   width: 100%;
-  padding: 0.25em 0 !important;
-  margin: 0 auto !important;
+  padding: 0.25em 0;
+  margin: 0 auto;
 }
 .cards table.dataview tbody > tr > td img {
   aspect-ratio: var(--cards-aspect-ratio);
@@ -2393,7 +2389,7 @@ body {
 }
 .cards table.dataview thead > tr > th {
   display: block;
-  padding: 3px 30px 3px 6px !important;
+  padding: 3px 30px 3px 6px;
   border-radius: var(--radius-s);
   width: 100%;
   font-weight: 400;
@@ -2508,7 +2504,7 @@ body {
 }
 .cards.cards-cover tbody > tr > td:first-child,
 .list-cards.cards-cover tbody > tr > td:first-child {
-  padding: 0 !important;
+  padding: 0;
   background-color: var(--background-secondary);
   display: block;
   margin: 0;
@@ -2709,7 +2705,10 @@ body:not(.tasks) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:is(
 body:not(.tasks) .markdown-preview-view ul li[data-task="-"].task-list-item.is-checked,
 body:not(.tasks) li[data-task="-"].task-list-item.is-checked {
   color: var(--text-faint);
-  text-decoration: line-through solid var(--text-faint) 1px;
+  text-decoration-line: line-through;
+  text-decoration-style: solid;
+  text-decoration-color: var(--text-faint);
+  text-decoration-thickness: 1px;
 }
 
 /* [*] Star */
@@ -3033,7 +3032,7 @@ body.colorful-headings .modal {
 }
 
 .praxis-focus-mode.is-translucent .workspace-ribbon.mod-left.is-collapsed, .praxis-focus-mode.is-translucent .workspace-ribbon.mod-left.is-collapsed:before {
-  background-color: var(--background-primary) !important;
+  background-color: var(--background-primary);
 }
 .praxis-focus-mode .workspace-ribbon.mod-left {
   transition: background-color 0s linear 0s;
@@ -3571,7 +3570,7 @@ https://github.com/sponsors/kepano
 }
 .labeled-nav .mod-left-split .mod-top .workspace-tab-header-container {
   position: relative;
-  flex-direction: column-reverse !important;
+  flex-direction: column-reverse;
   height: auto;
   width: 100%;
 }
@@ -3585,7 +3584,7 @@ https://github.com/sponsors/kepano
 .labeled-nav .mod-left-split .mod-top .workspace-tab-header-container .workspace-tab-header-container-inner {
   padding: var(--size-4-2) var(--size-4-2);
   margin-top: var(--labeled-nav-top-margin);
-  flex-direction: column !important;
+  flex-direction: column;
   background-color: var(--background-secondary);
 }
 .labeled-nav .mod-left-split .mod-top .workspace-tab-header-container .workspace-tab-container-inner {
@@ -4315,7 +4314,7 @@ body {
   font-size: var(--font-adaptive-smallest);
 }
 #calendar-container tr th:first-child {
-  padding-left: 0 !important;
+  padding-left: 0;
 }
 #calendar-container tr td {
   padding: 2px 0 0;
@@ -4325,7 +4324,7 @@ body {
   transition: none;
 }
 #calendar-container tr td:first-child {
-  padding-left: 0 !important;
+  padding-left: 0;
 }
 #calendar-container .nav {
   padding: 0;
@@ -4498,8 +4497,8 @@ body .table-view-table > thead > tr > th,
 table.dataview ul.dataview-ul {
   list-style: none;
   padding-inline-start: 0;
-  margin-block-start: 0em !important;
-  margin-block-end: 0em !important;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
 }
 
 .markdown-source-view.mod-cm6:not(.cards) .table-view-table > tbody > tr > td,
@@ -4515,7 +4514,7 @@ body .dataview.small-text {
 body:not(.row-hover) .dataview.task-list-item:hover,
 body:not(.row-hover) .dataview.task-list-basic-item:hover,
 body:not(.row-hover) .table-view-table > tbody > tr:hover {
-  background-color: transparent !important;
+  background-color: transparent;
   box-shadow: none;
 }
 
@@ -4628,7 +4627,7 @@ body .dataview.inline-field-value {
 }
 
 .git-view-body .file-view .opener .collapse-icon {
-  display: flex !important;
+  display: flex;
   margin-left: -7px;
 }
 
@@ -4645,7 +4644,7 @@ body .dataview.inline-field-value {
 }
 
 .git-view-body .file-view .tools .type {
-  display: none !important;
+  display: none;
 }
 
 .git-view-body .file-view .tools {
@@ -4671,12 +4670,12 @@ div[data-type=git-view] .search-input-container {
 }
 
 .git-view-body .opener .collapse-icon {
-  display: none !important;
+  display: none;
 }
 
 .git-view-body main {
-  background-color: var(--background-primary) !important;
-  width: initial !important;
+  background-color: var(--background-primary);
+  width: initial;
 }
 
 .git-view-body .file-view > main:not(.topLevel) {
@@ -4684,9 +4683,9 @@ div[data-type=git-view] .search-input-container {
 }
 
 div[data-type=git-view] .commit-msg {
-  min-height: 2.5em !important;
-  height: 2.5em !important;
-  padding: 6.5px 8px !important;
+  min-height: 2.5em;
+  height: 2.5em;
+  padding: 6.5px 8px;
 }
 
 div[data-type=git-view] .search-input-clear-button {
@@ -4927,16 +4926,16 @@ body .kanban-plugin__item-form {
 body .kanban-plugin__markdown-preview-view ol.contains-task-list .contains-task-list,
 body .kanban-plugin__markdown-preview-view ul.contains-task-list .contains-task-list,
 body .kanban-plugin__markdown-preview-view ul, body .kanban-plugin__markdown-preview-view ol {
-  padding-inline-start: 1.8em !important;
+  padding-inline-start: 1.8em;
 }
 
 @media (max-width: 400pt) {
   .kanban-plugin__board {
-    flex-direction: column !important;
+    flex-direction: column;
   }
   .kanban-plugin__lane {
-    width: 100% !important;
-    margin-bottom: 1rem !important;
+    width: 100%;
+    margin-bottom: 1rem;
   }
 }
 /* Lapel */
@@ -5033,7 +5032,7 @@ body .markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-t
 }
 .setting-item .style-settings-import,
 .setting-item .style-settings-export {
-  text-decoration: none;
+  text-decoration-line: none;
   font-size: var(--font-ui-small);
   font-weight: 500;
   color: var(--text-muted);
@@ -5094,7 +5093,7 @@ body .markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-t
   max-width: var(--max-width);
 }
 .zoom-plugin-header > .zoom-plugin-title {
-  text-decoration: none;
+  text-decoration-line: none;
   max-width: 15em;
   overflow: hidden;
 }
@@ -5328,8 +5327,8 @@ body.praxis-properties-spacious {
 }
 
 .metadata-property-value :is(.metadata-input-date, .metadata-input-datetime) > .clickable-icon {
-  margin-inline-start: var(--size-2-2) !important;
-  margin-inline-end: 0 !important;
+  margin-inline-start: var(--size-2-2);
+  margin-inline-end: 0;
 }
 
 .metadata-property-value :is(.metadata-input-date, .metadata-input-datetime) > :is(input, span, div):not(.clickable-icon) {
@@ -5384,14 +5383,14 @@ body.praxis-properties-spacious {
   --checkbox-marker-color: var(--text-on-accent);
   --checkbox-radius: var(--radius-xs);
   --checkbox-size: 16px;
-  border-radius: var(--checkbox-radius) !important;
+  border-radius: var(--checkbox-radius);
   height: var(--checkbox-size);
   width: var(--checkbox-size);
 }
 
 .metadata-property-value :is(input[type="checkbox"], .metadata-input-checkbox)::before,
 .metadata-property-value :is(input[type="checkbox"], .metadata-input-checkbox)::after {
-  border-radius: var(--checkbox-radius) !important;
+  border-radius: var(--checkbox-radius);
 }
 
 /* H1 underline */
@@ -5559,13 +5558,13 @@ body :is(input[data-task="L"], li[data-task="L"]) { --praxis-task-icon: var(--pr
 
 .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="x"],
 .markdown-rendered li[data-task="x"] {
-  opacity: 0.2 !important;
-  text-decoration: none !important;
+  opacity: 0.2;
+  text-decoration-line: none;
 }
 .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="x"]:hover,
 .markdown-rendered li[data-task="x"]:hover {
-  opacity: 0.8 !important;
-  transition: opacity ease-in-out 0.5s !important;
+  opacity: 0.8;
+  transition: opacity ease-in-out 0.5s;
 }
 
 input[data-task]:not(input[data-task=""], input[data-task=" "], input[data-task="x"]):checked,
