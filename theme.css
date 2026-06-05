@@ -176,7 +176,7 @@ settings:
     id: praxis-properties-label-width
     title: Label width
     type: variable-number-slider
-    default: 136
+    default: 128
     min: 96
     max: 240
     step: 4
@@ -185,7 +185,7 @@ settings:
     id: praxis-properties-input-height
     title: Input height
     type: variable-number-slider
-    default: 28
+    default: 26
     min: 24
     max: 40
     step: 1
@@ -194,7 +194,7 @@ settings:
     id: praxis-properties-gap
     title: Row gap
     type: variable-number-slider
-    default: 2
+    default: 0
     min: 0
     max: 10
     step: 1
@@ -267,9 +267,9 @@ body {
   --praxis-cards-image-height: 400px;
   --praxis-cards-image-fit: contain;
   --praxis-img-grid-gap: 8px;
-  --praxis-properties-label-width: 136px;
-  --praxis-properties-input-height: 28px;
-  --praxis-properties-gap: 2px;
+  --praxis-properties-label-width: 128px;
+  --praxis-properties-input-height: 26px;
+  --praxis-properties-gap: 0px;
 
   --font-interface-theme: var(--praxis-font-interface-theme);
   --font-text-theme: var(--praxis-font-text-theme);
@@ -323,12 +323,12 @@ body {
   --metadata-divider-color-hover: var(--background-modifier-border-hover);
   --metadata-divider-color-focus: var(--background-modifier-border-focus);
   --metadata-divider-width: var(--border-width);
-  --metadata-property-padding: var(--size-2-1) var(--size-2-2);
+  --metadata-property-padding: var(--size-2-1) 0;
   --metadata-property-radius: var(--radius-s);
   --metadata-property-radius-hover: var(--radius-s);
   --metadata-property-radius-focus: var(--radius-s);
   --metadata-property-background: transparent;
-  --metadata-property-background-hover: transparent;
+  --metadata-property-background-hover: color-mix(in srgb, var(--background-modifier-hover) 42%, transparent);
   --metadata-property-background-active: transparent;
   --metadata-label-background-hover: transparent;
   --metadata-label-background-active: transparent;
@@ -337,7 +337,7 @@ body {
   --metadata-sidebar-label-font-size: var(--font-ui-smaller);
   --metadata-label-text-color: var(--text-muted);
   --metadata-label-text-color-hover: var(--text-normal);
-  --metadata-label-width: clamp(96px, 28%, var(--praxis-properties-label-width));
+  --metadata-label-width: clamp(112px, 24%, var(--praxis-properties-label-width));
   --metadata-input-height: var(--praxis-properties-input-height);
   --metadata-input-text-color: var(--text-normal);
   --metadata-input-font-size: var(--font-ui-small);
@@ -970,49 +970,24 @@ body.praxis-properties-spacious {
   margin-bottom: var(--size-4-1);
 }
 
-.metadata-property-key {
-  color: var(--metadata-label-text-color);
-  gap: var(--size-2-3);
-}
-
-.metadata-property-key:hover,
-.metadata-property:focus-within .metadata-property-key {
-  color: var(--metadata-label-text-color-hover);
-}
-
-.metadata-property-icon,
-.metadata-property-warning-icon,
-.metadata-property-value .clickable-icon {
-  color: var(--text-faint);
-}
-
-.metadata-property-value {
-  background: transparent !important;
-  color: var(--metadata-input-text-color);
-}
-
-.metadata-property-value :is(input, textarea, select, .multi-select-container, .metadata-input-text, .metadata-input-longtext, .metadata-input-number, .metadata-input-date, .metadata-input-datetime) {
-  background: transparent !important;
-  border-radius: calc(var(--metadata-property-radius) - 4px);
-  box-shadow: none;
-}
-
 .metadata-property-value :is(.metadata-input-date, .metadata-input-datetime) {
-  gap: var(--size-2-2);
+  gap: var(--size-2-3);
 }
 
 .metadata-property-value :is(.metadata-input-date, .metadata-input-datetime) .clickable-icon,
 .metadata-property-value :is(.metadata-input-date, .metadata-input-datetime) svg {
-  margin-inline-end: var(--size-2-2);
+  margin-inline-end: var(--size-2-3);
 }
 
-.metadata-add-button {
-  color: var(--text-muted);
-  margin-top: var(--size-2-3);
-}
-
-.metadata-add-button:hover {
-  color: var(--text-normal);
+.metadata-property-value :is(input[type="checkbox"], .metadata-input-checkbox) {
+  --checkbox-border-color: var(--background-modifier-border-hover);
+  --checkbox-border-color-hover: var(--text-accent);
+  --checkbox-color: var(--interactive-accent);
+  --checkbox-color-hover: var(--interactive-accent-hover);
+  --checkbox-marker-color: var(--text-on-accent);
+  --checkbox-radius: var(--radius-xs);
+  --checkbox-size: 16px;
+  border-radius: var(--checkbox-radius);
 }
 
 @media (max-width: 600px) {
