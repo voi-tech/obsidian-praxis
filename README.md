@@ -48,12 +48,11 @@ Praxis works without plugins, and its Style Settings-backed features are enabled
 
 - background contrast
 - callout style
-- link underlines
+- Properties heading and Add property visibility
 - custom checkbox click locking
-- title and H1 underline
 - active line highlighting
-- Properties heading visibility
-- Add property button visibility
+- title and H1 underline
+- link underlines
 
 Praxis intentionally does not mirror the full Minimal Style Settings surface. Broader typography, color, and layout preferences should be managed through Obsidian's built-in Appearance settings or custom snippets.
 

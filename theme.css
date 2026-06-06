@@ -35,12 +35,6 @@ name: Praxis
 id: praxis
 settings:
   -
-    id: praxis-appearance
-    title: Appearance
-    type: heading
-    level: 1
-    collapsed: false
-  -
     id: praxis-background-style
     title: Background contrast
     type: class-select
@@ -76,40 +70,6 @@ settings:
         label: Minimal
         value: praxis-callouts-minimal
   -
-    id: praxis-links-underlined
-    title: Underline links
-    type: class-toggle
-    default: true
-  -
-    id: praxis-content
-    title: Content
-    type: heading
-    level: 1
-    collapsed: false
-  -
-    id: praxis-disable-checkbox-click
-    title: Disable checkbox click
-    description: Prevent clicking on custom task icons to toggle their state
-    type: class-toggle
-    default: true
-  -
-    id: praxis-underline-title
-    title: Underline title
-    description: Add a divider below the note title and H1 headings
-    type: class-toggle
-    default: false
-  -
-    id: active-line-on
-    title: Highlight active line
-    type: class-toggle
-    default: true
-  -
-    id: praxis-properties-heading
-    title: Properties
-    type: heading
-    level: 1
-    collapsed: false
-  -
     id: metadata-heading-off
     title: Hide properties heading
     type: class-toggle
@@ -117,6 +77,28 @@ settings:
   -
     id: metadata-add-property-off
     title: Hide "Add property" button
+    type: class-toggle
+    default: true
+  -
+    id: praxis-disable-checkbox-click
+    title: Disable checkbox click
+    description: Prevent clicking on custom task icons to toggle their state
+    type: class-toggle
+    default: true
+  -
+    id: active-line-on
+    title: Highlight active line
+    type: class-toggle
+    default: true
+  -
+    id: praxis-underline-title
+    title: Underline title
+    description: Add a divider below the note title and H1 headings
+    type: class-toggle
+    default: true
+  -
+    id: praxis-links-underlined
+    title: Underline links
     type: class-toggle
     default: true
 */
