@@ -5665,6 +5665,16 @@ label.task-list-label:has(> input[data-task]:not(input[data-task=""], input[data
   pointer-events: none;
 }
 
+body:not(.tasks) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:is([data-task="-"]),
+body:not(.tasks) .markdown-preview-view ul li[data-task="-"].task-list-item.is-checked,
+body:not(.tasks) li[data-task="-"].task-list-item.is-checked {
+  color: var(--text-faint);
+  text-decoration-line: line-through;
+  text-decoration-style: solid;
+  text-decoration-color: var(--text-faint);
+  text-decoration-thickness: 1px;
+}
+
 /* Callouts */
 .callout {
   --callout-color: rgb(152 120 224);
