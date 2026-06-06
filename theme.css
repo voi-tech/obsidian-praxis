@@ -5622,15 +5622,15 @@ body :is(input[data-task="t"], li[data-task="t"]) { --praxis-task-icon: var(--pr
 body :is(input[data-task="P"], li[data-task="P"]) { --praxis-task-icon: var(--praxis-icon-phone); --praxis-task-color: var(--praxis-task-mint); }
 body :is(input[data-task="L"], li[data-task="L"]) { --praxis-task-icon: var(--praxis-icon-heart); --praxis-task-color: var(--praxis-task-violet); }
 body :is(input[data-task="0"], li[data-task="0"]) { --praxis-task-progress: 0%; }
-body :is(input[data-task="1"], li[data-task="1"]) { --praxis-task-progress: 11.111%; }
-body :is(input[data-task="2"], li[data-task="2"]) { --praxis-task-progress: 22.222%; }
-body :is(input[data-task="3"], li[data-task="3"]) { --praxis-task-progress: 33.333%; }
-body :is(input[data-task="4"], li[data-task="4"]) { --praxis-task-progress: 44.444%; }
-body :is(input[data-task="5"], li[data-task="5"]) { --praxis-task-progress: 55.556%; }
-body :is(input[data-task="6"], li[data-task="6"]) { --praxis-task-progress: 66.667%; }
-body :is(input[data-task="7"], li[data-task="7"]) { --praxis-task-progress: 77.778%; }
-body :is(input[data-task="8"], li[data-task="8"]) { --praxis-task-progress: 88.889%; }
-body :is(input[data-task="9"], li[data-task="9"]) { --praxis-task-progress: 100%; }
+body :is(input[data-task="1"], li[data-task="1"]) { --praxis-task-progress: 10%; }
+body :is(input[data-task="2"], li[data-task="2"]) { --praxis-task-progress: 20%; }
+body :is(input[data-task="3"], li[data-task="3"]) { --praxis-task-progress: 30%; }
+body :is(input[data-task="4"], li[data-task="4"]) { --praxis-task-progress: 40%; }
+body :is(input[data-task="5"], li[data-task="5"]) { --praxis-task-progress: 50%; }
+body :is(input[data-task="6"], li[data-task="6"]) { --praxis-task-progress: 60%; }
+body :is(input[data-task="7"], li[data-task="7"]) { --praxis-task-progress: 70%; }
+body :is(input[data-task="8"], li[data-task="8"]) { --praxis-task-progress: 80%; }
+body :is(input[data-task="9"], li[data-task="9"]) { --praxis-task-progress: 90%; }
 
 .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="x"],
 .markdown-rendered li[data-task="x"] {

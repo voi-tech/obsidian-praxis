@@ -116,7 +116,7 @@ Add these suffixes to image embeds:
 
 Praxis includes custom task icons for `/`, `-`, `>`, `<`, `?`, `!`, `*`, quote, `l`, `b`, `i`, `S`, `I`, `p`, `c`, `f`, `k`, `w`, `u`, `d`, `+`, `B`, `a`, `n`, `R`, `t`, `P`, and `L`.
 
-It also supports `[0]` through `[9]` task states as horizontal progress bars, from empty (`[0]`) to full (`[9]`).
+It also supports `[0]` through `[9]` task states as horizontal progress bars, from 0% (`[0]`) to 90% (`[9]`).
 
 Callouts use Lucide-based icons. The custom `[!author]` callout is styled for quotes and attributions. Add `|noicon` metadata to a callout to hide its icon.
 
