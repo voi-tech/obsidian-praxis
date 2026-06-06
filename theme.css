@@ -252,6 +252,13 @@ body {
   --color-blue: #6b9fd4;
   --color-purple: #9878e0;
   --color-pink: #c87ab0;
+  --callout-purple: #9878e0;
+  --callout-blue:   #6b9fd4;
+  --callout-teal:   #5bbfb2;
+  --callout-yellow: #c9a84c;
+  --callout-orange: #e8975c;
+  --callout-red:    #d97a40;
+  --callout-brown:  #b8a88a;
 }
 
 .theme-light {
