@@ -5758,7 +5758,7 @@ label.task-list-label:has(> input[data-task]:not(input[data-task=""], input[data
 .callout[data-callout="cite"] { --callout-color: var(--callout-brown); --callout-icon: lucide-quote; }
 
 .callout[data-callout="author"] {
-  --callout-color: rgb(139 114 85);
+  --callout-color: var(--callout-brown);
   --callout-icon: lucide-user;
   box-shadow: 0 var(--praxis-space-3) var(--praxis-space-6) var(--shadow-color);
   display: flex;
