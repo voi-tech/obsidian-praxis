@@ -826,12 +826,12 @@ body {
   box-shadow: none;
   color: var(--praxis-task-progress-fill, var(--interactive-accent));
   filter: none;
-  height: calc(var(--checkbox-size, 1em) * 0.55);
+  height: calc(var(--checkbox-size, 1em) * 0.5);
   mask: none;
   overflow: hidden;
   position: relative;
   transform: none;
-  width: var(--checkbox-size, 1em);
+  width: calc(var(--checkbox-size, 1em) * 2.4);
   -webkit-mask: none;
 }
 
