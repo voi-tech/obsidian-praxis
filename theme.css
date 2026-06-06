@@ -1529,14 +1529,18 @@ body {
 }
 
 body {
-  --table-header-border-width: 0;
+  --table-header-border-width: 1px;
   --table-column-first-border-width: 0;
   --table-column-last-border-width: 0;
   --table-row-last-border-width: 0;
-  --table-edge-cell-padding-first: 0;
-  --table-edge-cell-padding-last: 0;
-  --table-cell-padding: 4px 10px;
+  --table-edge-cell-padding-first: var(--praxis-space-4);
+  --table-edge-cell-padding-last: var(--praxis-space-4);
+  --table-cell-padding: var(--praxis-space-3) var(--praxis-space-4);
   --table-header-size: var(--table-text-size);
+  --table-border-color: color-mix(in srgb, var(--ui1) 60%, transparent);
+  --table-header-background: color-mix(in srgb, var(--bg3) 60%, var(--bg2));
+  --table-header-color: var(--tx1);
+  --table-header-weight: 500;
 }
 
 /* Preview mode tables */
