@@ -1552,9 +1552,24 @@ body {
   --table-header-size: var(--table-text-size);
 }
 
+/* Table header styling */
+.markdown-source-view.mod-cm6 th,
+.markdown-preview-view th {
+  background-color: var(--table-header-background);
+  color: var(--table-header-color);
+  font-weight: var(--table-header-weight);
+  border-bottom: var(--table-header-border-width) solid var(--table-border-color);
+}
+
+/* Table cell line-height */
+.markdown-source-view.mod-cm6 td,
+.markdown-preview-view td {
+  line-height: var(--line-height);
+}
+
 .markdown-source-view.mod-cm6 table,
 .markdown-preview-view table {
-  border: var(--border-width) solid var(--border-color);
+  border: var(--border-width) solid var(--table-border-color);
   border-collapse: collapse;
 }
 .markdown-source-view.mod-cm6 td, .markdown-source-view.mod-cm6 th,
