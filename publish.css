@@ -182,13 +182,15 @@ body {
   --hr-color: var(--background-modifier-border);
 
   --table-background: transparent;
-  --table-header-background: transparent;
+  --table-header-background: color-mix(in srgb, var(--praxis-bg-tertiary) 60%, var(--praxis-bg-secondary));
+  --table-header-color: var(--praxis-text-normal);
+  --table-header-weight: 500;
+  --table-header-border-width: 1px;
   --table-row-background-hover: var(--background-modifier-hover);
   --table-row-alt-background: transparent;
-  --table-border-color: var(--background-modifier-border);
+  --table-border-color: color-mix(in srgb, var(--praxis-border-muted) 60%, transparent);
   --table-text-size: var(--font-text-size);
   --table-header-size: var(--table-text-size);
-  --table-header-weight: var(--bold-weight);
   --table-white-space: normal;
   --table-cell-padding: var(--space-2) var(--space-4);
   --tag-color: var(--text-muted);
