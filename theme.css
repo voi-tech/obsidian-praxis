@@ -5430,6 +5430,9 @@ body.cupertino-light {
   --praxis-task-orange: #a65a2d;
   --praxis-task-brown: #806b4d;
   --praxis-task-muted: #8a7a65;
+  --praxis-task-progress-fill: var(--praxis-task-mint);
+  --praxis-task-progress-track: color-mix(in srgb, var(--praxis-task-muted) 14%, transparent);
+  --praxis-task-progress-border: color-mix(in srgb, var(--praxis-task-muted) 42%, transparent);
 }
 
 body.theme-dark,
@@ -5439,6 +5442,9 @@ body.cupertino-dark {
   --praxis-task-orange: #d97a40;
   --praxis-task-brown: #b8a88a;
   --praxis-task-muted: #8c8078;
+  --praxis-task-progress-fill: var(--praxis-task-mint);
+  --praxis-task-progress-track: color-mix(in srgb, var(--praxis-task-muted) 18%, transparent);
+  --praxis-task-progress-border: color-mix(in srgb, var(--praxis-task-muted) 52%, transparent);
 }
 
 body {
@@ -5526,6 +5532,67 @@ body:is(.theme-dark, .theme-light)
   -webkit-mask: none;
 }
 
+body:is(.theme-dark, .theme-light)
+  :is(input[data-task="0"], input[data-task="1"], input[data-task="2"], input[data-task="3"], input[data-task="4"], input[data-task="5"], input[data-task="6"], input[data-task="7"], input[data-task="8"], input[data-task="9"]):checked,
+body:is(.theme-dark, .theme-light)
+  li:is([data-task="0"], [data-task="1"], [data-task="2"], [data-task="3"], [data-task="4"], [data-task="5"], [data-task="6"], [data-task="7"], [data-task="8"], [data-task="9"]) > input:checked,
+body:is(.theme-dark, .theme-light)
+  li:is([data-task="0"], [data-task="1"], [data-task="2"], [data-task="3"], [data-task="4"], [data-task="5"], [data-task="6"], [data-task="7"], [data-task="8"], [data-task="9"]) > p > input:checked {
+  --checkbox-marker-color: transparent;
+  appearance: none;
+  -webkit-appearance: none;
+  background: var(--praxis-task-progress-track);
+  background-image: none;
+  border: 1px solid var(--praxis-task-progress-border, var(--background-modifier-border));
+  border-radius: 999px;
+  box-shadow: none;
+  color: var(--praxis-task-progress-fill, var(--interactive-accent));
+  filter: none;
+  height: calc(var(--checkbox-size, 1em) * 0.55);
+  mask: none;
+  overflow: hidden;
+  position: relative;
+  transform: none;
+  width: var(--checkbox-size, 1em);
+  -webkit-mask: none;
+}
+
+body:is(.theme-dark, .theme-light)
+  :is(input[data-task="0"], input[data-task="1"], input[data-task="2"], input[data-task="3"], input[data-task="4"], input[data-task="5"], input[data-task="6"], input[data-task="7"], input[data-task="8"], input[data-task="9"]):checked::before,
+body:is(.theme-dark, .theme-light)
+  li:is([data-task="0"], [data-task="1"], [data-task="2"], [data-task="3"], [data-task="4"], [data-task="5"], [data-task="6"], [data-task="7"], [data-task="8"], [data-task="9"]) > input:checked::before,
+body:is(.theme-dark, .theme-light)
+  li:is([data-task="0"], [data-task="1"], [data-task="2"], [data-task="3"], [data-task="4"], [data-task="5"], [data-task="6"], [data-task="7"], [data-task="8"], [data-task="9"]) > p > input:checked::before {
+  background: none;
+  border: 0;
+  content: none;
+  display: none;
+  height: 0;
+  mask: none;
+  width: 0;
+  -webkit-mask: none;
+}
+
+body:is(.theme-dark, .theme-light)
+  :is(input[data-task="0"], input[data-task="1"], input[data-task="2"], input[data-task="3"], input[data-task="4"], input[data-task="5"], input[data-task="6"], input[data-task="7"], input[data-task="8"], input[data-task="9"]):checked::after,
+body:is(.theme-dark, .theme-light)
+  li:is([data-task="0"], [data-task="1"], [data-task="2"], [data-task="3"], [data-task="4"], [data-task="5"], [data-task="6"], [data-task="7"], [data-task="8"], [data-task="9"]) > input:checked::after,
+body:is(.theme-dark, .theme-light)
+  li:is([data-task="0"], [data-task="1"], [data-task="2"], [data-task="3"], [data-task="4"], [data-task="5"], [data-task="6"], [data-task="7"], [data-task="8"], [data-task="9"]) > p > input:checked::after {
+  background: currentColor;
+  border: 0;
+  border-radius: inherit;
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  mask: none;
+  position: absolute;
+  top: 0;
+  width: var(--praxis-task-progress, 0%);
+  -webkit-mask: none;
+}
+
 body :is(input[data-task="/"], li[data-task="/"]) { --praxis-task-icon: var(--praxis-icon-minus); --praxis-task-color: var(--praxis-task-muted); }
 body :is(input[data-task="-"], li[data-task="-"]) { --praxis-task-icon: var(--praxis-icon-minus); --praxis-task-color: var(--praxis-task-muted); }
 body :is(input[data-task=">"], li[data-task=">"]) { --praxis-task-icon: var(--praxis-icon-paper-plane); --praxis-task-color: var(--praxis-task-muted); }
@@ -5554,6 +5621,16 @@ body :is(input[data-task="R"], li[data-task="R"]) { --praxis-task-icon: var(--pr
 body :is(input[data-task="t"], li[data-task="t"]) { --praxis-task-icon: var(--praxis-icon-clock); --praxis-task-color: var(--praxis-task-muted); }
 body :is(input[data-task="P"], li[data-task="P"]) { --praxis-task-icon: var(--praxis-icon-phone); --praxis-task-color: var(--praxis-task-mint); }
 body :is(input[data-task="L"], li[data-task="L"]) { --praxis-task-icon: var(--praxis-icon-heart); --praxis-task-color: var(--praxis-task-violet); }
+body :is(input[data-task="0"], li[data-task="0"]) { --praxis-task-progress: 0%; }
+body :is(input[data-task="1"], li[data-task="1"]) { --praxis-task-progress: 11.111%; }
+body :is(input[data-task="2"], li[data-task="2"]) { --praxis-task-progress: 22.222%; }
+body :is(input[data-task="3"], li[data-task="3"]) { --praxis-task-progress: 33.333%; }
+body :is(input[data-task="4"], li[data-task="4"]) { --praxis-task-progress: 44.444%; }
+body :is(input[data-task="5"], li[data-task="5"]) { --praxis-task-progress: 55.556%; }
+body :is(input[data-task="6"], li[data-task="6"]) { --praxis-task-progress: 66.667%; }
+body :is(input[data-task="7"], li[data-task="7"]) { --praxis-task-progress: 77.778%; }
+body :is(input[data-task="8"], li[data-task="8"]) { --praxis-task-progress: 88.889%; }
+body :is(input[data-task="9"], li[data-task="9"]) { --praxis-task-progress: 100%; }
 
 .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="x"],
 .markdown-rendered li[data-task="x"] {
