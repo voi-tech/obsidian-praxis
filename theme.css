@@ -5731,3 +5731,64 @@ body.praxis-callouts-minimal .callout {
     --img-grid-gap: max(4px, calc(var(--praxis-img-grid-gap) / 2));
   }
 }
+
+/* Mobile editor safety: keep content out from under the absolute CM gutter. */
+@media (max-width: 400pt) {
+  .is-mobile .markdown-source-view.mod-cm6 {
+    --praxis-mobile-editor-gutter-width: var(--folding-offset, 32px);
+    --praxis-mobile-editor-gap: var(--size-4-2);
+    --praxis-mobile-editor-inset: 0px;
+    --file-line-width: 100%;
+    --file-margins: var(--size-4-2) var(--size-4-4) var(--size-4-6) var(--size-4-4);
+  }
+
+  .is-mobile .markdown-source-view.mod-cm6:has(.cm-lineNumbers) {
+    --praxis-mobile-editor-inset: calc(var(--praxis-mobile-editor-gutter-width) + var(--praxis-mobile-editor-gap));
+  }
+
+  .is-mobile .markdown-source-view.mod-cm6 .cm-gutters {
+    inset-inline-start: 0;
+    min-width: var(--praxis-mobile-editor-gutter-width);
+  }
+
+  .is-mobile .markdown-source-view.mod-cm6 .cm-lineNumbers .cm-gutterElement {
+    min-width: var(--praxis-mobile-editor-gutter-width);
+  }
+
+  .is-mobile .markdown-source-view.mod-cm6 .cm-content {
+    box-sizing: border-box;
+    max-width: 100%;
+    padding-inline-start: var(--praxis-mobile-editor-inset);
+  }
+
+  .is-mobile .markdown-source-view.mod-cm6.is-rtl .cm-content {
+    padding-inline-start: 0;
+    padding-inline-end: var(--praxis-mobile-editor-inset);
+  }
+
+  .is-mobile .markdown-source-view.mod-cm6 .cm-line,
+  .is-mobile .markdown-source-view.mod-cm6 .cm-embed-block,
+  .is-mobile .markdown-source-view.mod-cm6 .callout,
+  .is-mobile .markdown-preview-view .callout {
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+
+  .is-mobile .markdown-source-view.mod-cm6 .HyperMD-codeblock,
+  .is-mobile .markdown-source-view.mod-cm6 .cm-hmd-codeblock,
+  .is-mobile .markdown-source-view.mod-cm6 .cm-table-widget,
+  .is-mobile .markdown-preview-view pre,
+  .is-mobile .markdown-preview-view table {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+
+  .is-mobile .markdown-source-view.mod-cm6 .image-embed,
+  .is-mobile .markdown-source-view.mod-cm6 .image-wrapper,
+  .is-mobile .markdown-rendered .image-embed,
+  .is-mobile .markdown-rendered .image-wrapper,
+  .is-mobile .markdown-rendered img:not(.emoji) {
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+}
