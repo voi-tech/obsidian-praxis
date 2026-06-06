@@ -939,7 +939,7 @@ body :is(input[data-task][data-task="9"], li[data-task][data-task="9"]) { --prax
 }
 
 .callout {
-  --callout-color: rgb(152 120 224);
+  --callout-color: var(--callout-purple, rgb(152 120 224));
   --callout-icon: lucide-pencil;
   --callout-title-color: var(--callout-color);
   --callout-border-width: var(--border-width);
