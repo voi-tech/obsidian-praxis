@@ -885,7 +885,7 @@ body {
 
 body :is(input[data-task="/"], li[data-task="/"]) { --praxis-task-icon: var(--praxis-icon-minus); --praxis-task-color: var(--praxis-task-muted); }
 body :is(input[data-task="-"], li[data-task="-"]) { --praxis-task-icon: var(--praxis-icon-minus); --praxis-task-color: var(--praxis-task-muted); }
-body :is(input[data-task=">"], li[data-task=">"]) { --praxis-task-icon: var(--praxis-icon-send); --praxis-task-color: var(--praxis-task-muted); }
+body :is(input[data-task=">"], li[data-task=">"]) { --praxis-task-icon: var(--praxis-icon-paper-plane); --praxis-task-color: var(--praxis-task-muted); }
 body :is(input[data-task="<"], li[data-task="<"]) { --praxis-task-icon: var(--praxis-icon-calendar); --praxis-task-color: var(--praxis-task-muted); }
 body :is(input[data-task="?"], li[data-task="?"]) { --praxis-task-icon: var(--praxis-icon-circle-help); --praxis-task-color: var(--praxis-task-violet); }
 body :is(input[data-task="!"], li[data-task="!"]) { --praxis-task-icon: var(--praxis-icon-triangle-alert); --praxis-task-color: var(--praxis-task-orange); }
