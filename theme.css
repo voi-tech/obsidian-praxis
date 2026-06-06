@@ -286,6 +286,13 @@ body {
   --color-blue: #4a7fb0;
   --color-purple: #7a60c8;
   --color-pink: #a05a90;
+  --callout-purple: #7a60c8;
+  --callout-blue:   #4a7fb0;
+  --callout-teal:   #3a8f84;
+  --callout-yellow: #a08030;
+  --callout-orange: #c47a40;
+  --callout-red:    #b96830;
+  --callout-brown:  #806b4d;
 }
 
 /* Map colors to semantic Obsidian names */
