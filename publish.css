@@ -100,6 +100,13 @@ body {
   --color-blue: #6b9fd4;
   --color-purple: #9878e0;
   --color-pink: #c87ab0;
+  --callout-purple: #9878e0;
+  --callout-blue:   #6b9fd4;
+  --callout-teal:   #5bbfb2;
+  --callout-yellow: #c9a84c;
+  --callout-orange: #e8975c;
+  --callout-red:    #d97a40;
+  --callout-brown:  #b8a88a;
 }
 
 .theme-light {
@@ -111,6 +118,13 @@ body {
   --color-blue: #4a7fb0;
   --color-purple: #7a60c8;
   --color-pink: #a05a90;
+  --callout-purple: #7a60c8;
+  --callout-blue:   #4a7fb0;
+  --callout-teal:   #3a8f84;
+  --callout-yellow: #a08030;
+  --callout-orange: #c47a40;
+  --callout-red:    #b96830;
+  --callout-brown:  #806b4d;
 }
 
 .theme-light,
