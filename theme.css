@@ -1571,7 +1571,10 @@ body {
 .markdown-source-view.mod-cm6 table,
 .markdown-preview-view table {
   border: var(--border-width) solid var(--table-border-color);
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: var(--praxis-radius);
+  overflow: hidden;
 }
 .markdown-source-view.mod-cm6 td, .markdown-source-view.mod-cm6 th,
 .markdown-preview-view td,
