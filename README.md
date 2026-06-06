@@ -49,7 +49,6 @@ Praxis works without plugins, and its Style Settings-backed features are enabled
 - background contrast
 - callout style
 - Properties heading and Add property visibility
-- custom checkbox click locking
 - active line highlighting
 - title and H1 underline
 - link underlines

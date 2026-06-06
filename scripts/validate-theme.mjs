@@ -79,7 +79,6 @@ const validateStyleSettings = (themeCss) => {
     "praxis-background-style",
     "praxis-callout-style",
     "praxis-links-underlined",
-    "praxis-disable-checkbox-click",
     "praxis-underline-title",
     "active-line-on",
     "metadata-heading-off",
