@@ -5388,13 +5388,13 @@ body.praxis-properties-spacious {
   margin-top: 0.45em;
 }
 
-body .inline-title {
+body.praxis-underline-title .inline-title {
   border-bottom: 1px solid var(--background-modifier-border);
   padding-bottom: 0.35em;
 }
 
-body .markdown-rendered h1:not(.embedded-note-title),
-body .mod-cm6 .cm-editor .HyperMD-header-1 {
+body.praxis-underline-title .markdown-rendered h1:not(.embedded-note-title),
+body.praxis-underline-title .mod-cm6 .cm-editor .HyperMD-header-1 {
   border-bottom: 1px solid var(--background-modifier-border);
   padding-bottom: 0.4em;
   margin-block-end: 0.6em;
