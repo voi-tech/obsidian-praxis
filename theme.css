@@ -5778,34 +5778,37 @@ label.task-list-label:has(> input[data-task]:not(input[data-task=""], input[data
 .theme-light .callout[data-callout="note"],
 .theme-light .callout[data-callout="abstract"],
 .theme-light .callout[data-callout="summary"],
-.theme-light .callout[data-callout="tldr"],
-.theme-light .callout[data-callout="question"],
-.theme-light .callout[data-callout="help"],
-.theme-light .callout[data-callout="faq"],
-.theme-light .callout[data-callout="example"] { --callout-title-color: #6f55bf; }
+.theme-light .callout[data-callout="tldr"] { --callout-title-color: var(--callout-purple); }
 
 .theme-light .callout[data-callout="info"],
 .theme-light .callout[data-callout="todo"],
+.theme-light .callout[data-callout="example"] { --callout-title-color: var(--callout-blue); }
+
 .theme-light .callout[data-callout="tip"],
 .theme-light .callout[data-callout="hint"],
-.theme-light .callout[data-callout="important"],
 .theme-light .callout[data-callout="success"],
 .theme-light .callout[data-callout="check"],
-.theme-light .callout[data-callout="done"] { --callout-title-color: #277a70; }
+.theme-light .callout[data-callout="done"] { --callout-title-color: var(--callout-teal); }
+
+.theme-light .callout[data-callout="question"],
+.theme-light .callout[data-callout="help"],
+.theme-light .callout[data-callout="faq"] { --callout-title-color: var(--callout-yellow); }
 
 .theme-light .callout[data-callout="warning"],
 .theme-light .callout[data-callout="caution"],
 .theme-light .callout[data-callout="attention"],
+.theme-light .callout[data-callout="important"] { --callout-title-color: var(--callout-orange); }
+
 .theme-light .callout[data-callout="failure"],
 .theme-light .callout[data-callout="fail"],
 .theme-light .callout[data-callout="missing"],
 .theme-light .callout[data-callout="danger"],
 .theme-light .callout[data-callout="error"],
-.theme-light .callout[data-callout="bug"] { --callout-title-color: #9a542b; }
+.theme-light .callout[data-callout="bug"] { --callout-title-color: var(--callout-red); }
 
 .theme-light .callout[data-callout="quote"],
 .theme-light .callout[data-callout="cite"],
-.theme-light .callout[data-callout="author"] { --callout-title-color: #665846; }
+.theme-light .callout[data-callout="author"] { --callout-title-color: var(--callout-brown); }
 
 .callout:is([data-callout-metadata~="noicon"], [data-callout-metadata="noicon"]) .callout-icon,
 .callout:is([data-callout-metadata~="noicon"], [data-callout-metadata="noicon"]) .callout-title-icon {
