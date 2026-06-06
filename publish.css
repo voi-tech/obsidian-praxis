@@ -401,10 +401,20 @@ body {
   background-color: var(--table-row-alt-background);
 }
 
-.table-lines table,
+.table-lines table {
+  border: var(--border-width) solid var(--table-border-color);
+}
 .table-lines td,
 .table-lines th {
-  border: var(--border-width) solid var(--table-border-color);
+  border-right: var(--border-width) solid var(--table-border-color);
+  border-bottom: var(--border-width) solid var(--table-border-color);
+}
+.table-lines td:last-child,
+.table-lines th:last-child {
+  border-right: none;
+}
+.table-lines tr:last-child td {
+  border-bottom: none;
 }
 
 .row-lines table tbody > tr:not(:last-child) > td,
