@@ -1545,7 +1545,8 @@ body {
 
 /* Preview mode tables */
 .markdown-source-view.mod-cm6 table {
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0;
 }
 
 .markdown-rendered th {
