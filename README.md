@@ -40,7 +40,7 @@ BRAT can install Praxis directly from GitHub while the theme is in beta or befor
 2. Open BRAT settings and add this repository as a beta theme: `https://github.com/voi-tech/obsidian-praxis`.
 3. Open Obsidian Settings -> Appearance -> Themes and select `Praxis`.
 
-Praxis targets Obsidian 1.13.0 or newer and works on desktop and mobile.
+Praxis targets Obsidian 1.13.0 or newer and works on desktop and mobile. It uses modern CSS selectors, including `:has()`, for Minimal-compatible media and table helpers.
 
 ## Style Settings
 
@@ -57,11 +57,11 @@ Praxis intentionally does not mirror the full Minimal Style Settings surface. Br
 
 ## Helper Classes
 
-Add helper classes with the `cssClasses` property in your note:
+Add helper classes with the `cssclasses` property in your note:
 
 ```yaml
 ---
-cssClasses:
+cssclasses:
   - cards
   - table-wide
 ---

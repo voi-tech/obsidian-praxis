@@ -3,6 +3,7 @@ import { readdir, readFile, stat } from "node:fs/promises";
 const root = new URL("../", import.meta.url);
 const requiredFiles = ["theme.css", "publish.css", "manifest.json", "README.md", "LICENSE", "screenshot.png"];
 const allowedPackageScripts = new Set(["build", "validate"]);
+const semverPattern = /^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)$/;
 
 const fail = (message) => {
   console.error(`Theme validation failed: ${message}`);
@@ -106,6 +107,8 @@ const validatePackage = async () => {
       fail(`package.json contains non-neutral script "${script}".`);
     }
   }
+
+  return packageJson;
 };
 
 for (const file of requiredFiles) {
@@ -140,7 +143,15 @@ if (manifest?.minAppVersion !== "1.13.0") {
   fail('manifest.json "minAppVersion" must be "1.13.0".');
 }
 
-await validatePackage();
+if (!semverPattern.test(manifest?.version ?? "")) {
+  fail('manifest.json "version" must use SemVer in the format "x.y.z" without leading zeroes.');
+}
+
+const packageJson = await validatePackage();
+
+if (packageJson.version !== manifest.version) {
+  fail(`package.json version "${packageJson.version}" must match manifest.json version "${manifest.version}".`);
+}
 
 const themeCss = await readText("theme.css");
 const publishCss = await readText("publish.css");
@@ -198,6 +209,10 @@ const minimalHelperMarkers = [
 checkBalancedCss("theme.css", themeCss);
 checkBalancedCss("publish.css", publishCss);
 validateStyleSettings(themeCss);
+const scheduledTaskSelector = /body :is\(input\[data-task="<"\], li\[data-task="<"\]\)/;
+if (!scheduledTaskSelector.test(themeCss) || !scheduledTaskSelector.test(publishCss)) {
+  fail('Task selector for data-task="<" must use the valid selector body :is(input[data-task="<"], li[data-task="<"]).');
+}
 requireMarkers("theme.css Minimal helpers", themeCss, minimalHelperMarkers);
 requireMarkers("publish.css Minimal helpers", publishCss, minimalHelperMarkers);
 
