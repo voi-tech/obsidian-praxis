@@ -3903,6 +3903,15 @@ input.prompt-input:focus-visible {
   border-color: rgba(var(--mono-rgb-100), 0.05);
 }
 
+.suggestion-item {
+  color: var(--text-muted);
+}
+
+.suggestion-item.is-selected {
+  background-color: var(--background-modifier-hover);
+  color: var(--text-normal);
+}
+
 .is-mobile {
   /* Mobile publish */
 }
