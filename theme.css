@@ -4705,7 +4705,7 @@ body .markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-t
 .style-settings-container[data-level="2"] {
   background: var(--background-secondary);
   border: 1px solid var(--ui1);
-  border-radius: 5px;
+  border-radius: var(--praxis-radius-xs);
   padding: 10px 20px;
   margin: 2px 0 2px -20px;
 }
