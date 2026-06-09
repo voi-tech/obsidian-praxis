@@ -257,8 +257,9 @@ body {
   --callout-teal:   #5bbfb2;
   --callout-yellow: #c9a84c;
   --callout-orange: #e8975c;
-  --callout-red:    #d97a40;
-  --callout-brown:  #b8a88a;
+  --callout-red:    var(--praxis-error);
+  --callout-brown:  #8b7255;
+  --praxis-error:   #e06f6f;
 }
 
 .theme-light {
