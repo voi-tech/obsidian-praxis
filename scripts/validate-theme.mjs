@@ -241,6 +241,40 @@ requireMarkers("theme.css", themeCss, [
   ".callout"
 ]);
 
+// Etap 1: --praxis-error must be defined in the *primitive* .theme-dark / .theme-light blocks
+// (the ones that also contain --callout-red etc., i.e. the first occurrence of each selector).
+// theme.css splits .theme-light / .theme-dark across multiple blocks, so we look for the
+// occurrence of --praxis-error anywhere in all blocks for that selector combined.
+const extractAllBlocks = (css, selector) => {
+  const escaped = selector.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const re = new RegExp(`${escaped}\\s*\\{([\\s\\S]*?)\\}`, "g");
+  let combined = "";
+  let m;
+  while ((m = re.exec(css)) !== null) {
+    combined += m[1];
+  }
+  return combined;
+};
+const darkBlocks = extractAllBlocks(themeCss, ".theme-dark");
+const lightBlocks = extractAllBlocks(themeCss, ".theme-light");
+if (!darkBlocks.includes("--praxis-error")) {
+  fail('theme.css .theme-dark is missing "--praxis-error" (must map --text-error to the semantic red token).');
+}
+if (!lightBlocks.includes("--praxis-error")) {
+  fail('theme.css .theme-light is missing "--praxis-error" (must map --text-error to the semantic red token).');
+}
+
+// Etap 1: --callout-red must NOT be hardcoded to the orange value (#d97a40).
+// This catches a regression where the red callout was accidentally set to orange.
+if (/--callout-red:\s*#d97a40/.test(themeCss)) {
+  fail('theme.css --callout-red must not be hardcoded to "#d97a40" (that is the orange design token, not the error red). Use var(--praxis-error) or a dedicated red value.');
+}
+
+// Etap 6: prefers-reduced-motion accessibility block must be present.
+if (!themeCss.includes("prefers-reduced-motion")) {
+  fail('theme.css is missing a "@media (prefers-reduced-motion: reduce)" block (required for accessibility).');
+}
+
 requireMarkers("publish.css", publishCss, [
   "Praxis for Obsidian Publish",
   ".published-container",

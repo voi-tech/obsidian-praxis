@@ -1296,6 +1296,12 @@ body {
   left: var(--checkbox-left);
 }
 
+/* Mobile: ensure task checkboxes meet minimum 44px touch target (WCAG 2.5.5) */
+.is-mobile .task-list-item-checkbox {
+  min-width: 44px;
+  min-height: 44px;
+}
+
 .praxis-code-scroll {
   --code-white-space: pre;
 }
@@ -1733,6 +1739,17 @@ body.active-line-on .workspace-leaf-content[data-type=markdown] .markdown-source
   box-shadow: -25vw 0px var(--active-line-bg), 25vw 0 var(--active-line-bg);
 }
 
+/* Animation speed helpers
+ * These are manual body-class overrides, NOT exposed in Style Settings.
+ * Apply via a CSS snippet that adds the class to <body>, or via a plugin
+ * such as Body Class or CustomJS:
+ *
+ *   body.disable-animations  — sets all Praxis transition/animation tokens to 0ms
+ *   body.fast-animations     — halves all Praxis transition/animation durations
+ *
+ * Note: system-level @media (prefers-reduced-motion: reduce) is handled
+ * separately at the bottom of this file and takes precedence over these classes.
+ */
 .disable-animations {
   --ribbon-animation-duration: 0ms;
   --focus-animation-duration: 0ms;
@@ -3810,11 +3827,11 @@ body:not(.full-file-names) .tree-item-inner {
 }
 .is-mobile .workspace-drawer.mod-left.is-pinned {
   width: var(--mobile-left-sidebar-width);
-  min-width: 150pt;
+  min-width: 200px;
 }
 .is-mobile .workspace-drawer.mod-right.is-pinned {
   width: var(--mobile-right-sidebar-width);
-  min-width: 150pt;
+  min-width: 200px;
 }
 
 .is-phone {
@@ -5625,6 +5642,12 @@ body.praxis-callouts-minimal .callout {
   border-left-width: 3px;
 }
 
+/* ====================================================
+ * Mobile — narrow viewport overrides (≤ 400px)
+ * Applies to phones and small tablets in portrait.
+ * These rules are scoped to .is-mobile where needed
+ * to avoid affecting Obsidian Publish / desktop.
+ * ==================================================== */
 @media (max-width: 400px) {
   body {
     --cards-min-width: var(--cards-mobile-width);

@@ -120,6 +120,37 @@ It also supports `[0]` through `[9]` task states as horizontal progress bars, fr
 
 Callouts use Lucide-based icons. The custom `[!author]` callout is styled for quotes and attributions. Add `|noicon` metadata to a callout to hide its icon.
 
+The callout color semantics follow the voitech.lol design system:
+
+| Color | Callout types |
+|---|---|
+| Violet | `[!note]` `[!info]` `[!todo]` `[!abstract]` `[!important]` |
+| Mint | `[!tip]` `[!success]` `[!check]` |
+| Orange | `[!warning]` `[!caution]` `[!attention]` |
+| Red | `[!danger]` `[!error]` `[!bug]` `[!fail]` |
+| Brown | `[!quote]` `[!author]` `[!example]` |
+
+## Advanced
+
+### Font Selection
+
+Praxis does not set a typeface. Select your preferred font in **Obsidian Settings → Appearance → Font** (Interface font, Text font, Monospace font). Praxis is designed with [Geist](https://vercel.com/font) in mind, but works well with any modern sans-serif at the text size.
+
+### Animation Speed Helpers
+
+Praxis exposes two undocumented body-class helpers for controlling animation speed across the theme. They are **not** configurable through Style Settings — apply them via a CSS snippet or a plugin like [Body Class](https://github.com/Quorafind/Obsidian-Body-Class):
+
+| Class | Effect |
+|---|---|
+| `body.disable-animations` | Sets all Praxis ribbon and focus transitions to `0ms` |
+| `body.fast-animations` | Halves all Praxis ribbon and focus transition durations |
+
+> **Note:** If your operating system has **Reduce Motion** enabled (macOS: System Settings → Accessibility → Display → Reduce Motion), Praxis already suppresses all transitions and animations via `@media (prefers-reduced-motion: reduce)`. That system setting takes precedence over these helper classes.
+
+### Graph View
+
+Praxis does not override Graph View node, edge, or label colors. Graph View uses Obsidian's default color scheme. To add branded colors, create a CSS snippet targeting `.graph-view.color-fill`, `.graph-view.color-line`, and related selectors.
+
 ## Obsidian Publish
 
 `publish.css` is a companion stylesheet for Obsidian Publish. It shares Praxis colors, typography, callouts, cards, table helpers, image helpers, and media width helpers while staying separate from the app theme.
