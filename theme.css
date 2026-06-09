@@ -4104,7 +4104,7 @@ body {
   font-size: var(--font-adaptive-smaller);
   font-weight: 500;
   color: var(--text-muted);
-  border-radius: 5px;
+  border-radius: var(--praxis-radius-xs);
   margin: 0;
   padding: 2px 8px;
 }
