@@ -5015,6 +5015,15 @@ body {
   border-radius: var(--radius-s);
 }
 
+/* Focus-visible: keyboard navigation ring */
+.clickable-icon:focus-visible,
+.nav-item-self:focus-visible,
+.tree-item-self:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--background-primary),
+              0 0 0 4px var(--interactive-accent);
+}
+
 .markdown-source-view .image-embed,
 .markdown-source-view .image-wrapper,
 .markdown-rendered .image-embed,
