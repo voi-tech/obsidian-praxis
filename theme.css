@@ -4032,7 +4032,7 @@ body {
 #calendar-container .arrow {
   cursor: var(--cursor);
   width: 22px;
-  border-radius: 5px;
+  border-radius: var(--praxis-radius-xs);
   padding: 3px 7px;
 }
 #calendar-container .arrow svg {
