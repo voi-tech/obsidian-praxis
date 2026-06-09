@@ -3502,7 +3502,7 @@ body:not(.sidebar-tabs-underline):not(.sidebar-tabs-index):not(.sidebar-tabs-squ
 }
 .tabs-modern .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header {
   background: transparent;
-  border-radius: 5px;
+  border-radius: var(--praxis-radius-xs);
   border: none;
   box-shadow: none;
   height: var(--tab-height);
