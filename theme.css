@@ -2268,7 +2268,7 @@ body {
   flex-direction: column;
   margin: 0;
   padding: 0 0 calc(var(--cards-padding) / 3);
-  border-radius: 5px;
+  border-radius: var(--praxis-radius-xs);
   overflow: hidden;
   transition: box-shadow 0.15s linear;
   max-width: var(--cards-max-width);
