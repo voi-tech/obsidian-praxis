@@ -562,7 +562,7 @@ body {
 }
 
 /* Line numbers */
-@media (max-width: 400pt) {
+@media (max-width: 400px) {
   .cm-editor .cm-lineNumbers .cm-gutterElement {
     padding-inline-end: 4px;
     padding-inline-start: 8px;
@@ -2236,7 +2236,7 @@ body {
   --cards-columns: repeat(auto-fit, minmax(var(--cards-min-width), var(--cards-max-width)));
 }
 
-@media (max-width: 400pt) {
+@media (max-width: 400px) {
   body {
     --cards-min-width:var(--cards-mobile-width);
   }
@@ -2544,12 +2544,12 @@ body {
   margin-top: auto;
 }
 
-@media (max-width: 400pt) {
+@media (max-width: 400px) {
   .cards table.dataview tbody > tr > td:not(:first-child) {
     font-size: 80%;
   }
 }
-@media (min-width: 400pt) {
+@media (min-width: 400px) {
   .cards-cols-3 {
     --cards-columns: repeat(3, minmax(0, 1fr));
   }
@@ -3200,7 +3200,7 @@ body {
   --img-grid-gap: 0.5rem;
 }
 
-@media (max-width: 400pt) {
+@media (max-width: 400px) {
   body {
     --img-grid-gap: 0.25rem;
   }
@@ -3943,7 +3943,7 @@ input.prompt-input:focus-visible {
 .is-mobile {
   /* Phone */
 }
-@media (max-width: 400pt) {
+@media (max-width: 400px) {
   .is-mobile .publish-section-header,
   .is-mobile .publish-changes-info {
     flex-wrap: wrap;
@@ -4681,7 +4681,7 @@ body .kanban-plugin__markdown-preview-view ul, body .kanban-plugin__markdown-pre
   padding-inline-start: 1.8em;
 }
 
-@media (max-width: 400pt) {
+@media (max-width: 400px) {
   .kanban-plugin__board {
     flex-direction: column;
   }
@@ -4826,7 +4826,7 @@ body .markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-t
   background-color: transparent;
 }
 
-@media (max-width: 400pt) {
+@media (max-width: 400px) {
   .workspace-leaf-content[data-type=style-settings] .setting-item-name {
     font-size: var(--font-adaptive-small);
   }
@@ -5623,7 +5623,7 @@ body.praxis-callouts-minimal .callout {
   border-left-width: 3px;
 }
 
-@media (max-width: 400pt) {
+@media (max-width: 400px) {
   body {
     --cards-min-width: var(--cards-mobile-width);
     --file-line-width: 100%;
@@ -5632,7 +5632,7 @@ body.praxis-callouts-minimal .callout {
 }
 
 /* Mobile editor safety: keep content out from under the absolute CM gutter. */
-@media (max-width: 400pt) {
+@media (max-width: 400px) {
   .is-mobile .markdown-source-view.mod-cm6 {
     --praxis-mobile-editor-gutter-width: var(--folding-offset, 32px);
     --praxis-mobile-editor-gap: var(--size-4-2);
