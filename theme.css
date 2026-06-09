@@ -3777,7 +3777,7 @@ body:not(.full-file-names) .tree-item-inner {
 .is-tablet .workspace-drawer:not(.is-pinned) {
   margin: 30px 16px 0;
   height: calc(100vh - 48px);
-  border-radius: 13px;
+  border-radius: var(--praxis-radius-md);
   border: none;
 }
 .is-tablet .workspace-drawer-ribbon {
