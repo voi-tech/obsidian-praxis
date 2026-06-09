@@ -362,7 +362,7 @@ body {
   --text-blockquote: var(--tx2);
   --text-bold: var(--tx1);
   --text-code: var(--tx4);
-  --text-error: var(--color-red);
+  --text-error: var(--praxis-error);
   --text-faint: var(--tx3);
   --text-highlight-bg: var(--hl2);
   --text-italic: var(--tx1);
