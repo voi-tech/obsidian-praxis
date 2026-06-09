@@ -292,8 +292,9 @@ body {
   --callout-teal:   #3a8f84;
   --callout-yellow: #a08030;
   --callout-orange: #c47a40;
-  --callout-red:    #b96830;
+  --callout-red:    var(--praxis-error);
   --callout-brown:  #806b4d;
+  --praxis-error:   #c05050;
 }
 
 /* Map colors to semantic Obsidian names */
