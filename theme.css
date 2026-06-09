@@ -4616,33 +4616,33 @@ body .kanban-plugin__lane.is-dragging {
   border: 1px solid var(--background-modifier-border);
 }
 body .kanban-plugin__lane .kanban-plugin__item-button-wrapper {
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+  border-top-left-radius: var(--praxis-radius-sm);
+  border-top-right-radius: var(--praxis-radius-sm);
   border-top: 1px solid var(--background-modifier-border);
   border-bottom-width: 0;
   padding: 4px 4px 0;
 }
 body .kanban-plugin__lane.will-prepend .kanban-plugin__lane-items {
-  border-radius: 8px;
+  border-radius: var(--praxis-radius-sm);
 }
 body .kanban-plugin__lane.will-prepend .kanban-plugin__item-form {
   border-top: 1px solid var(--background-modifier-border);
-  border-radius: 8px 8px 0 0;
+  border-radius: var(--praxis-radius-sm) var(--praxis-radius-sm) 0 0;
   padding: 4px 4px 0;
   border-bottom-width: 0;
 }
 body .kanban-plugin__lane.will-prepend .kanban-plugin__item-form + .kanban-plugin__lane-items {
   border-top-width: 0px;
-  border-radius: 0 0 8px 8px;
+  border-radius: 0 0 var(--praxis-radius-sm) var(--praxis-radius-sm);
 }
 body .kanban-plugin__lane.will-prepend .kanban-plugin__item-button-wrapper + .kanban-plugin__lane-items {
   border-top-width: 0px;
-  border-radius: 0 0 8px 8px;
+  border-radius: 0 0 var(--praxis-radius-sm) var(--praxis-radius-sm);
 }
 body .kanban-plugin__lane:not(.will-prepend) .kanban-plugin__item-form,
 body .kanban-plugin__lane:not(.will-prepend) .kanban-plugin__item-button-wrapper {
   border-top: none;
-  border-radius: 0 0 8px 8px;
+  border-radius: 0 0 var(--praxis-radius-sm) var(--praxis-radius-sm);
 }
 body .kanban-plugin__lane:not(.will-prepend) .kanban-plugin__item-button-wrapper {
   padding: 0 4px 4px;
@@ -4651,7 +4651,7 @@ body .kanban-plugin__lane:not(.will-prepend) .kanban-plugin__item-button-wrapper
 body .kanban-plugin__lane:not(.will-prepend) .kanban-plugin__lane-items {
   border-bottom: none;
   border-top-width: 1px;
-  border-radius: 8px 8px 0 0;
+  border-radius: var(--praxis-radius-sm) var(--praxis-radius-sm) 0 0;
 }
 body .kanban-plugin__item-form .kanban-plugin__item-input-wrapper {
   min-height: calc(var(--input-height) + 8px);
