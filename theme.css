@@ -5489,23 +5489,21 @@ body:not(.tasks) li[data-task="-"].task-list-item.is-checked {
   padding: var(--callout-content-padding);
 }
 
-/* Purple — intellectual / reference */
+/* Violet — brand / intellectual / important */
 .callout[data-callout="note"] { --callout-icon: lucide-pencil; }
 .callout[data-callout="abstract"],
 .callout[data-callout="summary"],
 .callout[data-callout="tldr"] { --callout-icon: lucide-clipboard-list; }
+.callout[data-callout="info"] { --callout-icon: lucide-info; }
+.callout[data-callout="todo"] { --callout-icon: lucide-circle-check; }
+.callout[data-callout="important"] { --callout-icon: lucide-bookmark; }
 .callout[data-callout="note"],
 .callout[data-callout="abstract"],
 .callout[data-callout="summary"],
-.callout[data-callout="tldr"] { --callout-color: var(--callout-purple); }
-
-/* Blue — informational / neutral */
-.callout[data-callout="info"] { --callout-icon: lucide-info; }
-.callout[data-callout="todo"] { --callout-icon: lucide-circle-check; }
-.callout[data-callout="example"] { --callout-icon: lucide-list; }
+.callout[data-callout="tldr"],
 .callout[data-callout="info"],
 .callout[data-callout="todo"],
-.callout[data-callout="example"] { --callout-color: var(--callout-blue); }
+.callout[data-callout="important"] { --callout-color: var(--callout-purple); }
 
 /* Teal — positive / actionable */
 .callout[data-callout="tip"],
@@ -5530,12 +5528,10 @@ body:not(.tasks) li[data-task="-"].task-list-item.is-checked {
 /* Orange — caution / attention */
 .callout[data-callout="warning"],
 .callout[data-callout="caution"],
-.callout[data-callout="attention"],
-.callout[data-callout="important"] { --callout-icon: lucide-triangle-alert; }
+.callout[data-callout="attention"] { --callout-icon: lucide-triangle-alert; }
 .callout[data-callout="warning"],
 .callout[data-callout="caution"],
-.callout[data-callout="attention"],
-.callout[data-callout="important"] { --callout-color: var(--callout-orange); }
+.callout[data-callout="attention"] { --callout-color: var(--callout-orange); }
 
 /* Red — failure / critical */
 .callout[data-callout="failure"],
@@ -5551,9 +5547,10 @@ body:not(.tasks) li[data-task="-"].task-list-item.is-checked {
 .callout[data-callout="error"],
 .callout[data-callout="bug"] { --callout-color: var(--callout-red); }
 
-/* Brown — attribution / quote */
+/* Brown — attribution / quote / context */
 .callout[data-callout="quote"],
 .callout[data-callout="cite"] { --callout-color: var(--callout-brown); --callout-icon: lucide-quote; }
+.callout[data-callout="example"] { --callout-color: var(--callout-brown); --callout-icon: lucide-list; }
 
 .callout[data-callout="author"] {
   --callout-color: var(--callout-brown);
