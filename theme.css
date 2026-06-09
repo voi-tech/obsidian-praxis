@@ -4781,7 +4781,7 @@ body .markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-t
   color: var(--text-muted);
   margin: 0;
   padding: 2px 8px;
-  border-radius: 5px;
+  border-radius: var(--praxis-radius-xs);
   cursor: var(--cursor);
 }
 .setting-item .style-settings-import:hover,
