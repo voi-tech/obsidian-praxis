@@ -5602,10 +5602,12 @@ body:not(.tasks) li[data-task="-"].task-list-item.is-checked {
 /* Brown callout title: override to --tx2 for sufficient contrast on both themes */
 .theme-dark .callout[data-callout="quote"],
 .theme-dark .callout[data-callout="cite"],
+.theme-dark .callout[data-callout="example"],
 .theme-dark .callout[data-callout="author"] { --callout-title-color: var(--tx2); }
 
 .theme-light .callout[data-callout="quote"],
 .theme-light .callout[data-callout="cite"],
+.theme-light .callout[data-callout="example"],
 .theme-light .callout[data-callout="author"] { --callout-title-color: var(--tx2); }
 
 .callout:is([data-callout-metadata~="noicon"], [data-callout-metadata="noicon"]) .callout-icon,
