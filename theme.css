@@ -3952,7 +3952,7 @@ input.prompt-input:focus-visible {
   }
   .is-mobile .publish-section {
     background: var(--background-secondary);
-    border-radius: 8px;
+    border-radius: var(--praxis-radius-sm);
     padding: 12px 12px 1px;
   }
   .is-mobile .publish-changes-switch-site {
