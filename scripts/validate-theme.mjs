@@ -274,6 +274,9 @@ if (/--callout-red:\s*#d97a40/.test(themeCss)) {
 if (!themeCss.includes("prefers-reduced-motion")) {
   fail('theme.css is missing a "@media (prefers-reduced-motion: reduce)" block (required for accessibility).');
 }
+if (!publishCss.includes("prefers-reduced-motion")) {
+  fail('publish.css is missing a "@media (prefers-reduced-motion: reduce)" block (required for accessibility).');
+}
 
 requireMarkers("publish.css", publishCss, [
   "Praxis for Obsidian Publish",
@@ -291,6 +294,19 @@ requireMarkers("publish.css", publishCss, [
   ".img-grid",
   ".callout"
 ]);
+
+const darkBlocksPublish = extractAllBlocks(publishCss, ".theme-dark");
+const lightBlocksPublish = extractAllBlocks(publishCss, ".theme-light");
+if (!darkBlocksPublish.includes("--praxis-error")) {
+  fail('publish.css .theme-dark is missing "--praxis-error" (must map --text-error to the semantic red token).');
+}
+if (!lightBlocksPublish.includes("--praxis-error")) {
+  fail('publish.css .theme-light is missing "--praxis-error" (must map --text-error to the semantic red token).');
+}
+
+if (/--callout-red:\s*#(?:d97a40|b96830)/.test(publishCss)) {
+  fail('publish.css --callout-red must not be hardcoded to orange values (#d97a40 or #b96830). Use var(--praxis-error) or a dedicated red value.');
+}
 
 for (const forbidden of ["@import", "base64,", "Mobile Documents", "iCloud~md~obsidian", "/Users/", "--callout-color: 152, 120, 224", "rgba(var(--callout-color)"]) {
   if (themeCss.includes(forbidden) || publishCss.includes(forbidden) || readme.includes(forbidden)) {

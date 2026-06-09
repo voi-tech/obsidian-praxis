@@ -104,9 +104,10 @@ body {
   --callout-blue:   #6b9fd4;
   --callout-teal:   #5bbfb2;
   --callout-yellow: #c9a84c;
-  --callout-orange: #e8975c;
-  --callout-red:    #d97a40;
-  --callout-brown:  #b8a88a;
+  --callout-orange: #d97a40;
+  --callout-red:    var(--praxis-error);
+  --callout-brown:  #8b7255;
+  --praxis-error:   #e06f6f;
 }
 
 .theme-light {
@@ -123,8 +124,9 @@ body {
   --callout-teal:   #3a8f84;
   --callout-yellow: #a08030;
   --callout-orange: #c47a40;
-  --callout-red:    #b96830;
+  --callout-red:    var(--praxis-error);
   --callout-brown:  #806b4d;
+  --praxis-error:   #c05050;
 }
 
 .theme-light,
@@ -155,7 +157,7 @@ body {
   --text-selection: var(--praxis-selection);
   --text-highlight-bg: var(--praxis-highlight);
   --text-code: var(--praxis-code-text);
-  --text-error: var(--color-red);
+  --text-error: var(--praxis-error);
   --text-blockquote: var(--text-muted);
 
   --link-color: var(--text-accent);
@@ -1129,6 +1131,13 @@ body :is(input[data-task][data-task="9"], li[data-task][data-task="9"]) { --prax
   .published-container {
     --page-padding: var(--space-5);
   }
+
+  /* Ensure task checkboxes have an accessible touch target on mobile (WCAG 2.2 AAA Target Size Minimum) */
+  .published-container input[type="checkbox"] {
+    min-width: 24px;
+    min-height: 24px;
+    cursor: pointer;
+  }
 }
 
 @media (min-width: 400pt) {
@@ -1154,5 +1163,15 @@ body :is(input[data-task][data-task="9"], li[data-task][data-task="9"]) { --prax
 
   .cards-cols-8 {
     --cards-columns: repeat(8, minmax(0, 1fr));
+  }
+}
+
+/* Accessibility: prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+    scroll-behavior: auto !important;
   }
 }
