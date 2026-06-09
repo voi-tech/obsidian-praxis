@@ -337,7 +337,7 @@ body {
   --interactive-accent: var(--ax1);
   --interactive-hover: var(--ui1);
   --list-marker-color: var(--tx3);
-  --nav-item-background-active: var(--bg3);
+  --nav-item-background-active: color-mix(in srgb, var(--bg3) 72%, var(--ax1));
   --nav-item-background-hover: var(--bg3);
   --nav-item-color: var(--tx2);
   --nav-item-color-active: var(--tx1);
