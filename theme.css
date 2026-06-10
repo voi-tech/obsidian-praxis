@@ -5209,13 +5209,13 @@ body.praxis-properties-spacious {
   margin-top: 0.45em;
 }
 
-body.praxis-underline-title .inline-title {
+body:not(.praxis-underline-title-off) .inline-title {
   border-bottom: 1px solid var(--background-modifier-border);
   padding-bottom: 0.35em;
 }
 
-body.praxis-underline-title .markdown-rendered h1:not(.embedded-note-title),
-body.praxis-underline-title .mod-cm6 .cm-editor .HyperMD-header-1 {
+body:not(.praxis-underline-title-off) .markdown-rendered h1:not(.embedded-note-title),
+body:not(.praxis-underline-title-off) .mod-cm6 .cm-editor .HyperMD-header-1 {
   border-bottom: 1px solid var(--background-modifier-border);
   padding-bottom: 0.4em;
   margin-block-end: 0.6em;
