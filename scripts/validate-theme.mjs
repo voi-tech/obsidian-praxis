@@ -79,11 +79,11 @@ const validateStyleSettings = (themeCss) => {
     "settings:",
     "praxis-background-style",
     "praxis-callout-style",
-    "praxis-links-underlined",
-    "praxis-underline-title",
-    "active-line-on",
-    "metadata-heading-off",
-    "metadata-add-property-off",
+    "praxis-links-underlined-off",
+    "praxis-underline-title-off",
+    "active-line-off",
+    "metadata-heading-on",
+    "metadata-add-property-on",
     "type: class-select",
     "type: class-toggle"
   ]);
