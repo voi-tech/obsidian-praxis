@@ -180,7 +180,15 @@ body {
   --list-indent: 2em;
   --list-spacing: 0.075em;
   --input-height: 32px;
-  --header-height: 40px;
+  --header-height: 55px;
+  --tab-height: 55px;
+  --tab-radius: 13px;
+  --tab-radius-active: 13px;
+  --tab-curve: 0;
+  --tab-background: transparent;
+  --tab-background-active: var(--background-primary);
+  --tab-outline-color: var(--ui1);
+  --tab-outline-width: 1px;
   /* Metadata */
   --metadata-label-width-multiplier: 9;
   --metadata-label-width: calc(var(--font-adaptive-small) * var(--metadata-label-width-multiplier));
