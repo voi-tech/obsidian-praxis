@@ -154,7 +154,7 @@ body {
   --line-width: min(89vw, 130rem);
   --line-height: 1.5;
   --line-height-normal: var(--line-height);
-  --max-width: 88%;
+  --max-width: 89%;
   --max-col-width: 18em;
   /* Icons */
   --icon-muted: 0.5;
