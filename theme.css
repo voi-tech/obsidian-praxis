@@ -5438,34 +5438,34 @@ body:is(.theme-dark, .theme-light):not(.praxis-checkboxes-off)
   -webkit-mask: none;
 }
 
-body :is(input[data-task="/"], li[data-task="/"]) { --praxis-task-icon: var(--praxis-icon-minus); --praxis-task-color: var(--praxis-task-muted); }
-body :is(input[data-task="-"], li[data-task="-"]) { --praxis-task-icon: var(--praxis-icon-minus); --praxis-task-color: var(--praxis-task-muted); }
-body :is(input[data-task=">"], li[data-task=">"]) { --praxis-task-icon: var(--praxis-icon-paper-plane); --praxis-task-color: var(--praxis-task-muted); }
-body :is(input[data-task="<"], li[data-task="<"]) { --praxis-task-icon: var(--praxis-icon-calendar); --praxis-task-color: var(--praxis-task-muted); }
-body :is(input[data-task="?"], li[data-task="?"]) { --praxis-task-icon: var(--praxis-icon-question); --praxis-task-color: var(--praxis-task-violet); }
-body :is(input[data-task="!"], li[data-task="!"]) { --praxis-task-icon: var(--praxis-icon-alert); --praxis-task-color: var(--praxis-task-orange); }
-body :is(input[data-task="*"], li[data-task="*"]) { --praxis-task-icon: var(--praxis-icon-star); --praxis-task-color: var(--praxis-task-violet); }
-body :is(input[data-task='"'], input[data-task="\201c"], li[data-task='"'], li[data-task="\201c"]) { --praxis-task-icon: var(--praxis-icon-quote); --praxis-task-color: var(--praxis-task-brown); }
-body :is(input[data-task="l"], li[data-task="l"]) { --praxis-task-icon: var(--praxis-icon-map-pin); --praxis-task-color: var(--praxis-task-orange); }
-body :is(input[data-task="b"], li[data-task="b"]) { --praxis-task-icon: var(--praxis-icon-bookmark); --praxis-task-color: var(--praxis-task-violet); }
-body :is(input[data-task="i"], li[data-task="i"]) { --praxis-task-icon: var(--praxis-icon-info); --praxis-task-color: var(--praxis-task-mint); }
-body :is(input[data-task="S"], li[data-task="S"]) { --praxis-task-icon: var(--praxis-icon-wallet); --praxis-task-color: var(--praxis-task-mint); }
-body :is(input[data-task="I"], li[data-task="I"]) { --praxis-task-icon: var(--praxis-icon-lightbulb); --praxis-task-color: var(--praxis-task-violet); }
-body :is(input[data-task="p"], li[data-task="p"]) { --praxis-task-icon: var(--praxis-icon-thumbs-up); --praxis-task-color: var(--praxis-task-mint); }
-body :is(input[data-task="c"], li[data-task="c"]) { --praxis-task-icon: var(--praxis-icon-thumbs-down); --praxis-task-color: var(--praxis-task-orange); }
-body :is(input[data-task="f"], li[data-task="f"]) { --praxis-task-icon: var(--praxis-icon-flame); --praxis-task-color: var(--praxis-task-orange); }
-body :is(input[data-task="k"], li[data-task="k"]) { --praxis-task-icon: var(--praxis-icon-key); --praxis-task-color: var(--praxis-task-violet); }
-body :is(input[data-task="w"], li[data-task="w"]) { --praxis-task-icon: var(--praxis-icon-trophy); --praxis-task-color: var(--praxis-task-violet); }
-body :is(input[data-task="u"], li[data-task="u"]) { --praxis-task-icon: var(--praxis-icon-trend-up); --praxis-task-color: var(--praxis-task-mint); }
-body :is(input[data-task="d"], li[data-task="d"]) { --praxis-task-icon: var(--praxis-icon-trend-down); --praxis-task-color: var(--praxis-task-orange); }
-body :is(input[data-task="+"], li[data-task="+"]) { --praxis-task-icon: var(--praxis-icon-plus); --praxis-task-color: var(--praxis-task-mint); }
-body :is(input[data-task="B"], li[data-task="B"]) { --praxis-task-icon: var(--praxis-icon-brain); --praxis-task-color: var(--praxis-task-violet); }
-body :is(input[data-task="a"], li[data-task="a"]) { --praxis-task-icon: var(--praxis-icon-alarm); --praxis-task-color: var(--praxis-task-orange); }
-body :is(input[data-task="n"], li[data-task="n"]) { --praxis-task-icon: var(--praxis-icon-note); --praxis-task-color: var(--praxis-task-violet); }
-body :is(input[data-task="R"], li[data-task="R"]) { --praxis-task-icon: var(--praxis-icon-review); --praxis-task-color: var(--praxis-task-mint); }
-body :is(input[data-task="t"], li[data-task="t"]) { --praxis-task-icon: var(--praxis-icon-clock); --praxis-task-color: var(--praxis-task-muted); }
-body :is(input[data-task="P"], li[data-task="P"]) { --praxis-task-icon: var(--praxis-icon-phone); --praxis-task-color: var(--praxis-task-mint); }
-body :is(input[data-task="L"], li[data-task="L"]) { --praxis-task-icon: var(--praxis-icon-heart); --praxis-task-color: var(--praxis-task-violet); }
+body:not(.praxis-checkboxes-off) :is(input[data-task="/"], li[data-task="/"]) { --praxis-task-icon: var(--praxis-icon-minus); --praxis-task-color: var(--praxis-task-muted); }
+body:not(.praxis-checkboxes-off) :is(input[data-task="-"], li[data-task="-"]) { --praxis-task-icon: var(--praxis-icon-minus); --praxis-task-color: var(--praxis-task-muted); }
+body:not(.praxis-checkboxes-off) :is(input[data-task=">"], li[data-task=">"]) { --praxis-task-icon: var(--praxis-icon-paper-plane); --praxis-task-color: var(--praxis-task-muted); }
+body:not(.praxis-checkboxes-off) :is(input[data-task="<"], li[data-task="<"]) { --praxis-task-icon: var(--praxis-icon-calendar); --praxis-task-color: var(--praxis-task-muted); }
+body:not(.praxis-checkboxes-off) :is(input[data-task="?"], li[data-task="?"]) { --praxis-task-icon: var(--praxis-icon-question); --praxis-task-color: var(--praxis-task-violet); }
+body:not(.praxis-checkboxes-off) :is(input[data-task="!"], li[data-task="!"]) { --praxis-task-icon: var(--praxis-icon-alert); --praxis-task-color: var(--praxis-task-orange); }
+body:not(.praxis-checkboxes-off) :is(input[data-task="*"], li[data-task="*"]) { --praxis-task-icon: var(--praxis-icon-star); --praxis-task-color: var(--praxis-task-violet); }
+body:not(.praxis-checkboxes-off) :is(input[data-task='"'], input[data-task="\201c"], li[data-task='"'], li[data-task="\201c"]) { --praxis-task-icon: var(--praxis-icon-quote); --praxis-task-color: var(--praxis-task-brown); }
+body:not(.praxis-checkboxes-off) :is(input[data-task="l"], li[data-task="l"]) { --praxis-task-icon: var(--praxis-icon-map-pin); --praxis-task-color: var(--praxis-task-orange); }
+body:not(.praxis-checkboxes-off) :is(input[data-task="b"], li[data-task="b"]) { --praxis-task-icon: var(--praxis-icon-bookmark); --praxis-task-color: var(--praxis-task-violet); }
+body:not(.praxis-checkboxes-off) :is(input[data-task="i"], li[data-task="i"]) { --praxis-task-icon: var(--praxis-icon-info); --praxis-task-color: var(--praxis-task-mint); }
+body:not(.praxis-checkboxes-off) :is(input[data-task="S"], li[data-task="S"]) { --praxis-task-icon: var(--praxis-icon-wallet); --praxis-task-color: var(--praxis-task-mint); }
+body:not(.praxis-checkboxes-off) :is(input[data-task="I"], li[data-task="I"]) { --praxis-task-icon: var(--praxis-icon-lightbulb); --praxis-task-color: var(--praxis-task-violet); }
+body:not(.praxis-checkboxes-off) :is(input[data-task="p"], li[data-task="p"]) { --praxis-task-icon: var(--praxis-icon-thumbs-up); --praxis-task-color: var(--praxis-task-mint); }
+body:not(.praxis-checkboxes-off) :is(input[data-task="c"], li[data-task="c"]) { --praxis-task-icon: var(--praxis-icon-thumbs-down); --praxis-task-color: var(--praxis-task-orange); }
+body:not(.praxis-checkboxes-off) :is(input[data-task="f"], li[data-task="f"]) { --praxis-task-icon: var(--praxis-icon-flame); --praxis-task-color: var(--praxis-task-orange); }
+body:not(.praxis-checkboxes-off) :is(input[data-task="k"], li[data-task="k"]) { --praxis-task-icon: var(--praxis-icon-key); --praxis-task-color: var(--praxis-task-violet); }
+body:not(.praxis-checkboxes-off) :is(input[data-task="w"], li[data-task="w"]) { --praxis-task-icon: var(--praxis-icon-trophy); --praxis-task-color: var(--praxis-task-violet); }
+body:not(.praxis-checkboxes-off) :is(input[data-task="u"], li[data-task="u"]) { --praxis-task-icon: var(--praxis-icon-trend-up); --praxis-task-color: var(--praxis-task-mint); }
+body:not(.praxis-checkboxes-off) :is(input[data-task="d"], li[data-task="d"]) { --praxis-task-icon: var(--praxis-icon-trend-down); --praxis-task-color: var(--praxis-task-orange); }
+body:not(.praxis-checkboxes-off) :is(input[data-task="+"], li[data-task="+"]) { --praxis-task-icon: var(--praxis-icon-plus); --praxis-task-color: var(--praxis-task-mint); }
+body:not(.praxis-checkboxes-off) :is(input[data-task="B"], li[data-task="B"]) { --praxis-task-icon: var(--praxis-icon-brain); --praxis-task-color: var(--praxis-task-violet); }
+body:not(.praxis-checkboxes-off) :is(input[data-task="a"], li[data-task="a"]) { --praxis-task-icon: var(--praxis-icon-alarm); --praxis-task-color: var(--praxis-task-orange); }
+body:not(.praxis-checkboxes-off) :is(input[data-task="n"], li[data-task="n"]) { --praxis-task-icon: var(--praxis-icon-note); --praxis-task-color: var(--praxis-task-violet); }
+body:not(.praxis-checkboxes-off) :is(input[data-task="R"], li[data-task="R"]) { --praxis-task-icon: var(--praxis-icon-review); --praxis-task-color: var(--praxis-task-mint); }
+body:not(.praxis-checkboxes-off) :is(input[data-task="t"], li[data-task="t"]) { --praxis-task-icon: var(--praxis-icon-clock); --praxis-task-color: var(--praxis-task-muted); }
+body:not(.praxis-checkboxes-off) :is(input[data-task="P"], li[data-task="P"]) { --praxis-task-icon: var(--praxis-icon-phone); --praxis-task-color: var(--praxis-task-mint); }
+body:not(.praxis-checkboxes-off) :is(input[data-task="L"], li[data-task="L"]) { --praxis-task-icon: var(--praxis-icon-heart); --praxis-task-color: var(--praxis-task-violet); }
 body :is(input[data-task="0"], li[data-task="0"]) { --praxis-task-progress: 0%; }
 body :is(input[data-task="1"], li[data-task="1"]) { --praxis-task-progress: 10%; }
 body :is(input[data-task="2"], li[data-task="2"]) { --praxis-task-progress: 20%; }
