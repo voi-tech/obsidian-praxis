@@ -209,7 +209,7 @@ const minimalHelperMarkers = [
 checkBalancedCss("theme.css", themeCss);
 checkBalancedCss("publish.css", publishCss);
 validateStyleSettings(themeCss);
-const scheduledTaskSelector = /body :is\(input\[data-task="<"\], li\[data-task="<"\]\)/;
+const scheduledTaskSelector = /body(?::not\(\.[a-z-]+\))? :is\(input\[data-task="<"\], li\[data-task="<"\]\)/;
 if (!scheduledTaskSelector.test(themeCss) || !scheduledTaskSelector.test(publishCss)) {
   fail('Task selector for data-task="<" must use the valid selector body :is(input[data-task="<"], li[data-task="<"]).');
 }
