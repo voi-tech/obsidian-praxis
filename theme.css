@@ -5232,10 +5232,14 @@ body.praxis-table-lines,
   --table-edge-cell-padding: var(--praxis-space-4);
 }
 
-/* Link underline toggle */
-body.praxis-links-underlined {
+/* Link underlines — on by default; add .praxis-links-underlined-off to disable */
+body {
   --link-decoration: underline;
   --link-external-decoration: underline;
+}
+body.praxis-links-underlined-off {
+  --link-decoration: none;
+  --link-external-decoration: none;
 }
 
 /*
