@@ -2025,20 +2025,6 @@ body {
   inset-inline-end: calc(100% - var(--table-drag-handle-size));
 }
 
-/* Drag handles visible on parent row/cell hover */
-.markdown-source-view.mod-cm6 .cm-table-widget tr:hover .table-row-drag-handle {
-  opacity: 1;
-}
-.markdown-source-view.mod-cm6 .cm-table-widget th:hover .table-col-drag-handle {
-  opacity: 1;
-}
-
-/* Add row/col "+" buttons visible on table hover */
-.markdown-source-view.mod-cm6 .cm-table-widget:hover .table-row-btn,
-.markdown-source-view.mod-cm6 .cm-table-widget:hover .table-col-btn {
-  opacity: 1;
-}
-
 .img-wide,
 .img-max,
 .img-100 {
