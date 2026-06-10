@@ -95,6 +95,18 @@ settings:
     title: Underline links
     type: class-toggle
     default: true
+  -
+    id: colorful-headings
+    title: Colorful headings
+    description: Apply unique colors to heading levels H1–H6 matching the Praxis color palette.
+    type: class-toggle
+    default: true
+  -
+    id: praxis-checkboxes-off
+    title: Disable custom task icons
+    description: Turn off Praxis custom icons for task checkboxes. Useful when using a custom CSS snippet for task states.
+    type: class-toggle
+    default: false
 */
 
 
