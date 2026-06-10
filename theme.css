@@ -641,11 +641,11 @@ body {
   --input-height: calc(var(--font-adaptive-small) * 2.2);
 }
 
-body.metadata-heading-off .metadata-properties-heading {
+body:not(.metadata-heading-on) .metadata-properties-heading {
   display: none;
 }
 
-body.metadata-add-property-off .mod-root .metadata-add-button {
+body:not(.metadata-add-property-on) .mod-root .metadata-add-button {
   display: none;
 }
 
