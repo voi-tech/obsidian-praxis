@@ -193,7 +193,7 @@ body {
   --table-selection-border-radius: 0px;
   --table-drag-handle-background-active: var(--text-selection);
   --table-drag-handle-color-active: var(--text-accent);
-  --table-add-button-border-width: 0px;
+  --table-add-button-border-width: var(--border-width);
   /* Readable line length off */
   --file-margins-y: var(--size-4-2);
 }
