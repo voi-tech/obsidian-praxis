@@ -70,37 +70,37 @@ settings:
         label: Minimal
         value: praxis-callouts-minimal
   -
-    id: metadata-heading-off
-    title: Hide properties heading
+    id: metadata-heading-on
+    title: Show properties heading
     type: class-toggle
-    default: true
+    default: false
   -
-    id: metadata-add-property-off
-    title: Hide "Add property" button
+    id: metadata-add-property-on
+    title: Show "Add property" button
     type: class-toggle
-    default: true
+    default: false
   -
-    id: active-line-on
-    title: Highlight active line
+    id: active-line-off
+    title: Disable active line highlight
     type: class-toggle
-    default: true
+    default: false
   -
-    id: praxis-underline-title
-    title: Underline title
-    description: Add a divider below the note title and H1 headings
+    id: praxis-underline-title-off
+    title: Disable title underline
+    description: Remove the divider below the note title and H1 headings
     type: class-toggle
-    default: true
+    default: false
   -
-    id: praxis-links-underlined
-    title: Underline links
+    id: praxis-links-underlined-off
+    title: Disable link underlines
     type: class-toggle
-    default: true
+    default: false
   -
-    id: colorful-headings
-    title: Colorful headings
-    description: Apply unique colors to heading levels H1–H6 matching the Praxis color palette.
+    id: colorful-headings-off
+    title: Disable colorful headings
+    description: Remove unique colors from heading levels H1–H6
     type: class-toggle
-    default: true
+    default: false
   -
     id: praxis-checkboxes-off
     title: Disable custom task icons
