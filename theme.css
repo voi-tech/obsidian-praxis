@@ -1568,16 +1568,6 @@ body {
   border-bottom: var(--table-header-border-width) solid var(--table-border-color);
 }
 
-/* Alternating column header hover — zebra stripe on thead hover */
-.markdown-source-view.mod-cm6 .cm-table-widget thead:hover th:nth-child(odd),
-.markdown-preview-view thead:hover th:nth-child(odd) {
-  background-color: color-mix(in srgb, var(--bg3) 80%, var(--ui1));
-}
-.markdown-source-view.mod-cm6 .cm-table-widget thead:hover th:nth-child(even),
-.markdown-preview-view thead:hover th:nth-child(even) {
-  background-color: color-mix(in srgb, var(--ui1) 50%, var(--bg3));
-}
-
 /* Table cell line-height */
 .markdown-source-view.mod-cm6 td,
 .markdown-preview-view td {
