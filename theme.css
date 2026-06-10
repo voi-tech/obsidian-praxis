@@ -2781,8 +2781,8 @@ body {
   right: 0;
 }
 
-/* Colorful headings */
-body.colorful-headings {
+/* Colorful headings — on by default; add .colorful-headings-off to disable */
+body:not(.colorful-headings-off) {
   --praxis-heading-1-color: var(--color-red);
   --praxis-heading-2-color: var(--color-orange);
   --praxis-heading-3-color: var(--color-yellow);
@@ -2796,7 +2796,7 @@ body.colorful-headings {
   --h5-color: var(--praxis-heading-5-color);
   --h6-color: var(--praxis-heading-6-color);
 }
-body.colorful-headings .modal {
+body:not(.colorful-headings-off) .modal {
   --h1-color: var(--text-normal);
   --h2-color: var(--text-normal);
   --h3-color: var(--text-normal);
