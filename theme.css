@@ -151,7 +151,7 @@ body {
   --h5-style: normal;
   --h6-style: normal;
   /* Line widths */
-  --line-width: min(89vw, 130rem);
+  --line-width: 55rem;
   --line-height: 1.5;
   --line-height-normal: var(--line-height);
   --max-width: 89%;
