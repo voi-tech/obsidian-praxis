@@ -2775,12 +2775,18 @@ body {
 
 /* Colorful headings */
 body.colorful-headings {
-  --h1-color: var(--color-red);
-  --h2-color:var(--color-orange);
-  --h3-color:var(--color-yellow);
-  --h4-color:var(--color-green);
-  --h5-color:var(--color-blue);
-  --h6-color:var(--color-purple);
+  --praxis-heading-1-color: var(--color-red);
+  --praxis-heading-2-color: var(--color-orange);
+  --praxis-heading-3-color: var(--color-yellow);
+  --praxis-heading-4-color: var(--color-green);
+  --praxis-heading-5-color: var(--color-blue);
+  --praxis-heading-6-color: var(--color-purple);
+  --h1-color: var(--praxis-heading-1-color);
+  --h2-color: var(--praxis-heading-2-color);
+  --h3-color: var(--praxis-heading-3-color);
+  --h4-color: var(--praxis-heading-4-color);
+  --h5-color: var(--praxis-heading-5-color);
+  --h6-color: var(--praxis-heading-6-color);
 }
 body.colorful-headings .modal {
   --h1-color: var(--text-normal);
