@@ -1919,6 +1919,8 @@ body {
   --container-table-margin: calc(var(--content-margin-start) - var(--table-drag-space));
   --container-table-width: calc(var(--line-width) + var(--table-drag-space)*2);
   --table-drag-padding: var(--table-drag-space);
+  --table-drag-handle-color: var(--tx2);
+  --table-add-button-background: var(--bg2);
 }
 
 .is-mobile {
