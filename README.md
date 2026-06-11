@@ -51,11 +51,9 @@ Praxis works without plugins. If you install the optional [Style Settings](https
 - background contrast
 - callout style
 - Properties heading and Add property visibility
-- compact or spacious Properties layout
 - active line highlighting
 - title and H1 underline
 - link underlines
-- global table grid lines
 - colorful headings
 - custom task icons
 

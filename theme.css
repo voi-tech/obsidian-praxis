@@ -80,12 +80,6 @@ settings:
     type: class-toggle
     default: false
   -
-    id: praxis-properties-spacious
-    title: Use spacious Properties layout
-    description: Increase spacing and input height in the Properties panel
-    type: class-toggle
-    default: false
-  -
     id: active-line-off
     title: Disable active line highlight
     type: class-toggle
@@ -99,12 +93,6 @@ settings:
   -
     id: praxis-links-underlined-off
     title: Disable link underlines
-    type: class-toggle
-    default: false
-  -
-    id: praxis-table-lines
-    title: Enable table grid lines globally
-    description: Add visible cell borders to all Markdown tables
     type: class-toggle
     default: false
   -
@@ -175,10 +163,10 @@ body {
   --h5-style: normal;
   --h6-style: normal;
   /* Line widths */
-  --line-width: 55rem;
+  --line-width: 44.5rem;
   --line-height: 1.5;
   --line-height-normal: var(--line-height);
-  --max-width: 89%;
+  --max-width: 72rem;
   --max-col-width: 18em;
   /* Icons */
   --icon-muted: 0.5;
@@ -193,7 +181,7 @@ body {
   --list-spacing: 0.075em;
   --input-height: 32px;
   --header-height: 55px;
-  --tab-height: 55px;
+  --tab-height: 34px;
   --tab-radius: 13px;
   --tab-radius-active: 13px;
   --tab-curve: 0;
@@ -3538,7 +3526,7 @@ body:not(.sidebar-tabs-underline):not(.sidebar-tabs-index):not(.sidebar-tabs-squ
 }
 .tabs-modern .mod-root .workspace-tabs:not(.mod-stacked) {
   --tab-background: var(--background-modifier-hover);
-  --tab-height: calc(var(--header-height) - 14px);
+  --tab-height: 34px;
   --tab-outline-width: 0px;
 }
 .tabs-modern .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header::before,
@@ -4963,7 +4951,7 @@ community:
 /* Praxis design tokens */
 body {
   --praxis-radius: 13px;
-  --praxis-line-width: 860px;
+  --praxis-line-width: 44.5rem;
   --praxis-inline-title-size: 42px;
   --praxis-heading-weight: 500;
   --praxis-cards-min-width: 180px;
@@ -5115,14 +5103,6 @@ body {
   padding-inline: var(--praxis-space-5);
 }
 
-/* Spacious properties toggle */
-body.praxis-properties-spacious {
-  --metadata-padding: var(--praxis-space-4) 0 var(--praxis-space-5) 0;
-  --metadata-gap: var(--size-2-2);
-  --metadata-property-padding: var(--size-2-2) var(--size-2-3);
-  --metadata-input-height: 34px;
-}
-
 @media (max-width: 600px) {
   body {
     --metadata-label-width: clamp(82px, 34%, 128px);
@@ -5233,8 +5213,7 @@ body:not(.praxis-underline-title-off) .mod-cm6 .cm-editor .HyperMD-header-1 {
   margin-block-end: 0.6em;
 }
 
-/* Table lines toggle */
-body.praxis-table-lines,
+/* Table lines helper */
 .table-lines {
   --table-border-width: 1px;
   --table-header-border-width: 1px;

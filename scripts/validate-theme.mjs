@@ -81,8 +81,6 @@ const validateStyleSettings = (themeCss) => {
     "praxis-callout-style",
     "praxis-links-underlined-off",
     "praxis-underline-title-off",
-    "praxis-properties-spacious",
-    "praxis-table-lines",
     "active-line-off",
     "metadata-heading-on",
     "metadata-add-property-on",
