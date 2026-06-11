@@ -1,7 +1,7 @@
 import { readdir, readFile, stat } from "node:fs/promises";
 
 const root = new URL("../", import.meta.url);
-const requiredFiles = ["theme.css", "publish.css", "manifest.json", "README.md", "LICENSE", "screenshot.png"];
+const requiredFiles = ["theme.css", "publish.css", "manifest.json", "README.md", "CHANGELOG.md", "LICENSE", "screenshot.png"];
 const allowedPackageScripts = new Set(["build", "validate"]);
 const semverPattern = /^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)$/;
 
@@ -81,6 +81,8 @@ const validateStyleSettings = (themeCss) => {
     "praxis-callout-style",
     "praxis-links-underlined-off",
     "praxis-underline-title-off",
+    "praxis-properties-spacious",
+    "praxis-table-lines",
     "active-line-off",
     "metadata-heading-on",
     "metadata-add-property-on",
@@ -306,6 +308,34 @@ if (!lightBlocksPublish.includes("--praxis-error")) {
 
 if (/--callout-red:\s*#(?:d97a40|b96830)/.test(publishCss)) {
   fail('publish.css --callout-red must not be hardcoded to orange values (#d97a40 or #b96830). Use var(--praxis-error) or a dedicated red value.');
+}
+
+const ruleBlocksForSelector = (css, selector) => {
+  const blocks = [];
+  const re = /([^{}]+)\{([^{}]*)\}/g;
+  let match;
+  while ((match = re.exec(css)) !== null) {
+    const [, selectorList, declarations] = match;
+    if (selectorList.includes(selector)) {
+      blocks.push(declarations);
+    }
+  }
+  return blocks;
+};
+
+const requireSelectorGroup = (name, css, selector, propertyValue) => {
+  if (!ruleBlocksForSelector(css, selector).some((block) => block.includes(propertyValue))) {
+    fail(`${name} must map ${selector} to "${propertyValue}".`);
+  }
+};
+
+requireSelectorGroup("publish.css callout semantics", publishCss, '.callout[data-callout="info"]', "--callout-color: var(--callout-purple)");
+requireSelectorGroup("publish.css callout semantics", publishCss, '.callout[data-callout="todo"]', "--callout-color: var(--callout-purple)");
+requireSelectorGroup("publish.css callout semantics", publishCss, '.callout[data-callout="important"]', "--callout-color: var(--callout-purple)");
+requireSelectorGroup("publish.css callout semantics", publishCss, '.callout[data-callout="example"]', "--callout-color: var(--callout-brown)");
+
+if (ruleBlocksForSelector(publishCss, '.callout[data-callout="important"]').some((block) => /--callout-color:\s*var\(--callout-orange\)/.test(block))) {
+  fail('publish.css must not map [!important] to the orange warning group.');
 }
 
 for (const forbidden of ["@import", "base64,", "Mobile Documents", "iCloud~md~obsidian", "/Users/", "--callout-color: 152, 120, 224", "rgba(var(--callout-color)"]) {

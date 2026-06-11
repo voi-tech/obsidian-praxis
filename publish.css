@@ -988,23 +988,21 @@ body :is(input[data-task][data-task="9"], li[data-task][data-task="9"]) { --prax
   padding: var(--callout-content-padding);
 }
 
-/* Purple — intellectual / reference */
+/* Purple — brand / intellectual / important */
 .callout[data-callout="note"] { --callout-icon: lucide-pencil; }
 .callout[data-callout="abstract"],
 .callout[data-callout="summary"],
 .callout[data-callout="tldr"] { --callout-icon: lucide-clipboard-list; }
+.callout[data-callout="info"] { --callout-icon: lucide-info; }
+.callout[data-callout="todo"] { --callout-icon: lucide-circle-check; }
+.callout[data-callout="important"] { --callout-icon: lucide-bookmark; }
 .callout[data-callout="note"],
 .callout[data-callout="abstract"],
 .callout[data-callout="summary"],
-.callout[data-callout="tldr"] { --callout-color: var(--callout-purple); }
-
-/* Blue — informational / neutral */
-.callout[data-callout="info"] { --callout-icon: lucide-info; }
-.callout[data-callout="todo"] { --callout-icon: lucide-circle-check; }
-.callout[data-callout="example"] { --callout-icon: lucide-list; }
-.callout[data-callout="info"],
+.callout[data-callout="tldr"],
 .callout[data-callout="todo"],
-.callout[data-callout="example"] { --callout-color: var(--callout-blue); }
+.callout[data-callout="info"],
+.callout[data-callout="important"] { --callout-color: var(--callout-purple); }
 
 /* Teal — positive / actionable */
 .callout[data-callout="tip"],
@@ -1029,12 +1027,10 @@ body :is(input[data-task][data-task="9"], li[data-task][data-task="9"]) { --prax
 /* Orange — caution / attention */
 .callout[data-callout="warning"],
 .callout[data-callout="caution"],
-.callout[data-callout="attention"],
-.callout[data-callout="important"] { --callout-icon: lucide-triangle-alert; }
+.callout[data-callout="attention"] { --callout-icon: lucide-triangle-alert; }
 .callout[data-callout="warning"],
 .callout[data-callout="caution"],
-.callout[data-callout="attention"],
-.callout[data-callout="important"] { --callout-color: var(--callout-orange); }
+.callout[data-callout="attention"] { --callout-color: var(--callout-orange); }
 
 /* Red — failure / critical */
 .callout[data-callout="failure"],
@@ -1050,9 +1046,10 @@ body :is(input[data-task][data-task="9"], li[data-task][data-task="9"]) { --prax
 .callout[data-callout="error"],
 .callout[data-callout="bug"] { --callout-color: var(--callout-red); }
 
-/* Brown — attribution / quote */
+/* Brown — attribution / quote / context */
 .callout[data-callout="quote"],
 .callout[data-callout="cite"] { --callout-color: var(--callout-brown); --callout-icon: lucide-quote; }
+.callout[data-callout="example"] { --callout-color: var(--callout-brown); --callout-icon: lucide-list; }
 
 .callout[data-callout="author"] {
   --callout-color: var(--callout-brown);
@@ -1075,11 +1072,10 @@ body :is(input[data-task][data-task="9"], li[data-task][data-task="9"]) { --prax
 .theme-light .callout[data-callout="note"],
 .theme-light .callout[data-callout="abstract"],
 .theme-light .callout[data-callout="summary"],
-.theme-light .callout[data-callout="tldr"] { --callout-title-color: var(--callout-purple); }
-
-.theme-light .callout[data-callout="info"],
+.theme-light .callout[data-callout="tldr"],
 .theme-light .callout[data-callout="todo"],
-.theme-light .callout[data-callout="example"] { --callout-title-color: var(--callout-blue); }
+.theme-light .callout[data-callout="info"],
+.theme-light .callout[data-callout="important"] { --callout-title-color: var(--callout-purple); }
 
 .theme-light .callout[data-callout="tip"],
 .theme-light .callout[data-callout="hint"],
@@ -1093,8 +1089,7 @@ body :is(input[data-task][data-task="9"], li[data-task][data-task="9"]) { --prax
 
 .theme-light .callout[data-callout="warning"],
 .theme-light .callout[data-callout="caution"],
-.theme-light .callout[data-callout="attention"],
-.theme-light .callout[data-callout="important"] { --callout-title-color: var(--callout-orange); }
+.theme-light .callout[data-callout="attention"] { --callout-title-color: var(--callout-orange); }
 
 .theme-light .callout[data-callout="failure"],
 .theme-light .callout[data-callout="fail"],
@@ -1105,6 +1100,7 @@ body :is(input[data-task][data-task="9"], li[data-task][data-task="9"]) { --prax
 
 .theme-light .callout[data-callout="quote"],
 .theme-light .callout[data-callout="cite"],
+.theme-light .callout[data-callout="example"],
 .theme-light .callout[data-callout="author"] { --callout-title-color: var(--callout-brown); }
 
 .callout:is([data-callout-metadata~="noicon"], [data-callout-metadata="noicon"]) .callout-icon,

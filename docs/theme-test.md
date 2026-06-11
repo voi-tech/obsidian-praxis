@@ -101,7 +101,7 @@ The error message text (`--text-error`) must be **red**, not orange.
 
 ## Callout style variants — check all three
 
-Apply each Style Settings callout style and verify the danger/quote calloits render correctly:
+Apply each Style Settings callout style and verify the danger/quote callouts render correctly:
 
 - **Soft** (default): background tinted, left border
 - **Outlined**: transparent background, border all sides

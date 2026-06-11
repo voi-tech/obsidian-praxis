@@ -80,6 +80,12 @@ settings:
     type: class-toggle
     default: false
   -
+    id: praxis-properties-spacious
+    title: Use spacious Properties layout
+    description: Increase spacing and input height in the Properties panel
+    type: class-toggle
+    default: false
+  -
     id: active-line-off
     title: Disable active line highlight
     type: class-toggle
@@ -93,6 +99,12 @@ settings:
   -
     id: praxis-links-underlined-off
     title: Disable link underlines
+    type: class-toggle
+    default: false
+  -
+    id: praxis-table-lines
+    title: Enable table grid lines globally
+    description: Add visible cell borders to all Markdown tables
     type: class-toggle
     default: false
   -
