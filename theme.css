@@ -5102,6 +5102,7 @@ body {
   justify-content: center;
   min-height: var(--tab-height);
   max-height: var(--tab-height);
+  transform: translateY(-1px);
 }
 
 .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header-inner {
@@ -5114,7 +5115,14 @@ body {
 }
 
 .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header-inner-title {
+  line-height: 1;
   text-align: center;
+}
+
+.mod-root .workspace-tabs:not(.mod-stacked) :is(.workspace-tab-header-inner-icon, .workspace-tab-header-inner-close-button) {
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 
 .mod-root .workspace-tabs:not(.mod-stacked) :is(.workspace-tab-header-new-tab, .workspace-tab-header-tab-list) {
