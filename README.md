@@ -11,8 +11,6 @@ Praxis is a warm, focused Obsidian theme built from Minimal's proven foundation 
 - [Style Settings](#style-settings)
 - [Helper classes](#helper-classes)
 - [Obsidian Publish](#obsidian-publish)
-- [Development](#development)
-- [Roadmap](#roadmap)
 - [Credits and license](#credits-and-license)
 
 ## Features
@@ -162,29 +160,6 @@ Praxis does not override Graph View node, edge, or label colors. Graph View uses
 To use it, publish `publish.css` at the root of your Publish vault. Keep `theme.css` for the Obsidian app and `publish.css` for Publish; the files intentionally target different DOMs.
 
 Style Settings does not run on Obsidian Publish, so Publish customization should be done directly through CSS variables in `publish.css`. The Publish stylesheet keeps the same callout color semantics as the app theme and avoids app-only Properties, CodeMirror, and workspace selectors.
-
-## Development
-
-Praxis currently keeps a flat, hand-maintained theme structure. There is no SCSS compilation step in this repository.
-
-Run the validation smoke test before release:
-
-```bash
-npm run validate
-git diff --check
-```
-
-For a local app install, copy `theme.css` and `manifest.json` into `.obsidian/themes/Praxis/` in your vault, then reload Obsidian or switch themes. For Publish, upload or configure `publish.css` as the Publish custom stylesheet.
-
-Supported plugin-oriented styles are inherited from the Minimal foundation and include Dataview-style tables/cards, Calendar, Charts, Checklist, Excalidraw, Git, Hider, Kanban, Outliner, QuickAdd, Style Settings, and related helper-class workflows. Treat plugin support as compatibility styling, not a guarantee that every plugin release is fully covered.
-
-## Roadmap
-
-- Stability: keep reducing broad DOM overrides where Obsidian CSS variables can carry the same behavior.
-- Style Settings: expose only stable, low-risk user preferences.
-- Plugin support: document verified plugin versions and add regression notes for popular workflows.
-- Publish polish: keep `publish.css` small, semantic, and independent from app-only selectors.
-- Public-ready release: maintain release notes, screenshot, manifest version, and GitHub release assets together.
 
 ## Credits And License
 
