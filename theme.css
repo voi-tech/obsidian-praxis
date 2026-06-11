@@ -5069,16 +5069,29 @@ body {
 
 /* Root tab bar: keep the bar tall while tabs stay compact. */
 .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header-container {
+  align-items: center;
+  display: flex;
   height: var(--header-height);
+  justify-content: center;
   min-height: var(--header-height);
 }
 
 .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header-container-inner {
   align-items: center;
+  flex: 0 1 auto;
   height: var(--header-height);
   justify-content: center;
+  margin-inline: auto;
+  max-width: 100%;
   min-height: var(--header-height);
   padding-block: 0;
+  width: auto;
+}
+
+.mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header-spacer {
+  flex: 0 0 0;
+  min-width: 0;
+  width: 0;
 }
 
 .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header {
@@ -5093,15 +5106,23 @@ body {
 
 .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header-inner {
   align-items: center;
+  display: flex;
   height: var(--tab-height);
   justify-content: center;
   min-height: 0;
   width: 100%;
 }
 
+.mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header-inner-title {
+  text-align: center;
+}
+
 .mod-root .workspace-tabs:not(.mod-stacked) :is(.workspace-tab-header-new-tab, .workspace-tab-header-tab-list) {
+  align-items: center;
   align-self: center;
+  display: flex;
   height: var(--tab-height);
+  justify-content: center;
 }
 
 /* Focus-visible: keyboard navigation ring */
