@@ -5067,6 +5067,37 @@ body {
   border-radius: var(--radius-s);
 }
 
+/* Root tab bar: keep the bar tall while tabs stay compact. */
+.mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header-container {
+  height: var(--header-height);
+  min-height: var(--header-height);
+}
+
+.mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header-container-inner {
+  align-items: center;
+  height: var(--header-height);
+  min-height: var(--header-height);
+  padding-block: 0;
+}
+
+.mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header {
+  align-self: center;
+  height: var(--tab-height);
+  min-height: var(--tab-height);
+  max-height: var(--tab-height);
+}
+
+.mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header-inner {
+  align-items: center;
+  height: var(--tab-height);
+  min-height: 0;
+}
+
+.mod-root .workspace-tabs:not(.mod-stacked) :is(.workspace-tab-header-new-tab, .workspace-tab-header-tab-list) {
+  align-self: center;
+  height: var(--tab-height);
+}
+
 /* Focus-visible: keyboard navigation ring */
 .clickable-icon:focus-visible,
 .nav-item-self:focus-visible,
