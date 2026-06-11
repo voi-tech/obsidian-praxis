@@ -5076,13 +5076,17 @@ body {
 .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header-container-inner {
   align-items: center;
   height: var(--header-height);
+  justify-content: center;
   min-height: var(--header-height);
   padding-block: 0;
 }
 
 .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header {
   align-self: center;
+  align-items: center;
+  display: flex;
   height: var(--tab-height);
+  justify-content: center;
   min-height: var(--tab-height);
   max-height: var(--tab-height);
 }
@@ -5090,7 +5094,9 @@ body {
 .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header-inner {
   align-items: center;
   height: var(--tab-height);
+  justify-content: center;
   min-height: 0;
+  width: 100%;
 }
 
 .mod-root .workspace-tabs:not(.mod-stacked) :is(.workspace-tab-header-new-tab, .workspace-tab-header-tab-list) {
