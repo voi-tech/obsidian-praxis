@@ -5726,6 +5726,73 @@ body.praxis-callouts-minimal .callout {
   border-left-width: 3px;
 }
 
+/* Graph view
+ * Nodes/lines render on an HTML <canvas>, so they are colourable only via the
+ * --graph-* variables (not selectors). Restrained palette: warm-neutral nodes,
+ * subtle links, purple accent on focus. The referenced tokens vary per theme,
+ * so one block covers dark + light. Disable-able via Style Settings. */
+body:not(.praxis-graph-canvas-off) {
+  --graph-text: var(--tx2);
+  --graph-line: color-mix(in srgb, var(--ui2) 70%, transparent);
+  --graph-node: var(--tx2);
+  --graph-node-focused: var(--ax1);
+  --graph-node-unresolved: var(--tx3);
+  --graph-node-tag: color-mix(in srgb, var(--ax1) 55%, var(--tx2));
+  --graph-node-attachment: var(--tx3);
+}
+
+/* Controls panel = Praxis surface (structural, always on). */
+.graph-controls {
+  border-radius: var(--radius-m);
+  border: 1px solid var(--ui1);
+  background: var(--bg2);
+  box-shadow: 0 var(--praxis-space-2) var(--praxis-space-5) var(--shadow-color);
+}
+
+/* Canvas
+ * Nodes/edges are DOM/SVG. Colour layer (preset colours, dot grid, accents) is
+ * gated by the Style Settings toggle; structural radius/shadow stay on to match
+ * tables and callouts. We never set a blanket node border-color — Obsidian
+ * derives a coloured node's border from --canvas-color, so a blanket value
+ * would clobber coloured cards. */
+body:not(.praxis-graph-canvas-off) {
+  --canvas-background: var(--background-primary);
+  --canvas-dot-pattern: var(--ui1);
+  --canvas-card-label-color: var(--text-muted);
+  --canvas-color-1: var(--color-red-rgb);
+  --canvas-color-2: var(--color-orange-rgb);
+  --canvas-color-3: var(--color-yellow-rgb);
+  --canvas-color-4: var(--color-green-rgb);
+  --canvas-color-5: var(--color-blue-rgb);
+  --canvas-color-6: var(--color-purple-rgb);
+}
+
+body:not(.praxis-graph-canvas-off) .canvas-edges :not(.is-themed) path.canvas-display-path,
+body:not(.praxis-graph-canvas-off) .canvas-edges :not(.is-themed) polyline.canvas-path-end {
+  stroke: var(--ui2);
+}
+body:not(.praxis-graph-canvas-off) .canvas-edges :not(.is-themed) polyline.canvas-path-end {
+  fill: var(--ui2);
+}
+
+body:not(.praxis-graph-canvas-off) .canvas-node.is-focused .canvas-node-container,
+body:not(.praxis-graph-canvas-off) .canvas-node.is-selected .canvas-node-container {
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--ax1) 45%, transparent);
+}
+
+.canvas-node-container {
+  border-radius: var(--radius-m);
+  box-shadow: 0 var(--praxis-space-1) var(--praxis-space-4) var(--shadow-color);
+}
+.canvas-node-content,
+.canvas-node-container .markdown-embed {
+  border-radius: var(--radius-m);
+}
+.canvas-node-label {
+  font-size: var(--font-adaptive-small);
+  color: var(--canvas-card-label-color, var(--text-muted));
+}
+
 /* ====================================================
  * Mobile — narrow viewport overrides (≤ 400px)
  * Applies to phones and small tablets in portrait.
