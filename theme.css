@@ -5780,16 +5780,16 @@ body {
   --canvas-color-6: var(--color-purple-rgb);
 }
 
-body:not(.praxis-graph-canvas-off) .canvas-edges :not(.is-themed) path.canvas-display-path,
-body:not(.praxis-graph-canvas-off) .canvas-edges :not(.is-themed) polyline.canvas-path-end {
+.canvas-edges :not(.is-themed) path.canvas-display-path,
+.canvas-edges :not(.is-themed) polyline.canvas-path-end {
   stroke: var(--ui2);
 }
-body:not(.praxis-graph-canvas-off) .canvas-edges :not(.is-themed) polyline.canvas-path-end {
+.canvas-edges :not(.is-themed) polyline.canvas-path-end {
   fill: var(--ui2);
 }
 
-body:not(.praxis-graph-canvas-off) .canvas-node.is-focused .canvas-node-container,
-body:not(.praxis-graph-canvas-off) .canvas-node.is-selected .canvas-node-container {
+.canvas-node.is-focused .canvas-node-container,
+.canvas-node.is-selected .canvas-node-container {
   box-shadow: 0 0 0 2px color-mix(in srgb, var(--ax1) 45%, transparent);
 }
 
