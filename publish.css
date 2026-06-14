@@ -1053,6 +1053,15 @@ body :is(input[data-task][data-task="9"], li[data-task][data-task="9"]) { --prax
 .callout[data-callout="cite"] { --callout-color: var(--callout-brown); --callout-icon: lucide-quote; }
 .callout[data-callout="example"] { --callout-color: var(--callout-brown); --callout-icon: lucide-list; }
 
+/* Thinking frameworks — knowledge-work callouts reusing the semantic palette + Lucide icons.
+   Title colour follows --callout-color via the default chain, so no light-mode override needed. */
+.callout[data-callout="decision"] { --callout-color: var(--callout-purple); --callout-icon: lucide-signpost; }
+.callout[data-callout="claim"] { --callout-color: var(--callout-purple); --callout-icon: lucide-megaphone; }
+.callout[data-callout="hypothesis"] { --callout-color: var(--callout-yellow); --callout-icon: lucide-flask-conical; }
+.callout[data-callout="evidence"] { --callout-color: var(--callout-teal); --callout-icon: lucide-search-check; }
+.callout[data-callout="assumption"] { --callout-color: var(--callout-orange); --callout-icon: lucide-circle-help; }
+.callout[data-callout="risk"] { --callout-color: var(--callout-red); --callout-icon: lucide-shield-alert; }
+
 .callout[data-callout="author"] {
   --callout-color: var(--callout-brown);
   --callout-icon: lucide-user;
