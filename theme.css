@@ -96,7 +96,7 @@ settings:
     type: class-toggle
     default: false
   -
-    id: colorful-headings-off
+    id: praxis-colorful-headings-off
     title: Disable colorful headings
     description: Remove unique colors from heading levels H1–H6
     type: class-toggle
