@@ -1218,6 +1218,15 @@ body :is(input[data-task][data-task="9"], li[data-task][data-task="9"]) { --prax
   }
 }
 
+/* Accessibility: high contrast — strengthen borders when the OS requests it. */
+@media (prefers-contrast: more) {
+  .theme-light,
+  .theme-dark {
+    --background-modifier-border: var(--praxis-border-strong);
+  }
+  .callout { --callout-border-opacity: 1; }
+}
+
 /* Accessibility: prefers-reduced-motion */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
