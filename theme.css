@@ -648,11 +648,11 @@ body {
   --input-height: calc(var(--font-adaptive-small) * 2.2);
 }
 
-body:not(.metadata-heading-on) .metadata-properties-heading {
+body:not(.praxis-metadata-heading-on) .metadata-properties-heading {
   display: none;
 }
 
-body:not(.metadata-add-property-on) .mod-root .metadata-add-button {
+body:not(.praxis-metadata-add-property-on) .mod-root .metadata-add-button {
   display: none;
 }
 
