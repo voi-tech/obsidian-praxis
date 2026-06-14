@@ -27,8 +27,9 @@
   linking `theme.css` ↔ `publish.css` to prevent drift; clarified previously-unused scale tokens.
 
 ### Docs
-- README: corrected the corner-radius description (13px base + 21px medium/large), kept install and
-  repository references consistent.
+- Documented the effective radius scale (13px base via `--radius-s`; 21px medium/large via
+  `--radius-m/l`) in `theme.css` comments. README was checked and makes no inaccurate radius claim,
+  so it was left unchanged.
 
 ---
 
