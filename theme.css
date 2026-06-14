@@ -4963,7 +4963,11 @@ body {
   --praxis-properties-input-height: 26px;
   --praxis-properties-gap: 0px;
 
-  /* Fibonacci spacing */
+  /* Fibonacci spacing scale (3·5·8·13·21·34·55·89). The full scale is defined
+     intentionally as a design system; -1/-7/-8 are reserved for future use and
+     may currently be unreferenced. Brand palette source of truth lives in the
+     .theme-dark / .theme-light blocks near the top of this file; publish.css
+     mirrors those hex values — keep the two in sync when changing colours. */
   --praxis-space-1: 3px;
   --praxis-space-2: 5px;
   --praxis-space-3: 8px;
@@ -4973,7 +4977,9 @@ body {
   --praxis-space-7: 55px;
   --praxis-space-8: 89px;
 
-  /* Border radii — Fibonacci/golden ratio */
+  /* Border radii — Fibonacci/golden ratio. Note: the live UI radius is a
+     13px base (--radius-s) with 21px medium/large (--radius-m/l, set below);
+     -xl is reserved. */
   --praxis-radius-xs: 5px;
   --praxis-radius-sm: 8px;
   --praxis-radius-md: 13px;
