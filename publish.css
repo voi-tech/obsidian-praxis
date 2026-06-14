@@ -111,13 +111,14 @@ body {
 }
 
 .theme-light {
-  --color-red: #b96830;
-  --color-orange: #c47a40;
-  --color-yellow: #a08030;
-  --color-green: #3a8f84;
+  /* Light-mode hues kept in sync with theme.css (darkened for WCAG ~4.3:1). */
+  --color-red: #a85a28;
+  --color-orange: #a55f2c;
+  --color-yellow: #8a6c22;
+  --color-green: #2f7d72;
   --color-cyan: #5bbfb2;
-  --color-blue: #4a7fb0;
-  --color-purple: #7a60c8;
+  --color-blue: #3d6f9e;
+  --color-purple: #6a51b4;
   --color-pink: #a05a90;
   --callout-purple: #7a60c8;
   --callout-blue:   #4a7fb0;
