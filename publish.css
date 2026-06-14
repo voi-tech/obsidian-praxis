@@ -1119,6 +1119,44 @@ body :is(input[data-task][data-task="9"], li[data-task][data-task="9"]) { --prax
   border-left-width: 3px;
 }
 
+/* Graph view + Canvas — parity with the app theme, using publish tokens.
+   Graph nodes/lines colour only via --graph-* (HTML canvas). Canvas nodes are
+   DOM/SVG; never set a blanket node border-color (clobbers coloured cards). */
+.theme-light,
+.theme-dark {
+  --graph-text: var(--text-muted);
+  --graph-line: var(--background-modifier-border);
+  --graph-node: var(--text-muted);
+  --graph-node-focused: var(--text-accent);
+  --graph-node-unresolved: var(--text-faint);
+  --graph-node-tag: color-mix(in srgb, var(--text-accent) 55%, var(--text-muted));
+  --graph-node-attachment: var(--text-faint);
+
+  --canvas-background: var(--background-primary);
+  --canvas-dot-pattern: var(--background-modifier-border);
+  --canvas-card-label-color: var(--text-muted);
+  --canvas-color-1: 217,122,64;
+  --canvas-color-2: 232,151,92;
+  --canvas-color-3: 201,168,76;
+  --canvas-color-4: 91,191,178;
+  --canvas-color-5: 107,159,212;
+  --canvas-color-6: 152,120,224;
+}
+
+.canvas-node-container {
+  border-radius: var(--radius-m);
+}
+.canvas-node-label {
+  color: var(--canvas-card-label-color, var(--text-muted));
+}
+.canvas-edges :not(.is-themed) path.canvas-display-path,
+.canvas-edges :not(.is-themed) polyline.canvas-path-end {
+  stroke: var(--background-modifier-border);
+}
+.canvas-edges :not(.is-themed) polyline.canvas-path-end {
+  fill: var(--background-modifier-border);
+}
+
 /* Tablet: Obsidian Publish hides the right sidebar at ≤1000px. Ease page
    padding one step and cap dense card grids so the reclaimed width is used
    without crowding. (Per Publish layout guidance: 1000px and 750px tiers.) */
