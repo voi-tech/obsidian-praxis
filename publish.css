@@ -202,21 +202,22 @@ body {
 }
 
 .theme-light {
+  /* Accent darkened for WCAG AA (link text ~5.1:1); kept in sync with theme.css. */
   --praxis-bg-primary: #f7f1e7;
-  --praxis-accent: #7a60c8;
+  --praxis-accent: #6e54bb;
   --praxis-bg-secondary: #f0e8d8;
   --praxis-bg-tertiary: #e8dfc8;
   --praxis-border-muted: #d8cdb8;
   --praxis-border-strong: #c4b89a;
-  --praxis-focus-ring: rgba(122, 96, 200, 0.25);
+  --praxis-focus-ring: rgba(110, 84, 187, 0.25);
   --praxis-text-normal: #211d18;
   --praxis-text-muted: #4a3f2f;
   --praxis-text-faint: #7a6a54;
   --praxis-code-text: #3a8f84;
   --praxis-code-bg: #f0e8d8;
-  --praxis-text-accent: #7a60c8;
+  --praxis-text-accent: #6e54bb;
   --praxis-text-accent-hover: #9878e0;
-  --praxis-selection: rgba(122, 96, 200, 0.2);
+  --praxis-selection: rgba(110, 84, 187, 0.2);
   --praxis-highlight: rgba(185, 102, 40, 0.18);
   --praxis-shadow: rgba(0, 0, 0, 0.08);
 }
