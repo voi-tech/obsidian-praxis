@@ -1119,6 +1119,22 @@ body :is(input[data-task][data-task="9"], li[data-task][data-task="9"]) { --prax
   border-left-width: 3px;
 }
 
+/* Tablet: Obsidian Publish hides the right sidebar at ≤1000px. Ease page
+   padding one step and cap dense card grids so the reclaimed width is used
+   without crowding. (Per Publish layout guidance: 1000px and 750px tiers.) */
+@media (max-width: 1000px) {
+  .published-container {
+    --page-padding: calc((var(--space-5) + var(--space-6)) / 2);
+  }
+
+  .cards-cols-5,
+  .cards-cols-6,
+  .cards-cols-7,
+  .cards-cols-8 {
+    --cards-columns: repeat(auto-fit, minmax(var(--cards-min-width), 1fr));
+  }
+}
+
 @media (max-width: 750px) {
   body {
     --cards-min-width: var(--cards-mobile-width);
