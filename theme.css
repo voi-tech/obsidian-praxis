@@ -409,7 +409,7 @@ body {
 }
 
 .theme-light {
-  --interactive-accent-rgb: 122, 96, 200;
+  --interactive-accent-rgb: 110, 84, 187;
   --active-line-bg: rgba(0, 0, 0, 0.03);
   --background-modifier-cover: rgba(29, 26, 23, 0.5);
   --text-highlight-bg-active: rgba(0, 0, 0, 0.09);
