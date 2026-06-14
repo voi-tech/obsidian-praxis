@@ -4054,14 +4054,14 @@ body:not(.is-mobile):not(.praxis-focus-mode) .workspace-split.mod-root {
 
 body:not(.is-mobile):not(.praxis-focus-mode) .mod-root .workspace-tabs {
   background: transparent;
-  padding: var(--praxis-space-2);
+  padding: var(--praxis-space-1);
 }
 
 body:not(.is-mobile):not(.praxis-focus-mode) .mod-root .workspace-tabs > .workspace-tab-container {
   background: var(--praxis-surface-workspace);
-  border: 1px solid var(--background-modifier-border);
-  border-radius: var(--praxis-radius-workspace);
-  box-shadow: var(--praxis-elevation-workspace);
+  border: 0;
+  border-radius: var(--praxis-radius-card);
+  box-shadow: none;
   overflow: hidden;
 }
 
@@ -4075,20 +4075,11 @@ body:not(.is-mobile) .workspace-split:not(.mod-root) .workspace-leaf-content {
   background: transparent;
 }
 
-body:not(.is-mobile) .workspace-split:not(.mod-root) .workspace-leaf-content > .nav-header,
-body:not(.is-mobile) .workspace-split:not(.mod-root) .workspace-leaf-content > .view-content {
-  background: var(--praxis-surface-panel-card);
-  border: 1px solid var(--background-modifier-border);
-  border-radius: var(--praxis-radius-panel);
-  margin: var(--praxis-space-2);
-}
-
 body:not(.is-mobile) .workspace-split:not(.mod-root) .workspace-leaf-content > .nav-header {
-  padding: var(--praxis-space-1);
-}
-
-body:not(.is-mobile) .workspace-split:not(.mod-root) .workspace-leaf-content > .view-content {
-  padding: var(--praxis-space-2);
+  background: transparent;
+  border: 0;
+  margin: 0;
+  padding-inline: var(--praxis-space-2);
 }
 
 body:not(.is-mobile) .workspace-split:not(.mod-root) .metadata-container {
@@ -4131,6 +4122,14 @@ body:not(.is-mobile) .workspace-split:not(.mod-root) .metadata-container {
 .menu-item.selected,
 .menu-item.is-selected {
   background-color: var(--background-modifier-hover);
+}
+
+body:not(.is-mobile) :is(.search-result-container, .search-info-container) {
+  background: var(--praxis-surface-panel-card);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--praxis-radius-panel);
+  margin-block: var(--praxis-space-2);
+  padding: var(--praxis-space-2);
 }
 
 .search-result-file-matches {
