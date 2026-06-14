@@ -5876,6 +5876,53 @@ button {
   transition-timing-function: var(--praxis-ease);
 }
 
+/* Heading hierarchy strength — opt-in via Style Settings. Default class adds no
+   rule, so the base --h*-size values apply unchanged. */
+body.praxis-headings-compact {
+  --h1-size: 1.25em;
+  --h2-size: 1.15em;
+  --h3-size: 1.05em;
+  --h4-size: 1em;
+  --h5-size: 0.92em;
+  --h6-size: 0.85em;
+}
+body.praxis-headings-pronounced {
+  --h1-size: 1.7em;
+  --h2-size: 1.42em;
+  --h3-size: 1.22em;
+  --h4-size: 1.06em;
+  --h5-size: 0.95em;
+  --h6-size: 0.85em;
+}
+
+/* Layout density — opt-in via Style Settings. Default class adds no rule. Reading
+   mode (below) still wins on --line-height when both are enabled. */
+body.praxis-layout-compact {
+  --line-width: 40rem;
+  --line-height: 1.45;
+  --p-spacing: 1.4rem;
+}
+body.praxis-layout-comfortable {
+  --line-width: 46rem;
+  --line-height: 1.6;
+  --p-spacing: 1.9rem;
+}
+body.praxis-layout-editorial {
+  --line-width: 38rem;
+  --line-height: 1.7;
+  --p-spacing: 2.1rem;
+}
+
+/* Drop cap — opt-in via Style Settings. Reading view, first paragraph only. */
+body.praxis-drop-cap .markdown-reading-view .markdown-preview-sizer > .el-p:first-of-type p::first-letter {
+  float: left;
+  font-size: 3.2em;
+  line-height: 0.82;
+  margin: 0.02em 0.08em 0 0;
+  color: var(--ax1);
+  font-weight: var(--praxis-heading-weight, 500);
+}
+
 /* Reading mode (quiet) — opt-in via Style Settings. Neutralises heading colours,
    widens leading and softens callout tint for distraction-free long-form reading. */
 body.praxis-reading-mode {
