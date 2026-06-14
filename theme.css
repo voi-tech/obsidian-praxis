@@ -2788,8 +2788,8 @@ body {
   right: 0;
 }
 
-/* Colorful headings — on by default; add .colorful-headings-off to disable */
-body:not(.colorful-headings-off) {
+/* Colorful headings — on by default; add .praxis-colorful-headings-off to disable */
+body:not(.praxis-colorful-headings-off) {
   --praxis-heading-1-color: var(--color-red);
   --praxis-heading-2-color: var(--color-orange);
   --praxis-heading-3-color: var(--color-yellow);
