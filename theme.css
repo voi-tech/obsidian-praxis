@@ -2803,7 +2803,7 @@ body:not(.praxis-colorful-headings-off) {
   --h5-color: var(--praxis-heading-5-color);
   --h6-color: var(--praxis-heading-6-color);
 }
-body:not(.colorful-headings-off) .modal {
+body:not(.praxis-colorful-headings-off) .modal {
   --h1-color: var(--text-normal);
   --h2-color: var(--text-normal);
   --h3-color: var(--text-normal);
