@@ -5540,7 +5540,9 @@ body :is(input[data-task="9"], li[data-task="9"]) { --praxis-task-progress: 90%;
 
 .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="x"],
 .markdown-rendered li[data-task="x"] {
-  opacity: 0.2;
+  /* Completed tasks are de-emphasised but must stay readable: 0.5 keeps the
+     "done" look while clearing the WCAG contrast floor (~4.2:1 vs ~1.8:1 at 0.2). */
+  opacity: 0.5;
   text-decoration-line: none;
 }
 .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="x"]:hover,
