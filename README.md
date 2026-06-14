@@ -56,8 +56,13 @@ Praxis works without plugins. If you install the optional [Style Settings](https
 - colorful headings
 - custom task icons
 - graph & canvas colors
+- reading mode (quiet)
 
 Praxis intentionally does not mirror the full Minimal Style Settings surface. Broader typography, color, and layout preferences should be managed through Obsidian's built-in Appearance settings or custom snippets.
+
+> **Beta note:** Style Settings toggle IDs are now namespaced under `praxis-*`. If you used an
+> early beta, a few toggles (active line, colorful headings, Properties heading/Add property) may
+> reset to their defaults once — just set them again.
 
 ## Helper Classes
 
