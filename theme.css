@@ -5765,11 +5765,10 @@ body {
 
 /* Canvas
  * Nodes/edges are DOM/SVG. Colour layer (preset colours, dot grid, accents) is
- * gated by the Style Settings toggle; structural radius/shadow stay on to match
- * tables and callouts. We never set a blanket node border-color — Obsidian
- * derives a coloured node's border from --canvas-color, so a blanket value
- * would clobber coloured cards. */
-body:not(.praxis-graph-canvas-off) {
+ * always on; structural radius/shadow match tables and callouts. We never set
+ * a blanket node border-color — Obsidian derives a coloured node's border from
+ * --canvas-color, so a blanket value would clobber coloured cards. */
+body {
   --canvas-background: var(--background-primary);
   --canvas-dot-pattern: var(--ui1);
   --canvas-card-label-color: var(--text-muted);
