@@ -5807,6 +5807,52 @@ body:not(.praxis-graph-canvas-off) .canvas-node.is-selected .canvas-node-contain
   color: var(--canvas-card-label-color, var(--text-muted));
 }
 
+/* Unified interaction easing on common interactive surfaces. Only affects
+   elements that already transition; the longhand overrides their timing
+   function. Reduced-motion (end of file) still neutralises durations. */
+.clickable-icon,
+.nav-item-self,
+.workspace-tab-header,
+button {
+  transition-timing-function: var(--praxis-ease);
+}
+
+/* Reading mode (quiet) — opt-in via Style Settings. Neutralises heading colours,
+   widens leading and softens callout tint for distraction-free long-form reading. */
+body.praxis-reading-mode {
+  --line-height: 1.62;
+  --h1-color: var(--text-normal);
+  --h2-color: var(--text-normal);
+  --h3-color: var(--text-normal);
+  --h4-color: var(--text-normal);
+  --h5-color: var(--text-normal);
+  --h6-color: var(--text-normal);
+}
+body.praxis-reading-mode .callout {
+  background: color-mix(in srgb, var(--callout-color) 7%, transparent);
+}
+
+/* High contrast — strengthen borders and dividers when the OS requests it. */
+@media (prefers-contrast: more) {
+  .theme-dark,
+  .theme-light {
+    --background-modifier-border: var(--ui2);
+    --background-modifier-border-hover: var(--tx3);
+    --divider-color: var(--ui2);
+  }
+  .callout { --callout-border-opacity: 1; }
+}
+
+/* Tablet / narrow window (401–768px). Breakpoints are documented constants
+   (400 / 600 / 768 / 1000) — CSS cannot use var() in media conditions. The
+   401px lower bound avoids overlapping the ≤400px phone rules below. */
+@media (min-width: 401px) and (max-width: 768px) {
+  body {
+    --cards-min-width: 150px;
+    --img-grid-gap: max(6px, calc(var(--praxis-img-grid-gap) * 0.75));
+  }
+}
+
 /* ====================================================
  * Mobile — narrow viewport overrides (≤ 400px)
  * Applies to phones and small tablets in portrait.
