@@ -4054,14 +4054,14 @@ body:not(.is-mobile):not(.praxis-focus-mode) .workspace-split.mod-root {
 
 body:not(.is-mobile):not(.praxis-focus-mode) .mod-root .workspace-tabs {
   background: transparent;
-  padding: var(--praxis-space-1);
+  padding: var(--praxis-space-2);
 }
 
 body:not(.is-mobile):not(.praxis-focus-mode) .mod-root .workspace-tabs > .workspace-tab-container {
   background: var(--praxis-surface-workspace);
-  border: 0;
-  border-radius: var(--praxis-radius-card);
-  box-shadow: none;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--praxis-radius-workspace);
+  box-shadow: var(--praxis-elevation-card);
   overflow: hidden;
 }
 
@@ -4089,6 +4089,26 @@ body:not(.is-mobile) .workspace-split:not(.mod-root) .metadata-container {
   padding: var(--praxis-space-2);
 }
 
+body:not(.is-mobile) .workspace-split:not(.mod-root) .search-input-container {
+  margin: var(--praxis-space-2);
+}
+
+body:not(.is-mobile) .workspace-split:not(.mod-root) :is(.nav-file-title, .nav-folder-title, .tree-item-self) {
+  margin-block: 1px;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+body:not(.is-mobile) .workspace-split:not(.mod-root) .nav-folder.mod-root > .nav-folder-children > .nav-folder > .nav-folder-title,
+body:not(.is-mobile) .workspace-split:not(.mod-root) .nav-folder.mod-root > .nav-folder-children > .nav-file > .nav-file-title,
+body:not(.is-mobile) .workspace-split:not(.mod-root) :is(.backlink-pane, .outgoing-link-pane) > .tree-item-self,
+body:not(.is-mobile) .workspace-split:not(.mod-root) .workspace-leaf-content[data-type=outline] .tree-item-self,
+body:not(.is-mobile) .workspace-split:not(.mod-root) .workspace-leaf-content[data-type=bookmarks] .tree-item-self,
+body:not(.is-mobile) .workspace-split:not(.mod-root) .workspace-leaf-content[data-type=all-properties] .tree-item-self {
+  background: color-mix(in srgb, var(--praxis-surface-card) 72%, transparent);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--praxis-radius-card);
+}
+
 .nav-file-title {
   border-radius: var(--praxis-radius-control);
 }
@@ -4105,6 +4125,7 @@ body:not(.is-mobile) .workspace-split:not(.mod-root) .metadata-container {
 .nav-folder-title:hover,
 .tree-item-self:hover {
   background-color: var(--background-modifier-hover);
+  border-color: var(--background-modifier-border-hover);
 }
 
 .nav-file-title.is-active,
@@ -4130,6 +4151,13 @@ body:not(.is-mobile) :is(.search-result-container, .search-info-container) {
   border-radius: var(--praxis-radius-panel);
   margin-block: var(--praxis-space-2);
   padding: var(--praxis-space-2);
+}
+
+.search-result-file-title {
+  background: color-mix(in srgb, var(--praxis-surface-card) 72%, transparent);
+  border: 1px solid var(--background-modifier-border);
+  margin-block: var(--praxis-space-1);
+  padding-inline: var(--praxis-space-2);
 }
 
 .search-result-file-matches {
