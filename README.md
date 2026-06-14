@@ -37,7 +37,7 @@ Praxis is a warm, focused Obsidian theme built from Minimal's proven foundation 
 
 Praxis now uses a card-based visual language by default. The app chrome keeps the warm neutral base and dark-first tone, but the main workspace, side-pane contents, search/backlinks, settings groups, and helper cards read as soft layered surfaces with small radii, hairline borders, and restrained spacing. The direction is a hybrid: Velocity contributes the structural card rhythm, while Cupertino/macOS informs the softer surface hierarchy.
 
-The editor remains intentionally unframed inside the workspace shell. Notes, inline titles, and reading/source surfaces avoid decorative chrome so the card language supports navigation and tools without boxing in the writing surface. Properties are carded in sidebars and panel contexts, while in-note metadata stays quieter. Accent color stays Praxis: violet, teal, and orange on a warm neutral foundation.
+The editor remains intentionally unframed inside the workspace shell, but Properties/metadata are part of the card system in both the editor and side panels. Notes, inline titles, and reading/source surfaces avoid decorative chrome so the card language supports navigation and tools without boxing in the writing surface. Accent color stays Praxis: violet, teal, and orange on a warm neutral foundation.
 
 ## Install
 

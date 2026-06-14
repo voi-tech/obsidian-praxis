@@ -93,7 +93,7 @@ The redesign makes card UI the default language without adding a Style Settings 
 
 The implementation uses a two-layer vocabulary: semantic radii/elevation tokens and semantic surface tokens. Selectors consume those tokens instead of hard-coded colors or one-off shadows.
 
-Static repeated rows remain restrained: nav rows, tree rows, menu items, suggestion items, and search matches use background layers and radii, not shadows. Floating surfaces and real content cards carry visible elevation. The editor, reading surface, and inline title remain unframed inside the workspace shell. Properties are carded in sidebars, while in-note metadata stays quieter.
+Static repeated rows remain restrained: nav rows, tree rows, menu items, suggestion items, and search matches use background layers, borders, and radii, not shadows. Floating surfaces and real content cards carry visible elevation. The editor, reading surface, and inline title remain unframed inside the workspace shell. Properties and in-note metadata now participate in the card system so the card layout is visible in the default note workflow.
 
 ## Accessibility, Performance, And Mobile
 

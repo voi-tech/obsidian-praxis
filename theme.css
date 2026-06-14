@@ -4089,24 +4089,50 @@ body:not(.is-mobile) .workspace-split:not(.mod-root) .metadata-container {
   padding: var(--praxis-space-2);
 }
 
+body:not(.is-mobile) .mod-root .metadata-container {
+  background: var(--praxis-surface-card);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--praxis-radius-card);
+  margin-block: var(--praxis-space-3);
+  padding: var(--praxis-space-3);
+}
+
 body:not(.is-mobile) .workspace-split:not(.mod-root) .search-input-container {
   margin: var(--praxis-space-2);
 }
 
 body:not(.is-mobile) .workspace-split:not(.mod-root) :is(.nav-file-title, .nav-folder-title, .tree-item-self) {
-  margin-block: 1px;
+  background: color-mix(in srgb, var(--praxis-surface-card) 78%, transparent);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--praxis-radius-card);
+  margin-block: var(--praxis-space-1);
   transition: background-color 0.15s ease, border-color 0.15s ease;
 }
 
-body:not(.is-mobile) .workspace-split:not(.mod-root) .nav-folder.mod-root > .nav-folder-children > .nav-folder > .nav-folder-title,
-body:not(.is-mobile) .workspace-split:not(.mod-root) .nav-folder.mod-root > .nav-folder-children > .nav-file > .nav-file-title,
-body:not(.is-mobile) .workspace-split:not(.mod-root) :is(.backlink-pane, .outgoing-link-pane) > .tree-item-self,
-body:not(.is-mobile) .workspace-split:not(.mod-root) .workspace-leaf-content[data-type=outline] .tree-item-self,
-body:not(.is-mobile) .workspace-split:not(.mod-root) .workspace-leaf-content[data-type=bookmarks] .tree-item-self,
-body:not(.is-mobile) .workspace-split:not(.mod-root) .workspace-leaf-content[data-type=all-properties] .tree-item-self {
-  background: color-mix(in srgb, var(--praxis-surface-card) 72%, transparent);
+body:not(.is-mobile) .workspace-split:not(.mod-root) :is(.nav-file-title.is-active, .nav-folder-title.is-active, .tree-item-self.is-active) {
+  background: var(--praxis-surface-elevated);
+  border-color: var(--background-modifier-border-hover);
+}
+
+body:not(.is-mobile) .workspace-leaf-content[data-type=file-explorer] .nav-files-container,
+body:not(.is-mobile) .workspace-leaf-content[data-type=bookmarks] .view-content,
+body:not(.is-mobile) .workspace-leaf-content[data-type=outline] .view-content,
+body:not(.is-mobile) .workspace-leaf-content[data-type=all-properties] .view-content {
+  padding: var(--praxis-space-2);
+}
+
+body:not(.is-mobile) .workspace-leaf-content[data-type=search] .view-content,
+body:not(.is-mobile) .workspace-leaf-content[data-type=backlink] .view-content,
+body:not(.is-mobile) .workspace-leaf-content[data-type=outgoing-link] .view-content {
+  padding-inline: var(--praxis-space-2);
+}
+
+body:not(.is-mobile) :is(.search-result-container, .search-info-container, .backlink-pane, .outgoing-link-pane) {
+  background: var(--praxis-surface-panel-card);
   border: 1px solid var(--background-modifier-border);
-  border-radius: var(--praxis-radius-card);
+  border-radius: var(--praxis-radius-panel);
+  margin-block: var(--praxis-space-2);
+  padding: var(--praxis-space-2);
 }
 
 .nav-file-title {
@@ -4143,14 +4169,6 @@ body:not(.is-mobile) .workspace-split:not(.mod-root) .workspace-leaf-content[dat
 .menu-item.selected,
 .menu-item.is-selected {
   background-color: var(--background-modifier-hover);
-}
-
-body:not(.is-mobile) :is(.search-result-container, .search-info-container) {
-  background: var(--praxis-surface-panel-card);
-  border: 1px solid var(--background-modifier-border);
-  border-radius: var(--praxis-radius-panel);
-  margin-block: var(--praxis-space-2);
-  padding: var(--praxis-space-2);
 }
 
 .search-result-file-title {
