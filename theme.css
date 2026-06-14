@@ -3885,26 +3885,8 @@ body:not(.full-file-names) .tree-item-inner {
   font-weight: 500;
 }
 
-body {
-  --canvas-dot-pattern: var(--background-modifier-border-hover);
-}
-
-.canvas-node-label {
-  font-size: var(--font-adaptive-small);
-}
-
-.canvas-edges :not(.is-themed) path.canvas-display-path {
-  stroke: var(--background-modifier-border-focus);
-}
-
-.canvas-edges :not(.is-themed) polyline.canvas-path-end {
-  stroke: var(--background-modifier-border-focus);
-  fill: var(--background-modifier-border-focus);
-}
-
-.canvas-node-container {
-  border: 1.5px solid var(--background-modifier-border-focus);
-}
+/* Canvas is styled in the Praxis overrides layer (see "Graph view" / "Canvas"
+   sections near the end of this file). */
 
 .node-insert-event.mod-inside-iframe {
   --max-width: 100%;
