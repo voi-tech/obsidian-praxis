@@ -4952,7 +4952,7 @@ body {
   --praxis-properties-gap: 0px;
 
   /* Fibonacci spacing scale (3·5·8·13·21·34·55·89). The full scale is defined
-     intentionally as a design system; -1/-7/-8 are reserved for future use and
+     intentionally as a design system; -7/-8 are reserved for future use and
      may currently be unreferenced. Brand palette source of truth lives in the
      .theme-dark / .theme-light blocks near the top of this file; publish.css
      mirrors those hex values — keep the two in sync when changing colours. */
