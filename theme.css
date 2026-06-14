@@ -297,9 +297,11 @@ body {
   --tx2: #4a3f2f;
   --tx3: #7a6a54;
   --tx4: #3a8f84;
-  --ax1: #7a60c8;
+  /* Accent darkened for WCAG AA: link text now ~5.1:1 on --bg1 (was 4.31:1).
+     Dark mode accent is unchanged. */
+  --ax1: #6e54bb;
   --ax2: #9878e0;
-  --hl1: rgba(122, 96, 200, 0.2);
+  --hl1: rgba(110, 84, 187, 0.2);
   --hl2: rgba(185, 102, 40, 0.18);
   --sp1: var(--mono0);
   /* Light-mode hues darkened for WCAG: each clears ~4.3:1 on --bg1 (was
