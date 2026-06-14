@@ -144,9 +144,8 @@ body {
   --h4: var(--h4-size);
   --h5: var(--h5-size);
   --h6: var(--h6-size);
-  --h1-weight: 600;
-  --h2-weight: 600;
-  --h3-weight: 500;
+  /* H1–H3 weights are set in the Praxis design-tokens block via
+     --praxis-heading-weight (single source of truth). H4–H6 keep these. */
   --h4-weight: 500;
   --h5-weight: 500;
   --h6-weight: 400;
