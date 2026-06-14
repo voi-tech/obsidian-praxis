@@ -27,7 +27,7 @@ Praxis is a warm, focused Obsidian theme built from Minimal's proven foundation 
 - Soft, outlined, and minimal callout styles
 - Custom `[!author]` callout and `|noicon` callout metadata support
 - Polished Properties styling for a quieter metadata panel
-- Card-based default UI for side panes, floating menus, modals, graph controls, canvas, callouts, and tables
+- Card-based default UI for the workspace shell, side-pane contents, search/backlinks, Properties sidebars, settings, floating menus, graph controls, canvas, callouts, and tables
 - Themed graph view and canvas (warm palette, accent focus, Praxis card radius and elevation)
 - Reading mode for distraction-free, quiet long-form notes
 - Accessibility-minded: WCAG-AA palette, keyboard focus rings, reduced-motion and high-contrast support
@@ -35,9 +35,9 @@ Praxis is a warm, focused Obsidian theme built from Minimal's proven foundation 
 
 ## Design Direction
 
-Praxis now uses a card-based visual language by default. The app chrome keeps the warm neutral base and dark-first tone, but panels and repeated controls read as soft layered surfaces with small radii, hairline borders, and restrained spacing. The direction is inspired by Cupertino/macOS surface hierarchy and Velocity's readable rhythm: floating elements are clearly lifted, while static lists and sidebars stay quiet and fast.
+Praxis now uses a card-based visual language by default. The app chrome keeps the warm neutral base and dark-first tone, but the main workspace, side-pane contents, search/backlinks, settings groups, and helper cards read as soft layered surfaces with small radii, hairline borders, and restrained spacing. The direction is a hybrid: Velocity contributes the structural card rhythm, while Cupertino/macOS informs the softer surface hierarchy.
 
-The editor remains intentionally unframed. Notes, inline titles, Properties, and reading/source surfaces avoid decorative chrome so the card language supports navigation and tools without boxing in the writing surface. Accent color stays Praxis: violet, teal, and orange on a warm neutral foundation.
+The editor remains intentionally unframed inside the workspace shell. Notes, inline titles, and reading/source surfaces avoid decorative chrome so the card language supports navigation and tools without boxing in the writing surface. Properties are carded in sidebars and panel contexts, while in-note metadata stays quieter. Accent color stays Praxis: violet, teal, and orange on a warm neutral foundation.
 
 ## Install
 
@@ -105,8 +105,8 @@ cssclasses:
 
 ### Cards
 
-- `cards` turns compatible tables into card grids
-- `list-cards` turns top-level lists into card grids
+- `cards` turns compatible tables into Praxis card grids with default surface, border, radius, and hover elevation
+- `list-cards` turns top-level lists into the same Praxis card grid language
 - `cards-cover` crops images to fill their card image area
 - `cards-align-bottom` pushes the last card field to the bottom
 - `cards-16-9`, `cards-1-1`, `cards-2-1`, `cards-2-3` set image aspect ratios
@@ -219,11 +219,11 @@ Systems or browsers without `backdrop-filter` still receive readable semi-solid 
 
 ## Compatibility
 
-Praxis targets Obsidian 1.13.0 or newer on desktop and mobile. The card defaults are shared by dark and light mode, including the true-black and contrast variants. Mobile drawers stay solid and avoid frosted treatment to keep resizing, touch targets, and sidebar handles predictable.
+Praxis targets Obsidian 1.13.0 or newer on desktop and mobile. The card defaults are shared by dark and light mode, including the true-black and contrast variants. Desktop uses a visible workspace shell card and panel content cards; mobile keeps drawers solid and avoids frosted treatment to keep resizing, touch targets, and sidebar handles predictable.
 
 The theme is tested against Electron/WebKit-style CSS support and includes `-webkit-backdrop-filter` for Safari-like engines. Style Settings continues to coexist with the new defaults; its controls adjust Praxis body classes, but there is no card-layout on/off switch.
 
-Obsidian Publish uses `publish.css`, which shares the same radius, surface, and elevation vocabulary for Publish tables, callouts, cards, code blocks, images, and canvas-adjacent surfaces. Publish intentionally does not include the app-only frosted translucency layer.
+Obsidian Publish uses `publish.css`, which shares the same radius, surface, and elevation vocabulary for Publish tables, callouts, cards, code blocks, images, and canvas-adjacent surfaces. Publish intentionally does not include the app-only frosted translucency layer or workspace chrome selectors.
 
 ## Obsidian Publish
 

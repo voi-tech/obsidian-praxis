@@ -59,6 +59,7 @@ body {
   --praxis-radius-card: var(--radius-s);
   --praxis-radius-panel: var(--radius-s);
   --praxis-radius-modal: var(--radius-m);
+  --praxis-radius-workspace: var(--radius-m);
   --border-width: 1px;
 
   --page-title-weight: 450;
@@ -83,6 +84,7 @@ body {
   --cards-padding: var(--space-4);
   --cards-image-fit: var(--praxis-cards-image-fit);
   --cards-background: var(--praxis-surface-card);
+  --cards-background-hover: var(--praxis-surface-elevated);
   --cards-border-width: 1px;
   --cards-radius: var(--praxis-radius-card);
   --cards-aspect-ratio: auto;
@@ -208,9 +210,12 @@ body {
   --praxis-surface-2: var(--praxis-bg-secondary);
   --praxis-surface-3: var(--praxis-bg-tertiary);
   --praxis-surface-card: var(--praxis-bg-secondary);
+  --praxis-surface-panel-card: var(--praxis-bg-secondary);
+  --praxis-surface-workspace: var(--praxis-bg-primary);
   --praxis-surface-elevated: var(--praxis-bg-tertiary);
   --praxis-elevation-card: 0 var(--space-1) var(--space-4) var(--praxis-shadow);
   --praxis-elevation-floating: 0 var(--space-2) var(--space-5) var(--praxis-shadow);
+  --praxis-elevation-workspace: 0 var(--space-2) var(--space-5) var(--praxis-shadow);
 }
 
 .theme-light {
@@ -233,6 +238,8 @@ body {
   --praxis-highlight: rgba(185, 102, 40, 0.18);
   --praxis-shadow: rgba(0, 0, 0, 0.08);
   --praxis-surface-card: color-mix(in srgb, var(--praxis-bg-primary) 92%, #ffffff);
+  --praxis-surface-panel-card: color-mix(in srgb, var(--praxis-bg-primary) 82%, #ffffff);
+  --praxis-surface-workspace: color-mix(in srgb, var(--praxis-bg-primary) 88%, #ffffff);
   --praxis-surface-elevated: color-mix(in srgb, var(--praxis-bg-primary) 78%, #ffffff);
 }
 
@@ -255,6 +262,8 @@ body {
   --praxis-highlight: rgba(217, 122, 64, 0.22);
   --praxis-shadow: rgba(0, 0, 0, 0.4);
   --praxis-surface-card: color-mix(in srgb, var(--praxis-bg-secondary) 88%, #ffffff);
+  --praxis-surface-panel-card: color-mix(in srgb, var(--praxis-bg-secondary) 76%, #ffffff);
+  --praxis-surface-workspace: color-mix(in srgb, var(--praxis-bg-secondary) 82%, #ffffff);
   --praxis-surface-elevated: color-mix(in srgb, var(--praxis-bg-secondary) 80%, #ffffff);
 }
 
@@ -693,7 +702,9 @@ span[src$="#circle"] img {
 }
 
 .list-cards.markdown-preview-view div ul > li:hover {
+  background-color: var(--cards-background-hover);
   border-color: var(--background-modifier-border-hover);
+  box-shadow: var(--praxis-elevation-card);
 }
 
 .list-cards.markdown-preview-view div ul ul {

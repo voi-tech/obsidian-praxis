@@ -465,6 +465,8 @@ body {
   --praxis-surface-2: var(--bg2);
   --praxis-surface-3: var(--bg3);
   --praxis-surface-card: color-mix(in srgb, var(--bg1) 92%, var(--mono0));
+  --praxis-surface-panel-card: color-mix(in srgb, var(--bg1) 82%, var(--mono0));
+  --praxis-surface-workspace: color-mix(in srgb, var(--bg1) 88%, var(--mono0));
   --praxis-surface-elevated: color-mix(in srgb, var(--bg1) 78%, var(--mono0));
   --praxis-surface-floating: var(--praxis-surface-elevated);
   --praxis-surface-modal: color-mix(in srgb, var(--bg1) 65%, var(--mono0));
@@ -487,6 +489,8 @@ body {
   --praxis-surface-2: var(--bg2);
   --praxis-surface-3: var(--bg3);
   --praxis-surface-card: color-mix(in srgb, var(--bg2) 88%, var(--mono100));
+  --praxis-surface-panel-card: color-mix(in srgb, var(--bg2) 76%, var(--mono100));
+  --praxis-surface-workspace: color-mix(in srgb, var(--bg2) 82%, var(--mono100));
   --praxis-surface-elevated: color-mix(in srgb, var(--bg2) 80%, var(--mono100));
   --praxis-surface-floating: var(--praxis-surface-elevated);
   --praxis-surface-modal: color-mix(in srgb, var(--bg2) 75%, var(--mono100));
@@ -503,6 +507,8 @@ body.praxis-contrast-low {
   --titlebar-background: var(--background-primary);
   --titlebar-background-focused: var(--background-primary);
   --praxis-surface-card: color-mix(in srgb, var(--bg1) 90%, var(--tx1));
+  --praxis-surface-panel-card: color-mix(in srgb, var(--bg1) 84%, var(--tx1));
+  --praxis-surface-workspace: color-mix(in srgb, var(--bg1) 90%, var(--tx1));
   --praxis-surface-elevated: color-mix(in srgb, var(--bg1) 84%, var(--tx1));
   --praxis-surface-floating: var(--praxis-surface-elevated);
   --praxis-surface-modal: color-mix(in srgb, var(--bg1) 78%, var(--tx1));
@@ -2386,7 +2392,7 @@ body {
   flex-direction: column;
   margin: 0;
   padding: 0 0 calc(var(--cards-padding) / 3);
-  border-radius: var(--praxis-radius-xs);
+  border-radius: var(--cards-radius);
   overflow: hidden;
   transition: box-shadow 0.15s linear;
   max-width: var(--cards-max-width);
@@ -2395,7 +2401,7 @@ body {
 .cards table.dataview > tbody > tr:hover {
   background-color: var(--cards-background-hover);
   border: var(--cards-border-width) solid var(--background-modifier-border-hover);
-  box-shadow: 0 4px 6px 0px rgba(0, 0, 0, 0.05), 0 1px 3px 1px rgba(0, 0, 0, 0.025);
+  box-shadow: var(--praxis-elevation-card);
   transition: box-shadow 0.15s linear;
 }
 .cards table.dataview tbody > tr > td:first-child {
@@ -2572,7 +2578,7 @@ body {
 .list-cards.markdown-preview-view div > ul > li {
   background-color: var(--cards-background);
   padding: calc(var(--cards-padding) / 2);
-  border-radius: var(--radius-s);
+  border-radius: var(--cards-radius);
   border: var(--cards-border-width) solid var(--background-modifier-border);
   overflow: hidden;
   margin-inline-start: 0;
@@ -2596,7 +2602,9 @@ body {
   font-weight: var(--bold-weight);
 }
 .list-cards.markdown-preview-view div ul > li:hover {
+  background-color: var(--cards-background-hover);
   border-color: var(--background-modifier-border-hover);
+  box-shadow: var(--praxis-elevation-card);
 }
 .list-cards.markdown-preview-view div ul ul {
   display: block;
@@ -4039,6 +4047,57 @@ body:not(.is-mobile) .nav-buttons-container {
   background: var(--praxis-surface-2);
 }
 
+/* Card Layout 2.0: structural cards for chrome, while note content stays unframed. */
+body:not(.is-mobile):not(.praxis-focus-mode) .workspace-split.mod-root {
+  background: var(--praxis-surface-1);
+}
+
+body:not(.is-mobile):not(.praxis-focus-mode) .mod-root .workspace-tabs {
+  background: transparent;
+  padding: var(--praxis-space-2);
+}
+
+body:not(.is-mobile):not(.praxis-focus-mode) .mod-root .workspace-tabs > .workspace-tab-container {
+  background: var(--praxis-surface-workspace);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--praxis-radius-workspace);
+  box-shadow: var(--praxis-elevation-workspace);
+  overflow: hidden;
+}
+
+body:not(.is-mobile):not(.praxis-focus-mode) .mod-root .workspace-leaf,
+body:not(.is-mobile):not(.praxis-focus-mode) .mod-root .workspace-leaf-content {
+  background: transparent;
+}
+
+body:not(.is-mobile) .workspace-split:not(.mod-root) .workspace-tabs,
+body:not(.is-mobile) .workspace-split:not(.mod-root) .workspace-leaf-content {
+  background: transparent;
+}
+
+body:not(.is-mobile) .workspace-split:not(.mod-root) .workspace-leaf-content > .nav-header,
+body:not(.is-mobile) .workspace-split:not(.mod-root) .workspace-leaf-content > .view-content {
+  background: var(--praxis-surface-panel-card);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--praxis-radius-panel);
+  margin: var(--praxis-space-2);
+}
+
+body:not(.is-mobile) .workspace-split:not(.mod-root) .workspace-leaf-content > .nav-header {
+  padding: var(--praxis-space-1);
+}
+
+body:not(.is-mobile) .workspace-split:not(.mod-root) .workspace-leaf-content > .view-content {
+  padding: var(--praxis-space-2);
+}
+
+body:not(.is-mobile) .workspace-split:not(.mod-root) .metadata-container {
+  background: var(--praxis-surface-card);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--praxis-radius-card);
+  padding: var(--praxis-space-2);
+}
+
 .nav-file-title {
   border-radius: var(--praxis-radius-control);
 }
@@ -4051,16 +4110,51 @@ body:not(.is-mobile) .nav-buttons-container {
   border-radius: var(--praxis-radius-control);
 }
 
+.nav-file-title:hover,
+.nav-folder-title:hover,
+.tree-item-self:hover {
+  background-color: var(--background-modifier-hover);
+}
+
+.nav-file-title.is-active,
+.nav-folder-title.is-active,
+.tree-item-self.is-active {
+  background-color: var(--praxis-surface-elevated);
+  color: var(--text-normal);
+}
+
 .menu-item {
   border-radius: var(--praxis-radius-control);
+}
+
+.menu-item:hover,
+.menu-item.selected,
+.menu-item.is-selected {
+  background-color: var(--background-modifier-hover);
+}
+
+.search-result-file-matches {
+  background: var(--praxis-surface-card);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--praxis-radius-card);
+  margin-block: var(--praxis-space-1) var(--praxis-space-2);
+  padding: var(--praxis-space-1);
 }
 
 .search-result-file-title {
   border-radius: var(--praxis-radius-card);
 }
 
+.search-result-file-title:hover {
+  background-color: var(--background-modifier-hover);
+}
+
 .search-result-file-match {
   border-radius: var(--praxis-radius-card);
+}
+
+.search-result-file-match:hover {
+  background-color: var(--background-modifier-hover);
 }
 
 input.prompt-input,
@@ -4077,8 +4171,21 @@ input.prompt-input:focus-visible {
 }
 
 .suggestion-item.is-selected {
-  background-color: var(--background-modifier-hover);
+  background-color: color-mix(in srgb, var(--interactive-accent) 18%, transparent);
   color: var(--text-normal);
+}
+
+.is-mobile .menu,
+.is-mobile .prompt,
+.is-mobile .suggestion-container {
+  background: var(--praxis-surface-floating);
+  border: 1px solid var(--background-modifier-border);
+  box-shadow: var(--praxis-elevation-floating);
+}
+
+.is-mobile .menu,
+.is-mobile .prompt {
+  border-radius: var(--praxis-radius-modal) var(--praxis-radius-modal) 0 0;
 }
 
 .is-mobile {
@@ -4936,6 +5043,32 @@ body .markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-t
   background-color: transparent;
 }
 
+.modal.mod-settings .vertical-tab-content-container {
+  background: var(--praxis-surface-modal);
+}
+
+.modal.mod-settings .setting-item:not(.setting-item-heading),
+.workspace-leaf-content[data-type=style-settings] .style-settings-container[data-level="1"],
+.workspace-leaf-content[data-type=style-settings] .style-settings-container[data-level="2"] {
+  background: var(--praxis-surface-card);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--praxis-radius-card);
+}
+
+.modal.mod-settings .setting-item:not(.setting-item-heading) {
+  margin-block: var(--praxis-space-1);
+  padding: var(--praxis-space-2) var(--praxis-space-3);
+}
+
+.modal.mod-settings .setting-item:not(.setting-item-heading):hover {
+  border-color: var(--background-modifier-border-hover);
+}
+
+.workspace-leaf-content[data-type=style-settings] .style-settings-container[data-level="1"] {
+  margin-block: var(--praxis-space-2);
+  padding: var(--praxis-space-2) var(--praxis-space-3);
+}
+
 .setting-item .pickr .pcr-button:after,
 .setting-item .pickr .pcr-button:before {
   border-radius: 34px;
@@ -5144,8 +5277,10 @@ body {
   --cards-image-height: var(--praxis-cards-image-height);
   --cards-image-fit: var(--praxis-cards-image-fit);
   --cards-padding: var(--praxis-space-4);
-  --cards-background: transparent;
+  --cards-background: var(--praxis-surface-card);
+  --cards-background-hover: var(--praxis-surface-elevated);
   --cards-border-width: 1px;
+  --cards-radius: var(--praxis-radius-card);
   --cards-aspect-ratio: auto;
   --cards-columns: repeat(auto-fit, minmax(var(--cards-min-width), var(--cards-max-width)));
 
@@ -5197,9 +5332,11 @@ body {
   --praxis-radius-card: var(--praxis-radius-md);
   --praxis-radius-panel: var(--praxis-radius-md);
   --praxis-radius-modal: var(--praxis-radius-lg);
+  --praxis-radius-workspace: var(--praxis-radius-lg);
   --praxis-elevation-card: 0 var(--praxis-space-1) var(--praxis-space-4) var(--shadow-color);
   --praxis-elevation-floating: 0 var(--praxis-space-2) var(--praxis-space-5) var(--shadow-color);
   --praxis-elevation-modal: 0 var(--praxis-space-3) var(--praxis-space-6) var(--shadow-color);
+  --praxis-elevation-workspace: 0 var(--praxis-space-2) var(--praxis-space-5) var(--shadow-color);
   --praxis-backdrop-blur: blur(20px) saturate(180%);
 }
 
