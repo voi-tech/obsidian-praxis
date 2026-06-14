@@ -296,13 +296,15 @@ body {
   --hl1: rgba(122, 96, 200, 0.2);
   --hl2: rgba(185, 102, 40, 0.18);
   --sp1: var(--mono0);
-  --color-red: #b96830;
-  --color-orange: #c47a40;
-  --color-yellow: #a08030;
-  --color-green: #3a8f84;
+  /* Light-mode hues darkened for WCAG: each clears ~4.3:1 on --bg1 (was
+     large-text-AA-only at 3.0–3.8:1). Dark-mode identity is unchanged. */
+  --color-red: #a85a28;
+  --color-orange: #a55f2c;
+  --color-yellow: #8a6c22;
+  --color-green: #2f7d72;
   --color-cyan: #5bbfb2;
-  --color-blue: #4a7fb0;
-  --color-purple: #7a60c8;
+  --color-blue: #3d6f9e;
+  --color-purple: #6a51b4;
   --color-pink: #a05a90;
   --callout-purple: #7a60c8;
   --callout-blue:   #4a7fb0;
