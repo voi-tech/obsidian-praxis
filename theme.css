@@ -70,7 +70,7 @@ settings:
         label: Minimal
         value: praxis-callouts-minimal
   -
-    id: metadata-heading-on
+    id: praxis-metadata-heading-on
     title: Show properties heading
     type: class-toggle
     default: false
