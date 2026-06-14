@@ -75,7 +75,7 @@ settings:
     type: class-toggle
     default: false
   -
-    id: metadata-add-property-on
+    id: praxis-metadata-add-property-on
     title: Show "Add property" button
     type: class-toggle
     default: false
