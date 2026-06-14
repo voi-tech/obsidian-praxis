@@ -974,7 +974,11 @@ body :is(input[data-task][data-task="9"], li[data-task][data-task="9"]) { --prax
   --callout-padding: var(--space-4);
   --callout-title-padding: 0 0 var(--space-2) 0;
   --callout-content-padding: var(--space-2) 0 0 0;
+  /* Fallbacks first for older Publish-visitor browsers without color-mix(); the
+     color-mix declarations below override wherever supported. */
+  background: var(--background-secondary);
   background: color-mix(in srgb, var(--callout-color) 12%, transparent);
+  border: var(--callout-border-width) solid var(--background-modifier-border);
   border: var(--callout-border-width) solid color-mix(in srgb, var(--callout-color) 28%, transparent);
   border-radius: var(--callout-radius);
   padding: var(--callout-padding);
