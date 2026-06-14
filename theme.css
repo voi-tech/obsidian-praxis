@@ -113,6 +113,12 @@ settings:
     description: Revert graph nodes/lines and canvas accent colors to Obsidian defaults. Praxis card radius and shadows are kept.
     type: class-toggle
     default: false
+  -
+    id: praxis-reading-mode
+    title: Reading mode (quiet)
+    description: Neutralise heading colors, widen line spacing, and soften callouts for distraction-free long-form reading.
+    type: class-toggle
+    default: false
 */
 
 
