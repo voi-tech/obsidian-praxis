@@ -5947,6 +5947,15 @@ body.praxis-reading-mode .callout {
     --divider-color: var(--ui2);
   }
   .callout { --callout-border-opacity: 1; }
+  /* Graph nodes/lines render on a canvas (colour only via --graph-*); raise them
+     to the strongest neutral tokens when the OS requests more contrast. */
+  body {
+    --graph-text: var(--tx1);
+    --graph-node: var(--tx1);
+    --graph-line: var(--ui2);
+    --graph-node-unresolved: var(--tx2);
+    --graph-node-attachment: var(--tx2);
+  }
 }
 
 /* Tablet / narrow window (401–768px). Breakpoints are documented constants
