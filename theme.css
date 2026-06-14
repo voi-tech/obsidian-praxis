@@ -113,6 +113,49 @@ settings:
     description: Neutralise heading colors, widen line spacing, and soften callouts for distraction-free long-form reading.
     type: class-toggle
     default: false
+  -
+    id: praxis-heading-scale
+    title: Heading hierarchy
+    description: Strength of the H1–H6 size hierarchy.
+    type: class-select
+    allowEmpty: false
+    default: praxis-headings-default
+    options:
+      -
+        label: Default
+        value: praxis-headings-default
+      -
+        label: Compact
+        value: praxis-headings-compact
+      -
+        label: Pronounced
+        value: praxis-headings-pronounced
+  -
+    id: praxis-layout
+    title: Layout density
+    description: Reading measure, line spacing, and paragraph rhythm.
+    type: class-select
+    allowEmpty: false
+    default: praxis-layout-default
+    options:
+      -
+        label: Default
+        value: praxis-layout-default
+      -
+        label: Compact
+        value: praxis-layout-compact
+      -
+        label: Comfortable
+        value: praxis-layout-comfortable
+      -
+        label: Editorial
+        value: praxis-layout-editorial
+  -
+    id: praxis-drop-cap
+    title: Drop cap on first paragraph
+    description: Decorative large initial letter on the first paragraph in reading view.
+    type: class-toggle
+    default: false
 */
 
 
