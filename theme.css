@@ -5744,8 +5744,8 @@ body.praxis-callouts-minimal .callout {
  * Nodes/lines render on an HTML <canvas>, so they are colourable only via the
  * --graph-* variables (not selectors). Restrained palette: warm-neutral nodes,
  * subtle links, purple accent on focus. The referenced tokens vary per theme,
- * so one block covers dark + light. Disable-able via Style Settings. */
-body:not(.praxis-graph-canvas-off) {
+ * so one block covers dark + light. Always on (no toggle). */
+body {
   --graph-text: var(--tx2);
   --graph-line: color-mix(in srgb, var(--ui2) 70%, transparent);
   --graph-node: var(--tx2);
