@@ -55,11 +55,6 @@ body {
   --radius-s: var(--praxis-radius);
   --radius-m: 21px;
   --radius-l: 21px;
-  --praxis-radius-control: var(--radius-xs);
-  --praxis-radius-card: var(--radius-s);
-  --praxis-radius-panel: var(--radius-s);
-  --praxis-radius-modal: var(--radius-m);
-  --praxis-radius-workspace: var(--radius-m);
   --border-width: 1px;
 
   --page-title-weight: 450;
@@ -83,10 +78,8 @@ body {
   --cards-image-height: var(--praxis-cards-image-height);
   --cards-padding: var(--space-4);
   --cards-image-fit: var(--praxis-cards-image-fit);
-  --cards-background: var(--praxis-surface-card);
-  --cards-background-hover: var(--praxis-surface-elevated);
+  --cards-background: transparent;
   --cards-border-width: 1px;
-  --cards-radius: var(--praxis-radius-card);
   --cards-aspect-ratio: auto;
   --cards-columns: repeat(auto-fit, minmax(var(--cards-min-width), var(--cards-max-width)));
 
@@ -206,16 +199,6 @@ body {
   --tag-color: var(--text-muted);
   --tag-background: transparent;
   --tag-border-color: var(--background-modifier-border);
-  --praxis-surface-1: var(--praxis-bg-primary);
-  --praxis-surface-2: var(--praxis-bg-secondary);
-  --praxis-surface-3: var(--praxis-bg-tertiary);
-  --praxis-surface-card: var(--praxis-bg-secondary);
-  --praxis-surface-panel-card: var(--praxis-bg-secondary);
-  --praxis-surface-workspace: var(--praxis-bg-primary);
-  --praxis-surface-elevated: var(--praxis-bg-tertiary);
-  --praxis-elevation-card: 0 var(--space-1) var(--space-4) var(--praxis-shadow);
-  --praxis-elevation-floating: 0 var(--space-2) var(--space-5) var(--praxis-shadow);
-  --praxis-elevation-workspace: 0 var(--space-2) var(--space-5) var(--praxis-shadow);
 }
 
 .theme-light {
@@ -237,10 +220,6 @@ body {
   --praxis-selection: rgba(110, 84, 187, 0.2);
   --praxis-highlight: rgba(185, 102, 40, 0.18);
   --praxis-shadow: rgba(0, 0, 0, 0.08);
-  --praxis-surface-card: color-mix(in srgb, var(--praxis-bg-primary) 92%, #ffffff);
-  --praxis-surface-panel-card: color-mix(in srgb, var(--praxis-bg-primary) 82%, #ffffff);
-  --praxis-surface-workspace: color-mix(in srgb, var(--praxis-bg-primary) 88%, #ffffff);
-  --praxis-surface-elevated: color-mix(in srgb, var(--praxis-bg-primary) 78%, #ffffff);
 }
 
 .theme-dark {
@@ -261,10 +240,6 @@ body {
   --praxis-selection: rgba(152, 120, 224, 0.25);
   --praxis-highlight: rgba(217, 122, 64, 0.22);
   --praxis-shadow: rgba(0, 0, 0, 0.4);
-  --praxis-surface-card: color-mix(in srgb, var(--praxis-bg-secondary) 88%, #ffffff);
-  --praxis-surface-panel-card: color-mix(in srgb, var(--praxis-bg-secondary) 76%, #ffffff);
-  --praxis-surface-workspace: color-mix(in srgb, var(--praxis-bg-secondary) 82%, #ffffff);
-  --praxis-surface-elevated: color-mix(in srgb, var(--praxis-bg-secondary) 80%, #ffffff);
 }
 
 .published-container {
@@ -292,7 +267,7 @@ body {
 
 .published-container code {
   background-color: var(--code-background);
-  border-radius: var(--praxis-radius-control);
+  border-radius: var(--radius-xs);
   color: var(--text-code);
   font-size: 0.88em;
   padding: 0.1em 0.3em;
@@ -301,7 +276,7 @@ body {
 .published-container pre {
   background-color: var(--code-background);
   border: var(--border-width) solid var(--background-modifier-border);
-  border-radius: var(--praxis-radius-control);
+  border-radius: var(--radius-s);
 }
 
 .published-container pre code {
@@ -322,7 +297,7 @@ body {
   border-collapse: separate;
   border-spacing: 0;
   border: var(--border-width) solid var(--table-border-color);
-  border-radius: var(--praxis-radius-card);
+  border-radius: 13px;
   overflow: hidden;
   margin-block-start: 1em;
 }
@@ -542,8 +517,8 @@ span[src$="#outline"] img {
 img[src$="#interface"],
 span[src$="#interface"] img {
   border: 1px solid var(--background-modifier-border);
-  border-radius: var(--praxis-radius-card);
-  box-shadow: var(--praxis-elevation-card);
+  border-radius: var(--radius-m);
+  box-shadow: 0 var(--space-1) var(--space-5) var(--praxis-shadow);
   margin-bottom: var(--space-5);
   margin-top: var(--space-4);
 }
@@ -616,7 +591,7 @@ span[src$="#circle"] img {
 .cards table > tbody > tr {
   background-color: var(--cards-background);
   border: var(--cards-border-width) solid var(--background-modifier-border);
-  border-radius: var(--cards-radius);
+  border-radius: var(--radius-s);
   display: flex;
   flex-direction: column;
   margin: 0;
@@ -628,7 +603,7 @@ span[src$="#circle"] img {
 
 .cards table > tbody > tr:hover {
   border-color: var(--background-modifier-border-hover);
-  box-shadow: var(--praxis-elevation-card);
+  box-shadow: 0 var(--space-1) var(--space-5) var(--praxis-shadow);
 }
 
 .cards table tbody > tr > td {
@@ -670,7 +645,7 @@ span[src$="#circle"] img {
 .list-cards.markdown-preview-view div > ul > li {
   background-color: var(--cards-background);
   border: var(--cards-border-width) solid var(--background-modifier-border);
-  border-radius: var(--cards-radius);
+  border-radius: var(--radius-s);
   display: block;
   list-style: none;
   overflow: hidden;
@@ -702,9 +677,7 @@ span[src$="#circle"] img {
 }
 
 .list-cards.markdown-preview-view div ul > li:hover {
-  background-color: var(--cards-background-hover);
   border-color: var(--background-modifier-border-hover);
-  box-shadow: var(--praxis-elevation-card);
 }
 
 .list-cards.markdown-preview-view div ul ul {
@@ -997,7 +970,7 @@ body :is(input[data-task][data-task="9"], li[data-task][data-task="9"]) { --prax
   --callout-icon: lucide-pencil;
   --callout-title-color: var(--callout-color);
   --callout-border-width: var(--border-width);
-  --callout-radius: var(--praxis-radius-card);
+  --callout-radius: var(--radius-s);
   --callout-padding: var(--space-4);
   --callout-title-padding: 0 0 var(--space-2) 0;
   --callout-content-padding: var(--space-2) 0 0 0;
@@ -1096,7 +1069,7 @@ body :is(input[data-task][data-task="9"], li[data-task][data-task="9"]) { --prax
 .callout[data-callout="author"] {
   --callout-color: var(--callout-brown);
   --callout-icon: lucide-user;
-  box-shadow: var(--praxis-elevation-card);
+  box-shadow: 0 var(--space-3) var(--space-6) var(--praxis-shadow);
   display: flex;
   flex-direction: column-reverse;
 }
@@ -1185,7 +1158,7 @@ body :is(input[data-task][data-task="9"], li[data-task][data-task="9"]) { --prax
 }
 
 .canvas-node-container {
-  border-radius: var(--praxis-radius-card);
+  border-radius: var(--radius-m);
 }
 .canvas-node-label {
   color: var(--canvas-card-label-color, var(--text-muted));

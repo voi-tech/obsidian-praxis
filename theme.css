@@ -232,8 +232,8 @@ body {
   --input-height: 32px;
   --header-height: 55px;
   --tab-height: 34px;
-  --tab-radius: var(--praxis-radius-card);
-  --tab-radius-active: var(--praxis-radius-card);
+  --tab-radius: 13px;
+  --tab-radius-active: 13px;
   --tab-curve: 0;
   --tab-background: transparent;
   --tab-background-active: var(--background-primary);
@@ -461,18 +461,6 @@ body {
   --workspace-background-translucent: rgba(247, 241, 231, 0.85);
   --shadow-color: rgba(0, 0, 0, 0.08);
   --btn-shadow-color: rgba(0, 0, 0, 0.04);
-  --praxis-surface-1: var(--bg1);
-  --praxis-surface-2: var(--bg2);
-  --praxis-surface-3: var(--bg3);
-  --praxis-surface-card: color-mix(in srgb, var(--bg1) 92%, var(--mono0));
-  --praxis-surface-panel-card: color-mix(in srgb, var(--bg1) 82%, var(--mono0));
-  --praxis-surface-workspace: color-mix(in srgb, var(--bg1) 88%, var(--mono0));
-  --praxis-surface-elevated: color-mix(in srgb, var(--bg1) 78%, var(--mono0));
-  --praxis-surface-floating: var(--praxis-surface-elevated);
-  --praxis-surface-modal: color-mix(in srgb, var(--bg1) 65%, var(--mono0));
-  --praxis-surface-translucent: rgba(247, 241, 231, 0.72);
-  --praxis-surface-translucent-strong: rgba(247, 241, 231, 0.85);
-  --praxis-border-translucent: rgba(0, 0, 0, 0.06);
 }
 
 .theme-dark {
@@ -485,18 +473,6 @@ body {
   --shadow-color: rgba(0, 0, 0, 0.35);
   --btn-shadow-color: rgba(0, 0, 0, 0.2);
   --modal-border-color: var(--ui2);
-  --praxis-surface-1: var(--bg1);
-  --praxis-surface-2: var(--bg2);
-  --praxis-surface-3: var(--bg3);
-  --praxis-surface-card: color-mix(in srgb, var(--bg2) 88%, var(--mono100));
-  --praxis-surface-panel-card: color-mix(in srgb, var(--bg2) 76%, var(--mono100));
-  --praxis-surface-workspace: color-mix(in srgb, var(--bg2) 82%, var(--mono100));
-  --praxis-surface-elevated: color-mix(in srgb, var(--bg2) 80%, var(--mono100));
-  --praxis-surface-floating: var(--praxis-surface-elevated);
-  --praxis-surface-modal: color-mix(in srgb, var(--bg2) 75%, var(--mono100));
-  --praxis-surface-translucent: rgba(36, 32, 24, 0.72);
-  --praxis-surface-translucent-strong: rgba(36, 32, 24, 0.85);
-  --praxis-border-translucent: rgba(255, 255, 255, 0.08);
 }
 
 /* Praxis contrast variants */
@@ -506,12 +482,6 @@ body.praxis-contrast-low {
   --ribbon-background: var(--background-primary);
   --titlebar-background: var(--background-primary);
   --titlebar-background-focused: var(--background-primary);
-  --praxis-surface-card: color-mix(in srgb, var(--bg1) 90%, var(--tx1));
-  --praxis-surface-panel-card: color-mix(in srgb, var(--bg1) 84%, var(--tx1));
-  --praxis-surface-workspace: color-mix(in srgb, var(--bg1) 90%, var(--tx1));
-  --praxis-surface-elevated: color-mix(in srgb, var(--bg1) 84%, var(--tx1));
-  --praxis-surface-floating: var(--praxis-surface-elevated);
-  --praxis-surface-modal: color-mix(in srgb, var(--bg1) 78%, var(--tx1));
 }
 
 .theme-light.praxis-contrast-high {
@@ -537,7 +507,6 @@ body.praxis-contrast-low {
   --background-secondary-alt: #000000;
   --background-modifier-box-shadow: rgba(0, 0, 0, 0.8);
   --shadow-color: rgba(0, 0, 0, 0.6);
-  --praxis-border-translucent: rgba(255, 255, 255, 0.16);
 }
 
 
@@ -866,7 +835,7 @@ body.ribbon-vertical-expand:not(.is-mobile) .workspace-ribbon.mod-left:hover ~ .
   overflow: visible;
   border-top: var(--border-width) solid var(--background-modifier-border);
   border-right: var(--border-width) solid var(--background-modifier-border);
-  border-top-right-radius: var(--praxis-radius-card);
+  border-top-right-radius: var(--radius-m);
   padding: 0;
   position: absolute;
   margin: 0;
@@ -875,13 +844,13 @@ body.ribbon-vertical-expand:not(.is-mobile) .workspace-ribbon.mod-left:hover ~ .
   flex-basis: 0;
   bottom: 0;
   top: auto;
-  background: var(--praxis-surface-elevated);
+  background: var(--background-secondary);
   display: var(--hider-ribbon-display);
   flex-direction: row;
   z-index: 17;
   opacity: 0;
   transition: opacity calc(var(--ribbon-animation-duration) * 2) ease-in-out;
-  box-shadow: var(--praxis-elevation-floating);
+  filter: drop-shadow(2px 10px 30px rgba(0, 0, 0, 0.2));
   gap: 0;
 }
 .hider-ribbon .side-dock-actions,
@@ -952,8 +921,7 @@ body.ribbon-vertical-expand:not(.is-mobile) .workspace-ribbon.mod-left:hover ~ .
 }
 
 body:not(.praxis-status-off) .status-bar {
-  background-color: var(--praxis-surface-elevated);
-  border-radius: var(--praxis-radius-control);
+  background-color: var(--background-primary);
   --status-bar-border-width: 0;
 }
 
@@ -1594,7 +1562,6 @@ body {
   font-size: var(--font-adaptive-normal);
   font-weight: 500;
   letter-spacing: unset;
-  border-radius: var(--praxis-radius-control);
 }
 
 body {
@@ -1686,7 +1653,7 @@ body {
   border: var(--border-width) solid var(--table-border-color);
   border-collapse: separate;
   border-spacing: 0;
-  border-radius: var(--praxis-radius-card);
+  border-radius: var(--praxis-radius);
   overflow: hidden;
 }
 .markdown-source-view.mod-cm6 td, .markdown-source-view.mod-cm6 th,
@@ -2392,7 +2359,7 @@ body {
   flex-direction: column;
   margin: 0;
   padding: 0 0 calc(var(--cards-padding) / 3);
-  border-radius: var(--cards-radius);
+  border-radius: var(--praxis-radius-xs);
   overflow: hidden;
   transition: box-shadow 0.15s linear;
   max-width: var(--cards-max-width);
@@ -2401,7 +2368,7 @@ body {
 .cards table.dataview > tbody > tr:hover {
   background-color: var(--cards-background-hover);
   border: var(--cards-border-width) solid var(--background-modifier-border-hover);
-  box-shadow: var(--praxis-elevation-card);
+  box-shadow: 0 4px 6px 0px rgba(0, 0, 0, 0.05), 0 1px 3px 1px rgba(0, 0, 0, 0.025);
   transition: box-shadow 0.15s linear;
 }
 .cards table.dataview tbody > tr > td:first-child {
@@ -2578,7 +2545,7 @@ body {
 .list-cards.markdown-preview-view div > ul > li {
   background-color: var(--cards-background);
   padding: calc(var(--cards-padding) / 2);
-  border-radius: var(--cards-radius);
+  border-radius: var(--radius-s);
   border: var(--cards-border-width) solid var(--background-modifier-border);
   overflow: hidden;
   margin-inline-start: 0;
@@ -2602,9 +2569,7 @@ body {
   font-weight: var(--bold-weight);
 }
 .list-cards.markdown-preview-view div ul > li:hover {
-  background-color: var(--cards-background-hover);
   border-color: var(--background-modifier-border-hover);
-  box-shadow: var(--praxis-elevation-card);
 }
 .list-cards.markdown-preview-view div ul ul {
   display: block;
@@ -2892,34 +2857,6 @@ body:not(.praxis-colorful-headings-off) .modal {
   --h4-color: var(--text-normal);
   --h5-color: var(--text-normal);
   --h6-color: var(--text-normal);
-}
-
-.modal {
-  background: var(--praxis-surface-modal);
-  border: 1px solid var(--modal-border-color, var(--background-modifier-border));
-  border-radius: var(--praxis-radius-modal);
-  box-shadow: var(--praxis-elevation-modal);
-}
-
-.menu {
-  background: var(--praxis-surface-floating);
-  border: 1px solid var(--background-modifier-border);
-  border-radius: var(--praxis-radius-card);
-  box-shadow: var(--praxis-elevation-floating);
-  padding: var(--praxis-space-1);
-}
-
-.suggestion-container {
-  background: var(--praxis-surface-floating);
-  border: 1px solid var(--background-modifier-border);
-  border-radius: var(--praxis-radius-modal);
-  box-shadow: var(--praxis-elevation-floating);
-}
-
-.prompt {
-  background: var(--praxis-surface-floating);
-  border-radius: var(--praxis-radius-modal);
-  box-shadow: var(--praxis-elevation-floating);
 }
 
 /* Focus mode */
@@ -3993,7 +3930,6 @@ body:not(.full-file-names) .tree-item-inner {
   letter-spacing: 0.05em;
   font-size: var(--font-adaptive-smallest);
   font-weight: 500;
-  border-radius: var(--praxis-radius-control);
 }
 
 /* Canvas is styled in the Praxis overrides layer (see "Graph view" / "Canvas"
@@ -4039,169 +3975,6 @@ body:not(.is-mobile) .nav-buttons-container {
   color: var(--text-muted);
 }
 
-.mod-left-split {
-  background: var(--praxis-surface-2);
-}
-
-.mod-right-split {
-  background: var(--praxis-surface-2);
-}
-
-/* Card Layout 2.0: structural cards for chrome, while note content stays unframed. */
-body:not(.is-mobile):not(.praxis-focus-mode) .workspace-split.mod-root {
-  background: var(--praxis-surface-1);
-}
-
-body:not(.is-mobile):not(.praxis-focus-mode) .mod-root .workspace-tabs {
-  background: transparent;
-  padding: var(--praxis-space-2);
-}
-
-body:not(.is-mobile):not(.praxis-focus-mode) .mod-root .workspace-tabs > .workspace-tab-container {
-  background: var(--praxis-surface-workspace);
-  border: 1px solid var(--background-modifier-border);
-  border-radius: var(--praxis-radius-workspace);
-  box-shadow: var(--praxis-elevation-card);
-  overflow: hidden;
-}
-
-body:not(.is-mobile):not(.praxis-focus-mode) .mod-root .workspace-leaf,
-body:not(.is-mobile):not(.praxis-focus-mode) .mod-root .workspace-leaf-content {
-  background: transparent;
-}
-
-body:not(.is-mobile) .workspace-split:not(.mod-root) .workspace-tabs,
-body:not(.is-mobile) .workspace-split:not(.mod-root) .workspace-leaf-content {
-  background: transparent;
-}
-
-body:not(.is-mobile) .workspace-split:not(.mod-root) .workspace-leaf-content > .nav-header {
-  background: transparent;
-  border: 0;
-  margin: 0;
-  padding-inline: var(--praxis-space-2);
-}
-
-body:not(.is-mobile) .workspace-split:not(.mod-root) .metadata-container {
-  background: var(--praxis-surface-card);
-  border: 1px solid var(--background-modifier-border);
-  border-radius: var(--praxis-radius-card);
-  padding: var(--praxis-space-2);
-}
-
-body:not(.is-mobile) .mod-root .metadata-container {
-  background: var(--praxis-surface-card);
-  border: 1px solid var(--background-modifier-border);
-  border-radius: var(--praxis-radius-card);
-  margin-block: var(--praxis-space-3);
-  padding: var(--praxis-space-3);
-}
-
-body:not(.is-mobile) .workspace-split:not(.mod-root) .search-input-container {
-  margin: var(--praxis-space-2);
-}
-
-body:not(.is-mobile) .workspace-split:not(.mod-root) :is(.nav-file-title, .nav-folder-title, .tree-item-self) {
-  background: color-mix(in srgb, var(--praxis-surface-card) 78%, transparent);
-  border: 1px solid var(--background-modifier-border);
-  border-radius: var(--praxis-radius-card);
-  margin-block: var(--praxis-space-1);
-  transition: background-color 0.15s ease, border-color 0.15s ease;
-}
-
-body:not(.is-mobile) .workspace-split:not(.mod-root) :is(.nav-file-title.is-active, .nav-folder-title.is-active, .tree-item-self.is-active) {
-  background: var(--praxis-surface-elevated);
-  border-color: var(--background-modifier-border-hover);
-}
-
-body:not(.is-mobile) .workspace-leaf-content[data-type=file-explorer] .nav-files-container,
-body:not(.is-mobile) .workspace-leaf-content[data-type=bookmarks] .view-content,
-body:not(.is-mobile) .workspace-leaf-content[data-type=outline] .view-content,
-body:not(.is-mobile) .workspace-leaf-content[data-type=all-properties] .view-content {
-  padding: var(--praxis-space-2);
-}
-
-body:not(.is-mobile) .workspace-leaf-content[data-type=search] .view-content,
-body:not(.is-mobile) .workspace-leaf-content[data-type=backlink] .view-content,
-body:not(.is-mobile) .workspace-leaf-content[data-type=outgoing-link] .view-content {
-  padding-inline: var(--praxis-space-2);
-}
-
-body:not(.is-mobile) :is(.search-result-container, .search-info-container, .backlink-pane, .outgoing-link-pane) {
-  background: var(--praxis-surface-panel-card);
-  border: 1px solid var(--background-modifier-border);
-  border-radius: var(--praxis-radius-panel);
-  margin-block: var(--praxis-space-2);
-  padding: var(--praxis-space-2);
-}
-
-.nav-file-title {
-  border-radius: var(--praxis-radius-control);
-}
-
-.nav-folder-title {
-  border-radius: var(--praxis-radius-control);
-}
-
-.tree-item-self {
-  border-radius: var(--praxis-radius-control);
-}
-
-.nav-file-title:hover,
-.nav-folder-title:hover,
-.tree-item-self:hover {
-  background-color: var(--background-modifier-hover);
-  border-color: var(--background-modifier-border-hover);
-}
-
-.nav-file-title.is-active,
-.nav-folder-title.is-active,
-.tree-item-self.is-active {
-  background-color: var(--praxis-surface-elevated);
-  color: var(--text-normal);
-}
-
-.menu-item {
-  border-radius: var(--praxis-radius-control);
-}
-
-.menu-item:hover,
-.menu-item.selected,
-.menu-item.is-selected {
-  background-color: var(--background-modifier-hover);
-}
-
-.search-result-file-title {
-  background: color-mix(in srgb, var(--praxis-surface-card) 72%, transparent);
-  border: 1px solid var(--background-modifier-border);
-  margin-block: var(--praxis-space-1);
-  padding-inline: var(--praxis-space-2);
-}
-
-.search-result-file-matches {
-  background: var(--praxis-surface-card);
-  border: 1px solid var(--background-modifier-border);
-  border-radius: var(--praxis-radius-card);
-  margin-block: var(--praxis-space-1) var(--praxis-space-2);
-  padding: var(--praxis-space-1);
-}
-
-.search-result-file-title {
-  border-radius: var(--praxis-radius-card);
-}
-
-.search-result-file-title:hover {
-  background-color: var(--background-modifier-hover);
-}
-
-.search-result-file-match {
-  border-radius: var(--praxis-radius-card);
-}
-
-.search-result-file-match:hover {
-  background-color: var(--background-modifier-hover);
-}
-
 input.prompt-input,
 input.prompt-input:hover,
 input.prompt-input:focus,
@@ -4211,26 +3984,11 @@ input.prompt-input:focus-visible {
 
 .suggestion-item {
   color: var(--text-muted);
-  border-radius: var(--praxis-radius-control);
-  margin-inline: var(--praxis-space-1);
 }
 
 .suggestion-item.is-selected {
-  background-color: color-mix(in srgb, var(--interactive-accent) 18%, transparent);
+  background-color: var(--background-modifier-hover);
   color: var(--text-normal);
-}
-
-.is-mobile .menu,
-.is-mobile .prompt,
-.is-mobile .suggestion-container {
-  background: var(--praxis-surface-floating);
-  border: 1px solid var(--background-modifier-border);
-  box-shadow: var(--praxis-elevation-floating);
-}
-
-.is-mobile .menu,
-.is-mobile .prompt {
-  border-radius: var(--praxis-radius-modal) var(--praxis-radius-modal) 0 0;
 }
 
 .is-mobile {
@@ -5033,9 +4791,9 @@ body .markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-t
 
 /* Style Settings preferences */
 .style-settings-container[data-level="2"] {
-  background: var(--praxis-surface-2);
+  background: var(--background-secondary);
   border: 1px solid var(--ui1);
-  border-radius: var(--praxis-radius-card);
+  border-radius: var(--praxis-radius-xs);
   padding: 10px 20px;
   margin: 2px 0 2px -20px;
 }
@@ -5086,32 +4844,6 @@ body .markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-t
 
 .style-settings-container .setting-item {
   background-color: transparent;
-}
-
-.modal.mod-settings .vertical-tab-content-container {
-  background: var(--praxis-surface-modal);
-}
-
-.modal.mod-settings .setting-item:not(.setting-item-heading),
-.workspace-leaf-content[data-type=style-settings] .style-settings-container[data-level="1"],
-.workspace-leaf-content[data-type=style-settings] .style-settings-container[data-level="2"] {
-  background: var(--praxis-surface-card);
-  border: 1px solid var(--background-modifier-border);
-  border-radius: var(--praxis-radius-card);
-}
-
-.modal.mod-settings .setting-item:not(.setting-item-heading) {
-  margin-block: var(--praxis-space-1);
-  padding: var(--praxis-space-2) var(--praxis-space-3);
-}
-
-.modal.mod-settings .setting-item:not(.setting-item-heading):hover {
-  border-color: var(--background-modifier-border-hover);
-}
-
-.workspace-leaf-content[data-type=style-settings] .style-settings-container[data-level="1"] {
-  margin-block: var(--praxis-space-2);
-  padding: var(--praxis-space-2) var(--praxis-space-3);
 }
 
 .setting-item .pickr .pcr-button:after,
@@ -5322,10 +5054,8 @@ body {
   --cards-image-height: var(--praxis-cards-image-height);
   --cards-image-fit: var(--praxis-cards-image-fit);
   --cards-padding: var(--praxis-space-4);
-  --cards-background: var(--praxis-surface-card);
-  --cards-background-hover: var(--praxis-surface-elevated);
+  --cards-background: transparent;
   --cards-border-width: 1px;
-  --cards-radius: var(--praxis-radius-card);
   --cards-aspect-ratio: auto;
   --cards-columns: repeat(auto-fit, minmax(var(--cards-min-width), var(--cards-max-width)));
 
@@ -5373,16 +5103,6 @@ body {
   --metadata-input-background: transparent;
   --metadata-input-background-hover: transparent;
   --metadata-input-background-active: transparent;
-  --praxis-radius-control: var(--praxis-radius-xs);
-  --praxis-radius-card: var(--praxis-radius-md);
-  --praxis-radius-panel: var(--praxis-radius-md);
-  --praxis-radius-modal: var(--praxis-radius-lg);
-  --praxis-radius-workspace: var(--praxis-radius-lg);
-  --praxis-elevation-card: 0 var(--praxis-space-1) var(--praxis-space-4) var(--shadow-color);
-  --praxis-elevation-floating: 0 var(--praxis-space-2) var(--praxis-space-5) var(--shadow-color);
-  --praxis-elevation-modal: 0 var(--praxis-space-3) var(--praxis-space-6) var(--shadow-color);
-  --praxis-elevation-workspace: 0 var(--praxis-space-2) var(--praxis-space-5) var(--shadow-color);
-  --praxis-backdrop-blur: blur(20px) saturate(180%);
 }
 
 /* Ribbon and icon sizing */
@@ -5461,15 +5181,11 @@ body {
 
 /* Focus-visible: keyboard navigation ring */
 .clickable-icon:focus-visible,
-.menu-item:focus-visible,
-.suggestion-item:focus-visible,
-.nav-file-title:focus-visible,
-.nav-folder-title:focus-visible,
 .nav-item-self:focus-visible,
-.tree-item-self:focus-visible,
-button:focus-visible {
+.tree-item-self:focus-visible {
   outline: none;
-  box-shadow: 0 0 0 2px var(--ui3);
+  box-shadow: 0 0 0 2px var(--background-primary),
+              0 0 0 4px var(--interactive-accent);
 }
 
 /* Custom task checkboxes set appearance:none + box-shadow:none (mask icon), which
@@ -5919,7 +5635,7 @@ body:not(.tasks) li[data-task="-"].task-list-item.is-checked {
   --callout-title-color: var(--callout-color);
   --callout-border-width: 1px;
   --callout-border-opacity: 1;
-  --callout-radius: var(--praxis-radius-card);
+  --callout-radius: var(--radius-s);
   --callout-padding: var(--praxis-space-4);
   --callout-title-padding: 0 0 var(--praxis-space-2) 0;
   --callout-content-padding: var(--praxis-space-2) 0 0 0;
@@ -6014,7 +5730,7 @@ body:not(.tasks) li[data-task="-"].task-list-item.is-checked {
 .callout[data-callout="author"] {
   --callout-color: var(--callout-brown);
   --callout-icon: lucide-user;
-  box-shadow: var(--praxis-elevation-card);
+  box-shadow: 0 var(--praxis-space-3) var(--praxis-space-6) var(--shadow-color);
   display: flex;
   flex-direction: column-reverse;
 }
@@ -6101,10 +5817,10 @@ body {
 
 /* Controls panel = Praxis surface (structural, always on). */
 .graph-controls {
-  border-radius: var(--praxis-radius-card);
+  border-radius: var(--radius-m);
   border: 1px solid var(--ui1);
-  background: var(--praxis-surface-elevated);
-  box-shadow: var(--praxis-elevation-floating);
+  background: var(--bg2);
+  box-shadow: 0 var(--praxis-space-2) var(--praxis-space-5) var(--shadow-color);
 }
 
 /* Canvas
@@ -6138,12 +5854,12 @@ body {
 }
 
 .canvas-node-container {
-  border-radius: var(--praxis-radius-card);
-  box-shadow: var(--praxis-elevation-card);
+  border-radius: var(--radius-m);
+  box-shadow: 0 var(--praxis-space-1) var(--praxis-space-4) var(--shadow-color);
 }
 .canvas-node-content,
 .canvas-node-container .markdown-embed {
-  border-radius: var(--praxis-radius-card);
+  border-radius: var(--radius-m);
 }
 .canvas-node-label {
   font-size: var(--font-adaptive-small);
@@ -6222,30 +5938,6 @@ body.praxis-reading-mode .callout {
   background: color-mix(in srgb, var(--callout-color) 7%, transparent);
 }
 
-/* Native window translucency swaps only floating chrome surfaces to frosted values. */
-body.is-translucent {
-  --praxis-surface-floating: var(--praxis-surface-translucent);
-  --praxis-surface-modal: var(--praxis-surface-translucent-strong);
-}
-
-body.is-translucent.praxis-contrast-black {
-  --praxis-surface-floating: var(--praxis-surface-elevated);
-  --praxis-surface-modal: var(--praxis-surface-elevated);
-}
-
-@supports ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
-  body:not(.is-mobile).is-translucent :is(.modal, .menu, .suggestion-container, .prompt, .graph-controls, .status-bar) {
-    backdrop-filter: var(--praxis-backdrop-blur);
-    -webkit-backdrop-filter: var(--praxis-backdrop-blur);
-    border-color: var(--praxis-border-translucent);
-  }
-
-  body:not(.is-mobile).is-translucent.praxis-contrast-black :is(.modal, .menu, .suggestion-container, .prompt, .graph-controls, .status-bar) {
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-  }
-}
-
 /* High contrast — strengthen borders and dividers when the OS requests it. */
 @media (prefers-contrast: more) {
   .theme-dark,
@@ -6263,26 +5955,6 @@ body.is-translucent.praxis-contrast-black {
     --graph-line: var(--ui2);
     --graph-node-unresolved: var(--tx2);
     --graph-node-attachment: var(--tx2);
-  }
-  body.is-translucent {
-    --praxis-surface-floating: var(--praxis-surface-elevated);
-    --praxis-surface-modal: var(--praxis-surface-elevated);
-  }
-  body.is-translucent :is(.modal, .menu, .suggestion-container, .prompt, .graph-controls, .status-bar) {
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-  }
-}
-
-/* Accessibility: prefers-reduced-transparency */
-@media (prefers-reduced-transparency: reduce) {
-  body.is-translucent {
-    --praxis-surface-floating: var(--praxis-surface-elevated);
-    --praxis-surface-modal: var(--praxis-surface-elevated);
-  }
-  body.is-translucent :is(.modal, .menu, .suggestion-container, .prompt, .graph-controls, .status-bar) {
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
   }
 }
 
