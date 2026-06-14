@@ -107,6 +107,12 @@ settings:
     description: Turn off Praxis custom icons for task checkboxes. Useful when using a custom CSS snippet for task states.
     type: class-toggle
     default: false
+  -
+    id: praxis-graph-canvas-off
+    title: Disable graph & canvas colors
+    description: Revert graph nodes/lines and canvas accent colors to Obsidian defaults. Praxis card radius and shadows are kept.
+    type: class-toggle
+    default: false
 */
 
 
