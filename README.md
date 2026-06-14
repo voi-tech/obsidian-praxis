@@ -122,23 +122,60 @@ Add these suffixes to image embeds:
 - `alt-title` hides the inline title for notes that provide their own first heading
 - `h1-borders` adds a divider treatment to H1 headings
 
-### Tasks And Callouts
+### Task Icons
 
-Praxis includes custom task icons for `/`, `-`, `>`, `<`, `?`, `!`, `*`, quote, `l`, `b`, `i`, `S`, `I`, `p`, `c`, `f`, `k`, `w`, `u`, `d`, `+`, `B`, `a`, `n`, `R`, `t`, `P`, and `L`.
+Praxis turns the one-character status inside a task checkbox (`- [?] …`) into a themed icon, so a
+note's task list reads as a small visual workflow language. The statuses are grouped by intent:
 
-It also supports `[0]` through `[9]` task states as horizontal progress bars, from 0% (`[0]`) to 90% (`[9]`).
+| Group | Statuses |
+|---|---|
+| **Status / workflow** | `[ ]` incomplete · `[x]` complete · `[/]` in progress · `[-]` canceled · `[>]` forwarded / delegated · `[<]` scheduled |
+| **Signals** | `[?]` question · `[!]` urgent · `[*]` starred · `["]` quote reference |
+| **Actionable** | `[t]` timed / waiting · `[a]` alarm / deadline · `[l]` location · `[P]` phone call · `[R]` review / due · `[+]` added |
+| **Categorical** | `[i]` information · `[S]` money / savings · `[I]` idea · `[B]` mental model · `[b]` bookmark · `[n]` note · `[k]` key insight · `[w]` win |
+| **Sentiment** | `[p]` pros · `[c]` cons · `[u]` trending up · `[d]` trending down · `[L]` love / value · `[f]` hot topic |
 
-Callouts use Lucide-based icons. The custom `[!author]` callout is styled for quotes and attributions. Add `|noicon` metadata to a callout to hide its icon.
+`[0]` through `[9]` render as a horizontal progress bar from 0% (`[0]`) to 90% (`[9]`) — handy for
+habit streaks or percent-done tracking.
 
-The callout color semantics follow the voitech.lol design system:
+Completed (`[x]`) tasks are de-emphasised but stay readable (no faint-text contrast failure). Disable
+the whole system with the **custom task icons** Style Setting if you prefer a plain checkbox or use a
+status snippet of your own.
+
+#### Recipes
+
+The icons are pure CSS, so they work alongside the **Tasks** and **Dataview** community plugins:
+
+- **Tasks plugin custom statuses** — in `Tasks → Settings → Custom Statuses`, add a status whose
+  symbol matches a Praxis glyph (e.g. symbol `?`, name `Question`, next-status `x`). Clicking the
+  checkbox then cycles through statuses while Praxis supplies the icon.
+- **Dataview rollup** — list every open task in a folder:
+  ````
+  ```dataview
+  task
+  from "Projects"
+  where !completed
+  ```
+  ````
+- **Progress pills** — write `- [3] Draft` for a 30%-done bar; bump the digit as the work advances.
+
+### Callouts
+
+Callouts use Lucide-based icons and a semantic color palette. The custom `[!author]` callout is
+styled for quotes and attributions. Add `|noicon` metadata to a callout to hide its icon.
 
 | Color | Callout types |
 |---|---|
-| Violet | `[!note]` `[!info]` `[!todo]` `[!abstract]` `[!important]` |
-| Mint | `[!tip]` `[!success]` `[!check]` |
-| Orange | `[!warning]` `[!caution]` `[!attention]` |
-| Red | `[!danger]` `[!error]` `[!bug]` `[!fail]` |
+| Violet | `[!note]` `[!info]` `[!todo]` `[!abstract]` `[!important]` `[!decision]` `[!claim]` |
+| Mint | `[!tip]` `[!success]` `[!check]` `[!evidence]` |
+| Yellow | `[!question]` `[!help]` `[!faq]` `[!hypothesis]` |
+| Orange | `[!warning]` `[!caution]` `[!attention]` `[!assumption]` |
+| Red | `[!danger]` `[!error]` `[!bug]` `[!fail]` `[!risk]` |
 | Brown | `[!quote]` `[!author]` `[!example]` |
+
+The `[!decision]`, `[!claim]`, `[!hypothesis]`, `[!evidence]`, `[!assumption]`, and `[!risk]` callouts
+are a knowledge-work set for thinking frameworks (decision logs, hypotheses, evidence, claims), reusing
+the same palette so they stay visually consistent with the rest of the system.
 
 ## Advanced
 
