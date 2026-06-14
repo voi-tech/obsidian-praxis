@@ -4979,10 +4979,10 @@ body {
   --praxis-radius-lg: 21px;
   --praxis-radius-xl: 34px;
 
-  /* Map to Obsidian radius vars */
+  /* Map to Obsidian radius vars.
+     Note: --radius-s/m/l are (re)assigned below under "Style Settings driven
+     values" — keep their single source of truth there. Only xs/xl live here. */
   --radius-xs: 5px;
-  --radius-m: 13px;
-  --radius-l: 21px;
   --radius-xl: 34px;
 
   /* Size overrides (Fibonacci) — only size-2-* to avoid breaking Obsidian UI */
