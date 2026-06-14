@@ -24,6 +24,7 @@ Praxis is a warm, focused Obsidian theme built from Minimal's proven foundation 
 - Soft, outlined, and minimal callout styles
 - Custom `[!author]` callout and `|noicon` callout metadata support
 - Polished Properties styling for a quieter metadata panel
+- Themed graph view and canvas (warm palette, accent focus, Praxis card radius)
 - Lightweight `publish.css` for Obsidian Publish
 
 ## Install
